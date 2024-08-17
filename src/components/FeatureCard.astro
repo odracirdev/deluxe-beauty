@@ -1,0 +1,17 @@
+---
+const { image, alt } = Astro.props;
+---
+
+<div class="featured__card">
+  <img src=`${image}` alt=`${alt}` />
+  <slot />
+</div>
+
+<style>
+  .featured__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

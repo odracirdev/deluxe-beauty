@@ -1,0 +1,30 @@
+---
+import Button from "@components/Button.astro";
+---
+
+<section class="booking">
+  <h2>Agenda con nosotras</h2>
+  <p>
+    <strong>¡Es hora de consentirte!</strong> Agenda una cita con nosotros y experimenta
+    un servicio de belleza excepcional. ¡No esperes más y asegura tu hora hoy mismo!
+  </p>
+  <Button href="#">Agendar</Button>
+</section>
+
+<style>
+  .booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-image: url(/images/pattern-1.webp);
+    background-size: cover;
+    padding: 2rem;
+    text-align: center;
+
+    & h2,
+    p {
+      color: var(--white);
+    }
+  }
+</style>

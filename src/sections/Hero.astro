@@ -1,0 +1,75 @@
+---
+import SliderItem from "@components/SliderItem.astro";
+import Button from "@components/Button.astro";
+---
+
+<section class="hero">
+  <nav>
+    <img src="/images/logo-black.webp" alt="Deluxe Beauty" />
+  </nav>
+  <div class="embla">
+    <div class="embla__container">
+      <div class="embla__slide slide-1">
+        <h2>Título del servicio 1</h2>
+        <Button href="#">CTA 1</Button>
+      </div>
+      <div class="embla__slide slide-2">
+        <h2>Título del servicio 2</h2>
+        <Button href="#">CTA 2</Button>
+      </div>
+      <div class="embla__slide slide-3">
+        <h2>Título del servicio 3</h2>
+        <Button href="#">CTA 3</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  nav {
+    padding: 16px;
+  }
+
+  .embla {
+    overflow: hidden;
+    height: 400px;
+
+    & .embla__container {
+      display: flex;
+      height: 100%;
+
+      & .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+        padding: 1.5rem 2rem;
+      }
+
+      & .slide-1 {
+        background-image: url(https://placehold.co/430x400/000000/FFFFFF/png);
+        object-fit: contain;
+      }
+
+      & .slide-2 {
+        background-image: url(https://placehold.co/430x400/f9408e/000000/png);
+        object-fit: contain;
+      }
+
+      & .slide-3 {
+        background-image: url(https://placehold.co/430x400/000000/f9408e/png);
+        object-fit: contain;
+      }
+    }
+  }
+</style>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const emblaNode = document.querySelector(".embla") as HTMLElement;
+  const options = { loop: false };
+  const plugins = [Autoplay()];
+  const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+
+  console.log(emblaApi.slideNodes()); // Access API
+</script>

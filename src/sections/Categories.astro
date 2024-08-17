@@ -1,0 +1,49 @@
+---
+import Button from "@components/Button.astro";
+import FeatureCard from "@components/FeatureCard.astro";
+import ServiceButton from "@components/ServiceButton.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+---
+
+<section class="categories">
+  <h2>Tus servicios favoritos</h2>
+  <p>
+    Descubre una experiencia de belleza personalizada con nuestros servicios. <strong
+      >¡Dedícate un momento para sentirte y verte increíble!</strong
+    >
+  </p>
+
+  <ServiceCategories>
+    <FeatureCard image="./images/service_1.png">
+      <ServiceButton name="Manos y Pies" slug="#" size pos
+        >Ver Servicios</ServiceButton
+      >
+    </FeatureCard>
+    <FeatureCard image="./images/service_2.png">
+      <ServiceButton name="Cejas y Pestañas" slug="#" size pos
+        >Ver Servicios</ServiceButton
+      >
+      <FeatureCard image="./images/service_3.png">
+        <ServiceButton name="Peluquería" slug="#" size pos
+          >Ver Servicios</ServiceButton
+        >
+      </FeatureCard>
+
+      <Button href="/servicios">Ver todas</Button>
+    </FeatureCard>
+
+    <style>
+      .categories {
+        padding: 24px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </ServiceCategories>
+</section>

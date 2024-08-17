@@ -1,0 +1,65 @@
+---
+const { img, name, duration, price, info, booking } = Astro.props;
+---
+
+<div class="services__wrapper">
+  <img src={img} alt="" />
+  <article>
+    <h3>{name}</h3>
+    <p><strong>Duración:</strong> {duration}</p>
+    <p><strong>Valor:</strong> {price}</p>
+  </article>
+  <div class="buttons">
+    <a href={info} target="_self" rel="noopener noreferrer">Info</a>
+    <a href={booking} target="_self" rel="noopener noreferrer">Agendar</a>
+  </div>
+</div>
+
+<style>
+  .services__wrapper {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow:
+      0px 4px 20px #ccc4,
+      0px 2px 6px #ccc4;
+
+    & img {
+      border-radius: 1rem;
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      & h3 {
+        text-wrap: balance;
+        font-size: 1.25rem;
+      }
+
+      & p {
+        font-size: 1rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+
+      & a {
+        background-color: var(--primary-color);
+        color: var(--white);
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+</style>

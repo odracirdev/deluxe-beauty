@@ -1,0 +1,32 @@
+---
+const {image, title, description} = Astro.props
+---
+
+<article class="reasons__wrap">
+  <img src=`${image}` alt="">
+  <h3>{title}</h3>
+  <p>{description}</p>
+</article>
+
+<style>
+  .reasons__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px;
+      gap: .5rem;
+
+      & img {
+        width: 44px;
+      }
+
+      & h3 {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+      }
+
+      & p {
+        text-align: center;
+      }
+    }
+</style>

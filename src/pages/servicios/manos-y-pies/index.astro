@@ -1,0 +1,199 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Manos y Pies - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Servicios principales" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manos Tradicional"
+          duration="45 min"
+          price="$14.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manos Permanente"
+          duration="45 min"
+          price="$20.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manos Permanente Pro (con diseños)"
+          duration="45 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Manicure Masculina"
+          duration="45 min"
+          price="$12.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Tradicional Niña"
+          duration="45 min"
+          price="$10.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retiro de esmalte permanente"
+          duration="45 min"
+          price="$3000"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        /><ServiceCard
+          img="https://placehold.co/600x400"
+          name="Pedicure Tradicional"
+          duration="45 min"
+          price="$16.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Pedicure Permanente"
+          duration="45 min"
+          price="$22.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        /><ServiceCard
+          img="https://placehold.co/600x400"
+          name="Pedicure hombre"
+          duration="45 min"
+          price="$15.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <section class="service__list">
+      <Header title="Combos" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Rusa + Esmaltado Permanente"
+          duration="45 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Rusa + Esmaltado Tradicional"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Tratamiento IBX + Manicure Tradicional"
+          duration="45 min"
+          price="$20.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Tratamiento IBX + Manicure Permanente"
+          duration="45 min"
+          price="$25.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Kapping Baño de Gel o Acrílico + Esmaltado Permanente"
+          duration="45 min"
+          price="$30.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Tradicional + Pedicure Tradicional"
+          duration="45 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Permanente + Manicure Tradicional"
+          duration="45 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Permanente + Pedicure Permanente"
+          duration="45 min"
+          price="$36.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Permanente + Pedicure Tradicional"
+          duration="45 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        /><ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Tradicional + Pedicure Permanente"
+          duration="45 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Manicure Permanente + Manicure Tradicional Niña"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

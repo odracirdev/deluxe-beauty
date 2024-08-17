@@ -1,0 +1,34 @@
+---
+const {image, title, cta} = Astro.props
+---
+
+<div class="slider-item">
+
+  <h2>{title}</h2>
+
+  <button>{cta}</button>
+
+</div>
+
+<style define:vars={{image}}>
+  .slider-item {
+    width: 100%;
+    left: 0;
+    position: sticky;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+
+    &::before {
+      content: "";
+      background-image: var(--image);
+      background-repeat: no-repeat;
+      background-size: cover;
+      inset: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -5;
+    }
+  }
+</style>

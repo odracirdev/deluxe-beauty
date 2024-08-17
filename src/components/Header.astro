@@ -1,0 +1,26 @@
+---
+const { title, desc } = Astro.props;
+---
+
+<header>
+  <h2>{title}</h2>
+  <p>{desc}</p>
+</header>
+
+<style>
+  header {
+    background-image: url(/images/pattern-4.webp);
+    background-size: cover;
+    padding: 3rem 1rem 6.25rem;
+
+    & h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      line-height: 1;
+    }
+
+    & p {
+      color: var(--white);
+    }
+  }
+</style>

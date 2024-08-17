@@ -1,0 +1,109 @@
+---
+import Layout from "@layouts/Layout.astro";
+import FeatureCard from "@components/FeatureCard.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import ServiceButton from "@components/ServiceButton.astro";
+
+const options = {
+  title: "Servicios - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="categories">
+      <header>
+        <h2>Tus servicios favoritos</h2>
+        <p>
+          Descubre una experiencia de belleza personalizada con nuestros
+          servicios. <strong
+            >¡Dedícate un momento para sentirte y verte increíble!</strong
+          >
+        </p>
+      </header>
+
+      <ServiceCategories column>
+        <FeatureCard image="./images/service_1.png">
+          <ServiceButton name="Manos y Pies" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_2.png">
+          <ServiceButton name="Cejas y Pestañas" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_3.png">
+          <ServiceButton name="Peluquería" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_1.png">
+          <ServiceButton name="Masajes" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_2.png">
+          <ServiceButton name="Masajes" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_3.png">
+          <ServiceButton name="Tratamientos Corpolares" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_1.png">
+          <ServiceButton name="Maquillaje y Peinados" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_2.png">
+          <ServiceButton name="Novias" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+        <FeatureCard image="./images/service_3.png">
+          <ServiceButton name="Pack" slug="#" size>Ver Servicios</ServiceButton>
+        </FeatureCard>
+        <FeatureCard image="./images/service_3.png">
+          <ServiceButton name="Promociones" slug="#" size
+            >Ver Servicios</ServiceButton
+          >
+        </FeatureCard>
+      </ServiceCategories>
+
+      <Booking />
+
+      <Footer />
+    </section>
+  </main>
+
+  <style>
+    .categories {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      & header {
+        background-image: url(/images/pattern-4.webp);
+        background-size: cover;
+        padding: 48px 32px 80px;
+
+        & h2 {
+          font-size: 2rem;
+          color: var(--primary-color);
+          line-height: 1;
+        }
+
+        & p {
+          color: var(--white);
+        }
+      }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,29 @@
+---
+const { column } = Astro.props;
+---
+
+<article class:list={["cols", column ? "col-2" : "col-1"]}>
+  <slot />
+</article>
+
+<style>
+  article {
+    padding: 2rem;
+  }
+
+  .col-1 {
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+  }
+
+  .col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 0.5rem;
+    background-color: var(--white);
+    border-radius: 2rem;
+    margin-top: -3rem;
+  }
+</style>

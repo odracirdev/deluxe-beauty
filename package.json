@@ -1,0 +1,17 @@
+{
+  "name": "deluxe-beauty",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.14.2",
+    "embla-carousel": "^8.1.8",
+    "embla-carousel-autoplay": "^8.1.8"
+  }
+}

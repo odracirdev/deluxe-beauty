@@ -1,0 +1,98 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Uñas Gel o Acrílicas - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Uñas de gel o acrílicas" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Uñas Acrilicas Tradicional"
+          duration="45 min"
+          price="$30.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Uñas Acrílicas Permanente"
+          duration="45 min"
+          price="$36.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Uñas Acrílicas Permanentes con diseños"
+          duration="45 min"
+          price="$42.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Uñas Gel Permanente"
+          duration="45 min"
+          price="$36.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Mantención de Acrilicas"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retiro de uñas acrílicas"
+          duration="45 min"
+          price="$10.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        /><ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retiro de uñas acrílicas + Esmaltado Permanente"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retiro de uñas acrílicas + Esmaltado Tradicional"
+          duration="45 min"
+          price="$22.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+      </ServiceCategories>
+
+      <Booking />
+
+      <Footer />
+    </section>
+  </main>
+
+  <style>
+    .service__list {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</Layout>

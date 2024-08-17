@@ -1,0 +1,204 @@
+---
+// import { Schema } from 'astro-seo-schema'
+
+interface Options {
+  title: string;
+  description: string;
+  metaRobots?: string;
+}
+
+interface Props {
+  options: Options;
+}
+
+const { options } = Astro.props;
+const { title, description, metaRobots } = options;
+---
+
+<!doctype html>
+<html dir="ltr" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+
+    <slot name="preconnect" />
+
+    <slot name="async-script" />
+
+    <slot name="critical-css" />
+
+    <slot name="stylesheet" />
+
+    <slot name="preload" />
+
+    <slot name="defer-script" />
+
+    <style is:global>
+      :root {
+        --primary-color: #f9408e;
+        --bg-color: #f8f8f8;
+        --white: #fff;
+        --black: #000;
+        --scrollbar: #e5e5e5;
+        --scrollbar-thumb: #c0c0c0;
+        --scrollbar-thumb-hover: #909090;
+        --scrollbar-dark: #898989;
+        --scrollbar-thumb-dark: #5d5d5d;
+        --scrollbar-thumb-hover-dark: #3f3f3f;
+      }
+
+      @font-face {
+        font-family: "CabinetGrotesk-Bold";
+        font-style: normal;
+        font-weight: bold;
+        src: url("./fonts/CabinetGrotesk-Bold.woff2");
+      }
+
+      @font-face {
+        font-family: "Colus";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./fonts/ColusRegular.woff2");
+      }
+
+      @font-face {
+        font-family: "Satoshi";
+        font-style: normal;
+        font-weight: 400;
+        src: url("./fonts/Satoshi-Regular.woff2");
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+        color: var(--primary-color);
+        font-family: "CabinetGrotesk-Bold";
+        line-height: 1;
+      }
+
+      p {
+        overflow-wrap: break-word;
+        color: var(--black);
+        font-family: "Satoshi";
+        font-size: 1rem;
+        line-height: 1.25;
+      }
+
+      a {
+        color: var(--white);
+        font-family: "Colus";
+      }
+
+      html {
+        font-family: system-ui, sans-serif;
+      }
+
+      @view-transition {
+        navigation: auto;
+      }
+
+      body::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+        background: var(--scrollbar);
+        transition: background 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: background;
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 0.25rem;
+      }
+
+      @media (any-hover: hover) {
+        body::-webkit-scrollbar-thumb:hover {
+          background: var(--scrollbar-thumb-hover);
+        }
+      }
+
+      @supports not selector(::-webkit-scrollbar) {
+        html,
+        body {
+          scrollbar-color: var(--scrollbar) var(--scrollbar-thumb);
+          scrollbar-width: thin;
+          scrollbar-gutter: stable;
+        }
+      }
+    </style>
+
+    <meta name="robots" content={metaRobots || "index, follow"} />
+    {description && <meta name="description" content={description} />}
+    {description && <link href={Astro.url.href} rel="canonical" />}
+    <meta
+      name="author"
+      content="Ricardo Cuauro - https://github.com/odracirdev"
+    />
+
+    <!-- {
+      description && (
+        <Schema
+          item={{
+	        "@context": "http://schema.org",
+	        "@type": "Organization",
+	        "name": "Deluxe Beauty",
+	        "address": {
+		        "@type": "PostalAddress",
+		        "addressLocality": "Santiago"
+	          }
+          }}
+        />
+      )
+
+
+    } -->
+
+    <slot name="schema" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="color-scheme" content="light" />
+    <slot name="social-media" />
+  </head>
+  <body>
+    <slot />
+
+    <slot name="dynamic-components" />
+  </body>
+</html>

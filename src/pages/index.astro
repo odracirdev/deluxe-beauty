@@ -1,0 +1,28 @@
+---
+import Layout from '@layouts/Layout.astro'
+import Hero from '@sections/Hero.astro'
+import Categories from '@sections/Categories.astro'
+import WhyChooseUs from '@sections/WhyChooseUs.astro'
+import Booking from '@sections/Booking.astro'
+import Footer from '@sections/Footer.astro'
+
+const options = {
+  title: 'Deluxe Beauty',
+  description: 'Una descripción que tengo que editar'
+}
+---
+
+<Layout options={options}>
+  <main>
+
+    <Hero />
+
+    <Categories />
+
+    <WhyChooseUs />
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>

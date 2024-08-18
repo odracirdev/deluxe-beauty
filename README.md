@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/images/logo-black.webp" />
+  <img src="./public/images/banner-repo.webp" />
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/odracirdev/deluxe-beauty?style=flat&color=0080ff" alt="license">

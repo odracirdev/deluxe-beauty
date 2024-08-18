@@ -1,0 +1,75 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Novias - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Novias" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Maquillaje Novia (Prueba)"
+          duration="60 min"
+          price="$54.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Maquillaje Novia (Dia del Matrimonio)"
+          duration="60 min"
+          price="$76.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Peinado Novia (Prueba)"
+          duration="9 min"
+          price="$42.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Peinado Novia (Dia del Matrimonio)"
+          duration="90 min"
+          price="$58.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Peinado niña"
+          duration="90 min"
+          price="$22.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

@@ -1,47 +1,141 @@
-# Astro Starter Kit: Minimal
+<p align="center">
+  <img src="./public/images/logo-black.webp" />
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/odracirdev/deluxe-beauty?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/odracirdev/deluxe-beauty?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/odracirdev/deluxe-beauty?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/odracirdev/deluxe-beauty?style=flat&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+		<em>Desarrollado con el software y las herramientas que se indican a continuación.</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/Astro-FF5D01.svg?style=flat&logo=Astro&logoColor=white" alt="Astro">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=flat&logo=YAML&logoColor=white" alt="YAML">
+	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white" alt="TypeScript">
+	<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=flat&logo=GitHub-Actions&logoColor=white" alt="GitHub%20Actions">
+	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
+</p>
+<hr>
+
+## 🔗 Quick Links
+
+> - [📍 Visión general](#-vision-general)
+> - [📦 Características](#-caracteristicas)
+> - [📂 Estructura del repositorio](#-estructura-del-repositorio)
+> - [🚀 Primeros pasos](#-primeros-pasos)
+>   - [⚙️ Instalación](#️-instalacion)
+>   - [🤖 Ejecutar deluxe-beauty](#-ejecutar-deluxe-beauty)
+> - [🛠 Roadmap](#-roadmap)
+> - [👏 Agradecimientos](#-agradecimientos)
+
+---
+
+## 📍 Visión general
+
+Este proyecto es un trabajo freelance que realicé para un cliente. Este necesitaba dar a conocer sus servicios de belleza en general para su nueva empresa por lo que cree un sitio web pensado en sus usuarios objetivos (mayormente mujeres con poco tiempo que prefieren utilizar dispositivos móviles para contratar estos servicios).
+
+---
+
+## 📦 Características
+
+- 100% Código abierto.
+- Optimizado para dispositivos móviles.
+- Interfaz sencilla e intuitiva.
+
+---
+
+## 📂 Estructura del repositorio
 
 ```sh
-npm create astro@latest -- --template minimal
+└── deluxe-beauty/
+    ├── .github
+    │   └── workflows
+    │       └── deploy.yml
+    ├── README.md
+    ├── astro.config.mjs
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── public
+    │   ├── fonts
+    │   └── images
+    └── src
+        ├── components
+        ├── layouts
+        ├── pages
+        │   └── servicios
+        │       ├── cejas-y-pestanas
+        │       ├── manos-y-pies
+        │       ├── maquillajes-y-peinados
+        │       ├── masajes
+        │       ├── novias
+        │       ├── peluqueria
+        │       ├── promociones
+        │       ├── tratamientos-corporales
+        │       └── unas-gel-o-acrilicas
+        └── sections
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Primeros pasos
 
-## 🚀 Project Structure
+**_Requisitos_**
 
-Inside of your Astro project, you'll see the following folders and files:
+Asegúrete de tener las siguientes dependencias instaladas en su sistema:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+- **<code>► astro</code>**: `^4.14.2`
+- **<code>► embla-carousel</code>**: `^8.1.8`
+- **<code>► embla-carousel-autoplay</code>**: `^8.1.8`
+
+### ⚙️ Instalación
+
+1. Clona el repositorio deluxe-beauty:
+
+```sh
+git clone https://github.com/odracirdev/deluxe-beauty
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+2. Cambia al directorio del proyecto:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+cd deluxe-beauty
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+3. Instala las dependencias:
 
-## 🧞 Commands
+```sh
+pnpm install
+```
 
-All commands are run from the root of the project, from a terminal:
+### 🤖 Ejecutar deluxe-beauty
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Utiliza el siguiente comando para ejecutar deluxe-beauty:
 
-## 👀 Want to learn more?
+```sh
+pnpm dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## 🛠 Roadmap
+
+- [ ] `► Maquetación para dispositivos móviles`
+- [ ] `► Maquetación para dispositivos de es critorio`
+- [ ] `► Optimización de archivos multimedia`
+- [ ] `► Optimización del SEO`
+
+---
+
+## 👏 Agradecimientos
+
+- Inspiración para el diseño mobile: [Beauty Clinic Skincare App (Community)](<https://www.figma.com/design/CEamJD6KYaHDoz8HCr6VZL/Beauty-Clinic-Skincare-App-(Community)?node-id=0-1&t=4gV1SgOnFYN2Dife-0>)
+- Optimización de Astro: [Félix Icaza](https://github.com/felixicaza)
+- Mentoría: [Jaime Alan Gutiérrez Cruz](https://github.com/jagcruz)
+- Comunidad de autodidactas [odraciRdev](https://twitch.tv/odracirdev)
+
+[**Return**](#-quick-links)
+
+---

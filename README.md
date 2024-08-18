@@ -20,7 +20,7 @@
 </p>
 <hr>
 
-## 🔗 Quick Links
+## 🔗 Enlaces rápidos
 
 > - [📍 Visión general](#-vision-general)
 > - [📦 Características](#-caracteristicas)
@@ -66,16 +66,9 @@ Este proyecto es un trabajo freelance que realicé para un cliente. Este necesit
         ├── layouts
         ├── pages
         │   └── servicios
-        │       ├── cejas-y-pestanas
-        │       ├── manos-y-pies
-        │       ├── maquillajes-y-peinados
-        │       ├── masajes
-        │       ├── novias
-        │       ├── peluqueria
-        │       ├── promociones
-        │       ├── tratamientos-corporales
-        │       └── unas-gel-o-acrilicas
+        │       └── ...
         └── sections
+            └── ...
 ```
 
 ---
@@ -86,9 +79,8 @@ Este proyecto es un trabajo freelance que realicé para un cliente. Este necesit
 
 Asegúrete de tener las siguientes dependencias instaladas en su sistema:
 
-- **<code>► astro</code>**: `^4.14.2`
-- **<code>► embla-carousel</code>**: `^8.1.8`
-- **<code>► embla-carousel-autoplay</code>**: `^8.1.8`
+- **<code>► Node</code>**: `^20.14.0`
+- **<code>► pnpm</code>**: `^9.4.0`
 
 ### ⚙️ Instalación
 
@@ -136,6 +128,6 @@ pnpm dev
 - Mentoría: [Jaime Alan Gutiérrez Cruz](https://github.com/jagcruz)
 - Comunidad de autodidactas [odraciRdev](https://twitch.tv/odracirdev)
 
-[**Return**](#-quick-links)
+[**Return**](#-enlaces-rapidos)
 
 ---

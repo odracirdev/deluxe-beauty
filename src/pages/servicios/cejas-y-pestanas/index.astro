@@ -1,0 +1,122 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Cejas y Pestañas - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Cejas y Pestañas" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Perfilado de Cejas"
+          duration="45 min"
+          price="$14.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Planchado de Cejas"
+          duration="45 min"
+          price="$18.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Laminado de Cejas"
+          duration="45 min"
+          price="$18.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Lifting de pestañas"
+          duration="45 min"
+          price="$20.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Ondulado de pestañas"
+          duration="45 min"
+          price="$20.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <section class="service__list">
+      <Header title="Combos en cejas y pestañas" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Perfilado de Cejas + Tinte"
+          duration="45 min"
+          price="$22.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Planchado de cejas + Perfilado"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Laminado de cejas + Perfilado"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Lifting + Tinte de pestañas"
+          duration="45 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Ondulado + Tinte de Pestañas"
+          duration="45 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

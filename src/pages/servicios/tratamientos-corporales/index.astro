@@ -1,0 +1,67 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Tratamientos corporales - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Tratamientos corporales" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Pack de 8 masajes reafirmantes"
+          duration="60 min"
+          price="$240.000"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Masaje Reafirmante"
+          duration="60 min"
+          price="$34.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Masaje Reductivo"
+          duration="9 min"
+          price="$38.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Drenaje Linfático"
+          duration="90 min"
+          price="$36.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

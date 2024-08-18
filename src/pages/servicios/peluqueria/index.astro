@@ -1,0 +1,162 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Peluquería - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Peluquería" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Corte de Cabello Mujer"
+          duration="45 min"
+          price="$18.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Corte de Cabello Hombre"
+          duration="45 min"
+          price="$15.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Brushing"
+          duration="45 min"
+          price="$20.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Balayage"
+          duration="45 min"
+          price="$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Babylights"
+          duration="45 min"
+          price="$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Tintura de Cabello"
+          duration="45 min"
+          price="$38.900 (S), $45.900 (M), $50.900 (L), $60.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        /><ServiceCard
+          img="https://placehold.co/600x400"
+          name="Baño de Color"
+          duration="45 min"
+          price="$32.900 (S), $37.900 (M), $47.900 (L), $52.900 (XL)"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Matización o Baño de Color"
+          duration="45 min"
+          price="$32.900 (S), $38.900 (M), $48.900 (L), $54.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Visos o mechas con papel"
+          duration="45 min"
+          price="$38.900 (S), $48.900 (M), $58.900 (L), $68.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retoque de Raíz"
+          duration="45 min"
+          price="$28.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Masaje nutritivo"
+          duration="45 min"
+          price="$18.900 (S), $18.900 (M), $24.900 (L), $24.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Alisado de Keratina"
+          duration="45 min"
+          price="$48.900 (S), $58.900 (M), $78.900 (L), $88.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Matización o Baño de Color"
+          duration="45 min"
+          price="$232.900 (S), $38.900 (M), $48.900 (L), $54.900 (XL)"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Corte de Cabello + Brushing"
+          duration="45 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Balayage + Babylights"
+          duration="45 min"
+          price="$62.900 (S), $72.900 (M), $82.9OO (L), 92.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Retoque de Raíz + Brushing"
+          duration="45 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+      </ServiceCategories>
+
+      <Booking />
+
+      <Footer />
+    </section>
+  </main>
+
+  <style>
+    .service__list {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</Layout>

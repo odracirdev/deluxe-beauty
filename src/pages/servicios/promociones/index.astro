@@ -1,0 +1,91 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import Footer from "@sections/Footer.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import ServiceCategories from "@components/ServiceCategories.astro";
+import Header from "@components/Header.astro";
+
+const options = {
+  title: "Promociones - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Promociones" />
+
+      <ServiceCategories column>
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="2 Manicure Amigas Permanente"
+          duration="60 min"
+          price="$35.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="2 Pedicure Amigas Permanente"
+          duration="60 min"
+          price="$38.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https://placehold.co/600x400"
+          name="Perfilado de Cejas + Lifting de Pestañas"
+          duration="9 min"
+          price="$34.900"
+          info="/servicios/manos-y-pies/manos-permanente"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Planchado de Cejas + Perfilado de Cejas"
+          duration="90 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Lifting de Pestañas + Manicure Permanente"
+          duration="90 min"
+          price="$40.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Corte de Cabello + Brushing"
+          duration="90 min"
+          price="$26.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+        <ServiceCard
+          img="https:placehold.co/600x400"
+          name="Corte de Cabello + Masaje nutritivo"
+          duration="90 min"
+          price="$32.900"
+          info="/servicios/manos-y-pies/manos-tradicional"
+          booking="#"
+        />
+      </ServiceCategories>
+    </section>
+
+    <Booking />
+
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

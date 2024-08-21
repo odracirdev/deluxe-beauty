@@ -29,32 +29,31 @@ import ServiceCategories from "@components/ServiceCategories.astro";
         size
         pos>Ver Servicios</ServiceButton
       >
-      <FeatureCard image="/deluxe-beauty/images/service_3.png">
-        <ServiceButton
-          name="Peluquería"
-          slug="https://odracirdev.github.io/deluxe-beauty/servicios/peluqueria/"
-          size
-          pos>Ver Servicios</ServiceButton
-        >
-      </FeatureCard>
-
-      <Button href="https://odracirdev.github.io/deluxe-beauty/servicios"
-        >Ver todas</Button
+    </FeatureCard>
+    <FeatureCard image="/deluxe-beauty/images/service_3.png">
+      <ServiceButton
+        name="Peluquería"
+        slug="https://odracirdev.github.io/deluxe-beauty/servicios/peluqueria/"
+        size
+        pos>Ver Servicios</ServiceButton
       >
     </FeatureCard>
-
-    <style>
-      .categories {
-        padding: 1.5rem 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        & h2 {
-          font-size: 2rem;
-        }
-      }
-    </style>
   </ServiceCategories>
+  <Button href="https://odracirdev.github.io/deluxe-beauty/servicios"
+    >Ver todas</Button
+  >
 </section>
+
+<style>
+  .categories {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

@@ -1,25 +1,52 @@
 ---
-const { href } = Astro.props;
+const { href, variant } = Astro.props;
 ---
 
-<a href={href} target="_self" rel="noopener noreferrer">
+<a
+  href={href}
+  target="_self"
+  rel="noopener noreferrer"
+  class:list={[
+    "button",
+    {
+      pink: variant === "pink",
+      pinklarge: variant === "pinklarge",
+      white: variant === "white",
+    },
+  ]}
+>
   <slot />
 </a>
 
 <style>
-  a {
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 160px;
-    height: 40px;
-    background-color: #fff;
-    color: var(--primary-color);
     border: none;
     border-radius: 999999px;
     box-shadow:
       0px 4px 20px #ccc4,
       0px 2px 6px #ccc4;
+  }
+
+  .pink {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.25rem 1.5rem;
+  }
+
+  .pinklarge {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.25rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .white {
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0.25rem 1.5rem;
   }
 </style>

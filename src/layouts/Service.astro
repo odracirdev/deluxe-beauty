@@ -1,0 +1,71 @@
+---
+import Button from "@components/Button.astro";
+
+const { img, title, duration, price } = Astro.props;
+---
+
+<main>
+  <header>
+    <img src={img} alt={title} />
+  </header>
+  <section class="service">
+    <h1>{title}</h1>
+    <article class="details">
+      <div class="time-price">
+        <p><strong>Duración:</strong> {duration}</p>
+        <p><strong>Valor:</strong> {price}</p>
+      </div>
+      <Button href="#" variant="pink">Agendar</Button>
+    </article>
+    <article class="description">
+      <slot />
+      <Button href="#" variant="pinklarge">Agendar</Button>
+    </article>
+  </section>
+</main>
+
+<style>
+  header {
+    width: 100dvw;
+    height: 21.188rem;
+    position: relative;
+    z-index: -1;
+  }
+
+  .service {
+    background-color: var(--white);
+    padding: 1.5rem 1rem;
+    border-radius: 2rem;
+    margin-top: -3rem;
+
+    & h1 {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+
+    & h2,
+    h3 {
+      margin-top: 1rem;
+    }
+
+    & article {
+      display: flex;
+    }
+
+    & .details {
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+
+      & p {
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+    }
+
+    & .description {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

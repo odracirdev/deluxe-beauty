@@ -1,6 +1,8 @@
 ---
 // import { Schema } from 'astro-seo-schema'
 
+import Footer from "@components/Footer.astro";
+
 interface Options {
   title: string;
   description: string;
@@ -200,5 +202,7 @@ const { title, description, metaRobots } = options;
     <slot />
 
     <slot name="dynamic-components" />
+
+    <Footer />
   </body>
 </html>

@@ -1,0 +1,118 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Retiro de Esmalte Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Retiro de Esmalte Permanente"
+    duration="45 min"
+    price="$3.000"
+  >
+    <h2>¿Qué son el Retiro de Esmalte Permanente?</h2>
+    <p>
+      Requiere un proceso específico para asegurar que las uñas naturales no se
+      dañen.
+    </p>
+    <h2>Proceso del Retiro de Esmalte Permanente</h2>
+    <ol>
+      <li class="process-title">
+        Preparación
+        <ul>
+          <li>
+            <strong>Lijado Suave:</strong> Con una lima de grano fino, se frota suavemente
+            la superficie del esmalte de gel para romper la capa superior y permitir
+            que el removedor penetre mejor.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación del Removedor
+        <ul>
+          <li>
+            <strong>Empapar Algodón:</strong> Empapando un algodón en removedor de
+            esmalte para gel que contenga acetona.
+          </li>
+          <li>
+            <strong>Aplicar en las Uñas:</strong> Se coloca el algodón empapado sobre
+            cada uña.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Cubrir con Papel Aluminio
+        <ul>
+          <li>
+            <strong>Enrollar con Papel Aluminio:</strong> Se envuelve cada dedo con
+            papel aluminio para mantener el algodón en su lugar y evitar que el removedor
+            se evapore.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Tiempo de Espera
+        <ul>
+          <li>
+            <strong>Dejar Actuar:</strong> Dejando actuar el removedor durante 10-15
+            minutos. El tiempo puede variar según la marca del esmalte y el removedor
+            utilizado.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Retiro del Esmalte
+        <ul>
+          <li>
+            <strong>Retirar el Algodón y el Esmalte:</strong> SQuitando el papel
+            aluminio y el algodón. Usando un palito de naranjo para retirar suavemente
+            el esmalte gel. Si el esmalte no se despega fácilmente, se vuelve a aplicar
+            el removedor y repite el proceso.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Limpieza y Cuidado
+        <ul>
+          <li>
+            <strong>Limpiar Restos:</strong> Se limpia cualquier residuo de esmalte
+            con un limpiador de gel si es necesario.
+          </li>
+          <li>
+            <strong>Hidratar:</strong> Aplicación de aceite para cutículas y una
+            crema hidratante para nutrir las uñas y la piel circundante.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

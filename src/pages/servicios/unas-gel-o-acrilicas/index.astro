@@ -9,6 +9,65 @@ const options = {
   title: "Uñas Gel o Acrílicas - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Uñas Gel Permanente",
+    duration: "45 min",
+    price: "$36.900",
+    info: "./unas-gel-permanente",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Uñas Gel Tradicional",
+    duration: "45 min",
+    price: "$30.900",
+    info: "./unas-gel-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Uñas Acrílicas Permanentes",
+    duration: "45 min",
+    price: "$36.900",
+    info: "./unas-acrilicas-permanentes",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Uñas Acrílicas Permanentes con Diseños",
+    duration: "45 min",
+    price: "$42.900",
+    info: "./unas-acrilicas-permanentes-con-disenos",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Uñas Acrílicas Tradicional",
+    duration: "45 min",
+    price: "$30.900",
+    info: "./unas-acrilicas-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Mantención de Uñas Acrílicas",
+    duration: "45 min",
+    price: "$28.900",
+    info: "./mantencion-de-unas-acrilicas",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Retiro de Uñas Acrílicas",
+    duration: "45 min",
+    price: "$10.900",
+    info: "./retiro-de-unas-acrilicas",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,109 +76,18 @@ const options = {
       <Header title="Uñas de gel o acrílicas" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Gel Tradicional"
-          duration="45 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Gel Permanentes con Diseño"
-          duration="45 min"
-          price="$42.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de Uñas Gel"
-          duration="45 min"
-          price="$10.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de Uñas Gel + Esmaltado Tradicional"
-          duration="45 min"
-          price="$22.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de Uñas Gel + Esmaltado Permanente"
-          duration="45 min"
-          price="$22.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Acrilicas Tradicional"
-          duration="45 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Acrílicas Permanente"
-          duration="45 min"
-          price="$36.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Acrílicas Permanentes con diseños"
-          duration="45 min"
-          price="$42.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Uñas Gel Permanente"
-          duration="45 min"
-          price="$36.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Mantención de Acrilicas"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de uñas acrílicas"
-          duration="45 min"
-          price="$10.900"
-          info="#"
-          booking="#"
-        /><ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de uñas acrílicas + Esmaltado Permanente"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de uñas acrílicas + Esmaltado Tradicional"
-          duration="45 min"
-          price="$22.900"
-          info="#"
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
 
       <Booking />

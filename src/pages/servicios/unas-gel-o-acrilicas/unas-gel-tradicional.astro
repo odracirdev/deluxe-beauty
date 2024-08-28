@@ -1,0 +1,176 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Uñas Gel Tradicional - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Uñas Gel Tradicional"
+    duration="45 min"
+    price="$30.900"
+  >
+    <h2>¿Qué son las Uñas Gel Tradicional?</h2>
+    <p>
+      Es una técnica en la que se utiliza gel para construir extensiones sobre
+      las uñas naturales. A diferencia de los sistemas de acrílico, el gel
+      tradicional se aplica en capas y se cura bajo una lámpara UV o LED para
+      endurecerse, proporcionando una solución duradera y flexible para lograr
+      uñas largas y bien formadas.
+    </p>
+    <h2>Proceso de Aplicación de Uñas Gel Tradicional</h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas
+        <ul>
+          <li>
+            <strong>Limpieza y Desmaquillado:</strong> Se quita el esmalte anterior
+            y se limpia la superficie de las uñas.
+          </li>
+          <li>
+            <strong>Corte y Forma:</strong>
+            Las uñas naturales se cortan y se les da forma. Se preparan las cutículas
+            y se realiza un lijado suave para mejorar la adhesión del gel.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación del Gel de Extensión
+        <ul>
+          <li>
+            <strong>Capa Base:</strong> Se aplica una capa base de gel sobre la uña
+            natural y se cura bajo una lámpara UV o LED. Esta capa ayuda a que el
+            gel de extensión se adhiera adecuadamente.
+          </li>
+          <li>
+            <strong>Construcción de la Extensión:</strong>
+            <ul>
+              <li>
+                <strong>Plantillas o Moldes:</strong> Se utilizan plantillas o moldes
+                para definir la longitud y forma deseadas para la extensión. Estas
+                plantillas pueden ser adhesivas o de tipo molde.
+              </li>
+              <li>
+                <strong>Aplicación del Gel:</strong> Se aplica gel sobre las plantillas
+                o moldes. El gel se moldea y se da forma utilizando pinceles especializados.
+                A menudo se utilizan capas finas de gel para construir gradualmente
+                la extensión.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Curado:</strong>
+            Cada capa de gel se cura bajo una lámpara UV o LED para endurecerse y
+            fijarse correctamente. Este proceso se repite para cada capa aplicada.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Formado y Diseño
+        <ul>
+          <li>
+            <strong>Lijado y Modelado:</strong> Una vez curado el gel, se retiran
+            las plantillas o moldes y se lija la extensión para darle la forma deseada.
+            Este paso asegura que las extensiones se mezclen suavemente con las uñas
+            naturales y tengan un acabado uniforme.
+          </li>
+          <li>
+            <strong>Aplicación de Color y Diseño:</strong> Se pueden aplicar capas
+            de esmalte de gel, decoraciones o diseños artísticos según las preferencias.
+            Cada capa de color también se cura bajo la lámpara UV/LED.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Capa Superior
+        <ul>
+          <li>
+            <strong>Aplicación de Top Coat:</strong>
+            Se aplica una capa superior de gel (top coat) para sellar el diseño y
+            proporcionar un acabado brillante y duradero. Esta capa también se cura
+            bajo la lámpara UV/LED.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            <strong>Limpieza de Residuos:</strong>
+            Se limpia cualquier residuo pegajoso con un limpiador específico para
+            gel para dejar las uñas con un acabado perfecto.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Ventajas de las Uñas de Gel Tradicionales de Extensión</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> Las extensiones de gel suelen durar de 2 a
+        4 semanas sin desconchamientos ni pérdida de brillo.
+      </li>
+      <li>
+        <strong>Flexibilidad y Resistencia:</strong> El gel ofrece una mayor flexibilidad
+        en comparación con el acrílico, reduciendo el riesgo de que se quiebren o
+        rompan las extensiones.
+      </li>
+      <li>
+        <strong>Aspecto Natural:</strong> Las extensiones de gel suelen verse más
+        naturales y brillantes en comparación con otros tipos de extensiones.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El gel se seca inmediatamente bajo la lámpara,
+        evitando el riesgo de que se estropee durante el secado.
+      </li>
+    </ul>
+    <h2>Cuidados Posteriores de las Uñas de Gel</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Aplica aceites para cutículas y cremas hidratantes
+        regularmente para mantener la piel y las cutículas saludables.
+      </li>
+      <li>
+        <strong>Mantenimiento Regular:</strong> Visita a un profesional para rellenar
+        las áreas de crecimiento y mantener las extensiones en buen estado.
+      </li>
+      <li>
+        <strong>Protección:</strong> Evita impactos fuertes y exposición excesiva
+        a productos químicos para proteger las extensiones y las uñas naturales.
+      </li>
+      <li>
+        <strong>Retiro Seguro:</strong> Para retirar las extensiones de gel, usa
+        productos específicos para disolver el gel y sigue un proceso adecuado para
+        evitar dañar las uñas naturales.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

@@ -1,0 +1,113 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Retiro de Uñas Acrílicas - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Retiro de Uñas Acrílicas"
+    duration="45 min"
+    price="$10.900"
+  >
+    <h2>¿Qué es el Retiro de Uñas Acrílicas?</h2>
+    <p>
+      Es un proceso que requiere cuidado para asegurar que tus uñas naturales
+      permanezcan saludables y sin daños.
+    </p>
+    <h2>Proceso del Retiro de Uñas Acrílicas</h2>
+    <ol>
+      <li class="process-title">
+        Preparación
+        <ul>
+          <li>
+            <strong>Lijado Suave:</strong> Con una lima de grano fino, frota suavemente
+            la superficie del esmalte de gel para romper la capa superior y permitir
+            que el removedor penetre mejor.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación del Removedor
+        <ul>
+          <li>
+            <strong>Empapar Algodón:</strong> Se empapa un algodón en removedor de
+            esmalte para gel que contenga acetona.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Cubrir con Papel Aluminio
+        <ul>
+          <li>
+            <strong>Enrollar con Papel Aluminio:</strong> Se envuelve cada dedo con
+            papel aluminio para mantener el algodón en su lugar y evitar que el removedor
+            se evapore.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Tiempo de Espera
+        <ul>
+          <li>
+            <strong>Dejar Actuar:</strong> Dejando actuar el removedor durante 10-15
+            minutos. El tiempo puede variar según la marca del esmalte y el removedor
+            utilizado.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Retiro del Esmalte
+        <ul>
+          <li>
+            <strong>Retiro el Algodón y Acrilico:</strong> Se retira el papel aluminio
+            y el algodón. Usando un palito de naranjo para retirar suavemente el
+            esmalte acrilico.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Limpieza y Cuidado
+        <ul>
+          <li>
+            <strong>Limpiar Restos:</strong> Se limpia cualquier residuo de esmalte
+            con un limpiador de gel si es necesario.
+          </li>
+          <li>
+            <strong>Hidratar:</strong> Aplicacion de aceite para cutículas y una
+            crema hidratante para nutrir las uñas y la piel circundante.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

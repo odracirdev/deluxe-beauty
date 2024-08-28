@@ -1,0 +1,134 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Pedicure Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Pedicure Permanente"
+    duration="45 min"
+    price="$22.900"
+  >
+    <h2>¿Qué es el Pedicure Permanente?</h2>
+    <p>
+      Es una técnica que consiste en mantener tus uñas de los pies en excelente
+      estado durante varias semanas sin necesidad de retoques constantes.
+    </p>
+    <h2>Proceso de Aplicación del Pedicure Permanente</h2>
+    <ol>
+      <li class="process-title">
+        Preparación
+        <ul>
+          <li>
+            <strong>Limpieza y Exfoliación:</strong> Se comienza con una limpieza
+            de los pies, eliminando cualquier resto de esmalte anterior y exfoliando
+            la piel muerta.
+          </li>
+          <li>
+            <strong>Corte y Forma:</strong> Las uñas se cortan y se les da forma
+            adecuada. También se empujan las cutículas y se retira cualquier exceso
+            de piel.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación de Esmalte
+        <ul>
+          <li>
+            <strong>Capa Base:</strong>
+            Se aplica una capa base que ayuda a que el esmalte se adhiera bien.
+          </li>
+          <li>
+            <strong>Esmalte de Gel:</strong> Se aplica el esmalte de gel en capas
+            finas, curando cada capa bajo una lámpara UV o LED. Esto asegura que
+            el esmalte se seque completamente y se adhiera de manera duradera.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Capa Superior
+        <ul>
+          <li>
+            <strong>Sellado:</strong>
+            Se aplica una capa superior de gel que se cura bajo la lámpara. Esta
+            capa da un acabado brillante y protege el color.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            <strong>Limpieza:</strong> Se limpia cualquier residuo pegajoso con un
+            limpiador especial para dejar las uñas y la piel alrededor en perfecto
+            estado.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Ventajas del Pedicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> Puede durar entre 2 y 4 semanas sin desconchamientos,
+        ideal para quienes buscan un acabado duradero.
+      </li>
+      <li>
+        <strong>Brillo:</strong> El esmalte mantiene un acabado brillante y atractivo
+        durante el tiempo que lleva puesto.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El esmalte se seca instantáneamente bajo
+        la lámpara, evitando el riesgo de que se estropee.
+      </li>
+    </ul>
+    <h2>Cuidados Posteriores del Pedicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Es importante mantener la piel de los pies
+        hidratada. Usa cremas para pies y aceites para cutículas para mantener todo
+        en buen estado.
+      </li>
+      <li>
+        <strong>Quitar el esmalte correctamente:</strong> Utiliza un removedor de
+        gel especializado y sigue las instrucciones para evitar dañar tus uñas o
+        piel.
+      </li>
+    </ul>
+    <p>
+      <em
+        >Recuerda que es importante cuidar tus pies y uñas después del
+        tratamiento para mantener los resultados.</em
+      >
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

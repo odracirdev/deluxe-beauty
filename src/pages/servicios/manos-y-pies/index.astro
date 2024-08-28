@@ -9,6 +9,172 @@ const options = {
   title: "Manos y Pies - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Tradicional",
+    duration: "45 min",
+    price: "$14.900",
+    info: "./manicure-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente",
+    duration: "45 min",
+    price: "$20.900",
+    info: "./manicure-permanente",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente Pro (con diseños)",
+    duration: "45 min",
+    price: "$26.900",
+    info: "./manicure-permanente-pro-con-disenos",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Masculina",
+    duration: "45 min",
+    price: "$12.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Tradicional Niña",
+    duration: "45 min",
+    price: "$10.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Retiro de Esmalte Permanente",
+    duration: "45 min",
+    price: "$3.000",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Pedicure Tradicional",
+    duration: "45 min",
+    price: "$16.900",
+    info: "./pedicure-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Pedicure Permanente",
+    duration: "45 min",
+    price: "$22.900",
+    info: "./pedicure-permanente",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Pedicure Hombre",
+    duration: "45 min",
+    price: "$15.900",
+    info: "./pedicure-hombre",
+    booking: "#",
+  },
+];
+
+const servicesPack = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Rusa + Esmaltado Permanente",
+    duration: "45 min",
+    price: "$32.900",
+    info: "./manicure-rusa-permanente",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Rusa + Esmaltado Tradicional",
+    duration: "45 min",
+    price: "$28.900",
+    info: "./manicure-rusa-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Tratamiento IBX + Manicure Tradicional",
+    duration: "45 min",
+    price: "$20.900",
+    info: "./tratamiento-ibx-tradicional",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Tratamiento IBX + Manicure Permanente",
+    duration: "45 min",
+    price: "$25.900",
+    info: "./tratamiento-ibx-permanente",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Kapping Baño de Gel o Acrílico + Esmaltado Permanente",
+    duration: "45 min",
+    price: "$30.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Tradicional + Pedicure Tradicional",
+    duration: "45 min",
+    price: "$26.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente + Manicure Tradicional",
+    duration: "45 min",
+    price: "$32.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente + Pedicure Permanente",
+    duration: "45 min",
+    price: "$36.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente + Pedicure Tradicional",
+    duration: "45 min",
+    price: "$32.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Tradicional + Pedicure Permanente",
+    duration: "45 min",
+    price: "$32.900",
+    info: "#",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Manicure Permanente + Manicure Tradicional Niña",
+    duration: "45 min",
+    price: "$28.900",
+    info: "#",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,76 +183,18 @@ const options = {
       <Header title="Manos y pies" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Tradicional"
-          duration="45 min"
-          price="$14.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente"
-          duration="45 min"
-          price="$20.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente Pro (con diseños)"
-          duration="45 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Masculina"
-          duration="45 min"
-          price="$12.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Tradicional Niña"
-          duration="45 min"
-          price="$10.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retiro de Esmalte Permanente"
-          duration="45 min"
-          price="$3000"
-          info="#"
-          booking="#"
-        /><ServiceCard
-          img="https://placehold.co/600x400"
-          name="Pedicure Tradicional"
-          duration="45 min"
-          price="$16.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Pedicure Permanente"
-          duration="45 min"
-          price="$22.900"
-          info="#"
-          booking="#"
-        /><ServiceCard
-          img="https://placehold.co/600x400"
-          name="Pedicure Hombre"
-          duration="45 min"
-          price="$15.900"
-          info='#"'
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 
@@ -94,93 +202,18 @@ const options = {
       <Header title="Packs para manos y pies" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Rusa + Esmaltado Permanente"
-          duration="45 min"
-          price="$32.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Rusa + Esmaltado Tradicional"
-          duration="45 min"
-          price="$28.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Tratamiento IBX + Manicure Tradicional"
-          duration="45 min"
-          price="$20.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Tratamiento IBX + Manicure Permanente"
-          duration="45 min"
-          price="$25.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Kapping Baño de Gel o Acrílico + Esmaltado Permanente"
-          duration="45 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Tradicional + Pedicure Tradicional"
-          duration="45 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente + Manicure Tradicional"
-          duration="45 min"
-          price="$32.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente + Pedicure Permanente"
-          duration="45 min"
-          price="$36.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente + Pedicure Tradicional"
-          duration="45 min"
-          price="$32.900"
-          info="#"
-          booking="#"
-        /><ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Tradicional + Pedicure Permanente"
-          duration="45 min"
-          price="$32.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Manicure Permanente + Manicure Tradicional Niña"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
+        {
+          servicesPack.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 

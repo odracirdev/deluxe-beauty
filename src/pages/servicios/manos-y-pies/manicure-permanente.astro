@@ -1,0 +1,118 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Manicure Permanente"
+    duration="45 min"
+    price="$20.900"
+  >
+    <h2>¿Qué es el Manicure Permanente?</h2>
+    <p>
+      También conocido como esmalte de gel o gel polish, es una técnica popular
+      para tener unas uñas impecables durante semanas sin necesidad de retoques
+      frecuentes.
+    </p>
+    <h2>Proceso de Aplicación del Manicure Permanente</h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas
+        <ul>
+          <li>
+            Las uñas se liman, se les da forma y se empuja la cutícula para
+            prepararlas para el esmalte.
+          </li>
+          <li>
+            Se aplica una capa base que ayuda a que el esmalte se adhiera mejor.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación de Esmalte
+        <ul>
+          <li>
+            Se aplica el esmalte en capas finas y cada capa se cura bajo una
+            lámpara UV o LED. La luz dura entre 30 segundos y 2 minutos
+            dependiendo del tipo de lámpara y el esmalte.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Capa Superior
+        <ul>
+          <li>
+            Se aplica una capa final de esmalte que también se cura con la
+            lámpara para sellar el color y darle un acabado brillante.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            Se limpia cualquier residuo pegajoso con un limpiador especial para
+            dejar las uñas lisas y brillantes.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Ventajas del Manicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> Puede durar de 2 a 4 semanas sin desconchamientos.
+      </li>
+      <li>
+        <strong>Brillo:</strong> Mantiene un acabado brillante durante todo el tiempo
+        que dura el esmalte.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El esmalte se seca rápidamente bajo la lámpara,
+        evitando el riesgo de que se estropee mientras está seco.
+      </li>
+    </ul>
+    <h2>Cuidados Posteriores del Manicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Aplica aceite para cutículas o crema hidratante
+        regularmente para mantener las uñas y la piel alrededor en buen estado.
+      </li>
+      <li>
+        <strong>Quitar el esmalte correctamente:</strong> No intentes quitar el esmalte
+        de gel con fuerza. Utiliza un removedor especializado y sigue las instrucciones
+        para evitar dañar tus uñas.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

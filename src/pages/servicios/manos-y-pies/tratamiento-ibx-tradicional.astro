@@ -1,0 +1,137 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Tratamiento IBX Tradicional - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Tratamiento IBX + Manicure Tradicional"
+    duration="45 min"
+    price="$20.900"
+  >
+    <h2>¿Qué el Tratamiento IBX?</h2>
+    <p>
+      El IBX (In-Between-Experience) es un sistema de tratamiento para uñas que
+      se aplica en el espacio entre la capa natural de la uña y el esmalte. Está
+      diseñado para:
+    </p>
+    <ul>
+      <li>
+        <strong>Fortalecer:</strong> Reforzar la estructura interna de la uña para
+        prevenir daños futuros.
+      </li>
+      <li>
+        <strong>Reparar:</strong> Restaurar y sanar las uñas dañadas por el uso excesivo
+        de productos, trauma o condiciones ambientales.
+      </li>
+      <li>
+        <strong>Proteger:</strong> Crear una barrera protectora para evitar que las
+        uñas se debiliten o se rompan.
+      </li>
+    </ul>
+    <h2>Proceso de Aplicación del Tratamiento IBX</h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas
+        <ul>
+          <li>
+            Las uñas se limpian y se preparan para el tratamiento. Se elimina
+            cualquier esmalte anterior y se realiza una ligera limadura para
+            mejorar la adhesión.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación del IBX
+        <ul>
+          <li>
+            <strong>Primera Fase:</strong> Se aplica una capa de IBX Repair, que
+            penetra en la estructura de la uña para reparar y reforzar la capa interna.
+          </li>
+          <li>
+            <strong>Segunda Fase:</strong> Se aplica IBX Boost, que se activa con
+            una fuente de calor (como una lámpara UV o LED) para ayudar a que el
+            producto se integre aún más en la uña.
+          </li>
+          <li>
+            <strong>Sellado:</strong> Una vez aplicado, el IBX se deja secar completamente
+            y se sella con una capa final.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            Después de que el tratamiento se ha completado, las uñas están
+            listas para aplicar esmalte de gel, esmalte tradicional, o
+            simplemente para dejarse al natural.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Beneficios del Tratamiento IBX</h2>
+    <ul>
+      <li>
+        <strong>Fortalece las Uñas:</strong> Ayuda a fortalecer las uñas debilitadas
+        o dañadas.
+      </li>
+      <li>
+        <strong>Previene Daños:</strong> Reduce la posibilidad de roturas y quiebras
+        al reforzar la estructura de la uña.
+      </li>
+      <li>
+        <strong>Mejora la Salud de las Uñas:</strong> Promueve una mejor salud de
+        las uñas a largo plazo.
+      </li>
+      <li>
+        <strong>Compatibilidad con Esmaltes:</strong> Puede ser utilizado antes de
+        aplicar esmalte de gel o esmalte tradicional, lo que ayuda a mantener las
+        uñas fuertes y saludables incluso con el uso de productos de esmalte.
+      </li>
+    </ul>
+    <h2>Consideraciones</h2>
+    <ul>
+      <li>
+        <strong>Repetición:</strong> Los tratamientos IBX suelen recomendarse en
+        sesiones múltiples, dependiendo del estado inicial de las uñas y los objetivos
+        de fortalecimiento.
+      </li>
+      <li>
+        <strong>No Sustituye el Cuidado General:</strong> Aunque el IBX es efectivo,
+        es importante combinarlo con prácticas generales de cuidado de uñas para
+        mantener la salud general de tus manos y pies.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

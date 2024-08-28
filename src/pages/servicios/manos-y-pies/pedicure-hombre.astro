@@ -1,0 +1,150 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Pedicure para Hombres - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Pedicure para Hombres"
+    duration="45 min"
+    price="$15.900"
+  >
+    <h2>¿Qué es el Pedicure para Hombres?</h2>
+    <p>
+      es un servicio de cuidado de pies diseñado específicamente para abordar
+      las preocupaciones comunes que pueden tener los hombres, como
+      callosidades, uñas encarnadas, y piel seca. El tratamiento se realiza de
+      manera que se adapte a la estética y preferencias masculinas, enfocándose
+      en la comodidad y el mantenimiento de los pies.
+    </p>
+    <h2>Proceso de Aplicación del Pedicure para Hombres</h2>
+    <ol>
+      <li class="process-title">
+        Preparación
+        <ul>
+          <li>
+            <strong>Desmaquillado:</strong> Se retira cualquier esmalte previo si
+            lo hubiera.
+          </li>
+          <li>
+            <strong>Remojo:</strong> Los pies se sumergen en un baño de agua tibia
+            con sales o productos especiales que ayudan a suavizar la piel y las
+            cutículas. Este paso también puede relajar los pies después de un día
+            largo.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Cuidado de las Uñas y Cutículas
+        <ul>
+          <li>
+            <strong>Corte y Forma:</strong>Se cortan las uñas a la longitud
+            deseada y se les da forma con un cortauñas y una lima. Las uñas
+            deben cortarse rectas para prevenir encarnaduras.
+          </li>
+          <li>
+            <strong>Cuidado de Cutículas:</strong> Se empujan y recortan las cutículas
+            si es necesario, usando herramientas específicas para evitar dañar la
+            piel circundante.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Eliminación de Callosidades y Piel Muerta
+        <ul>
+          <li>
+            <strong>Exfoliación:</strong>Se utilizan piedras pómez, limas o
+            raspadores para eliminar callosidades y piel dura en los talones y
+            la planta del pie.
+          </li>
+          <li>
+            <strong>Exfoliante:</strong> Se aplica un exfoliante suave para eliminar
+            las células muertas de la piel y dejar los pies suaves.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Hidratación
+        <ul>
+          <li>
+            <strong>Aplicación de Crema:</strong> Se aplica una crema hidratante
+            o aceite para cutículas para suavizar y nutrir la piel. Esto ayuda a
+            mantener los pies hidratados y previene la sequedad y las grietas.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Masaje (Opcional)
+        <ul>
+          <li>
+            <strong>Masaje de Pies:</strong> Algunos servicios de pedicure incluyen
+            un masaje relajante para mejorar la circulación y aliviar la tensión
+            en los pies y las piernas.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Secado y Acabado
+        <ul>
+          <li>
+            <strong>Secado:</strong> Los pies se secan completamente para evitar
+            cualquier riesgo de hongos.
+          </li>
+          <li>
+            <strong>Esmalte (Opcional):</strong> Aunque el esmalte no es común para
+            hombres, algunos optan por aplicar una capa de brillo para un acabado
+            limpio y saludable.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h2>Ventajas del Pedicure para Hombres</h2>
+    <ul>
+      <li>
+        <strong>Salud y Bienestar:</strong> Ayuda a prevenir problemas comunes en
+        los pies como callosidades, uñas encarnadas, y hongos. También contribuye
+        a una mejor higiene general.
+      </li>
+      <li>
+        <strong>Comodidad:</strong> El tratamiento puede aliviar molestias causadas
+        por el desgaste diario, mejorar la circulación y proporcionar una sensación
+        de frescura y confort.
+      </li>
+      <li>
+        <strong>Estética:</strong> Mantiene los pies bien cuidados y presentables,
+        lo que puede ser especialmente importante para aquellos que usan sandalias
+        o muestran los pies en actividades recreativas.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

@@ -12,10 +12,16 @@
   "dependencies": {
     "astro": "^4.14.2",
     "embla-carousel": "^8.1.8",
-    "embla-carousel-autoplay": "^8.1.8"
+    "embla-carousel-autoplay": "^8.1.8",
+    "eslint-plugin-astro": "^1.2.3"
   },
   "engines": {
     "node": "^20.14.0",
     "pnpm": "^9.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0"
   }
 }

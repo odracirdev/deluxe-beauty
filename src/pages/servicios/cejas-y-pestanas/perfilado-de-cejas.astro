@@ -1,0 +1,72 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Perfilado de Cejas - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Perfilado de Cejas"
+    duration="30 min"
+    price="$14.900"
+  >
+    <h2>¿Qué es el Perfilado de Cejas?</h2>
+    <p>
+      Es una técnica de diseño y depilación que se utiliza para definir la forma
+      y el contorno de las cejas. El objetivo es lograr una forma que
+      complemente las características faciales, como los ojos y la estructura
+      ósea, y que realce la belleza natural del rostro.
+    </p>
+
+    <h2>Ventajas del Perfilado de Cejas</h2>
+    <ul>
+      <li>
+        <strong>Precisión:</strong> Permite un control detallado y una forma precisa.
+      </li>
+      <li>
+        <strong>Duración:</strong> Los resultados suelen durar varias semanas.
+      </li>
+    </ul>
+
+    <h2>Consejos Adicionales</h2>
+    <ul>
+      <li>
+        <strong>Frecuencia:</strong> Realiza el perfilado de cejas cada 4-6 semanas
+        para mantener la forma.
+      </li>
+      <li>
+        <strong>Forma Natural:</strong> Mantén la forma natural de tus cejas en mente
+        para evitar un aspecto artificial.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

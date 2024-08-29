@@ -9,6 +9,28 @@ const options = {
   title: "Cejas y Pestañas - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Perfilado de Cejas",
+    duration: "30 min",
+    price: "$14.900",
+    info: "./perfilado-de-cejas",
+    booking: "#",
+  },
+];
+
+const servicesPack = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Perfilado de Cejas + Tinte",
+    duration: "45 min",
+    price: "$22.900",
+    info: "./perfilado-de-cejas-con-tinte",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,46 +39,18 @@ const options = {
       <Header title="Cejas y Pestañas" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Perfilado de Cejas"
-          duration="45 min"
-          price="$14.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Planchado de Cejas"
-          duration="45 min"
-          price="$18.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Laminado de Cejas"
-          duration="45 min"
-          price="$18.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Lifting de pestañas"
-          duration="45 min"
-          price="$20.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Ondulado de pestañas"
-          duration="45 min"
-          price="$20.900"
-          info="#"
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 
@@ -64,54 +58,18 @@ const options = {
       <Header title="Packs para cejas y pestañas" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Perfilado de Cejas + Tinte"
-          duration="45 min"
-          price="$22.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Planchado de Cejas + Perfilado"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Laminado de Cejas + Perfilado"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Lifting + Tinte de Pestañas"
-          duration="45 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Ondulado + Tinte de Pestañas"
-          duration="45 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Lifting de Pestañas+ Perfilado"
-          duration="45 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
+        {
+          servicesPack.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 

@@ -9,6 +9,81 @@ const options = {
   title: "Peluquería - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Balayage",
+    duration: "120 min",
+    price: "$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)",
+    info: "./balayage",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Babylights",
+    duration: "40 min",
+    price: "$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)",
+    info: "./babylights",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Tintura de Cabello",
+    duration: "60 min",
+    price: "$38.900 (S), $45.900 (M), $50.900 (L), $60.900 (XL)",
+    info: "./tintura-de-cabello",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Baño de Color",
+    duration: "60 min",
+    price: "$32.900 (S), $37.900 (M), $47.900 (L), $52.900 (XL)",
+    info: "./bano-de-color",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Visos o Mechas con Papel",
+    duration: "120 min",
+    price: "$38.900 (S), $48.900 (M), $58.900 (L), $68.900 (XL)",
+    info: "./visos-o-mechas-con-papel",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Retoque de Raíz",
+    duration: "120 min",
+    price: "$28.900",
+    info: "./retoque-de-raiz",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Brushing",
+    duration: "40 min",
+    price: "$20.900",
+    info: "./brushing",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Nutritivo",
+    duration: "60 min",
+    price: "$18.900 (S), $18.900 (M), $24.900 (L), $24.900 (XL)",
+    info: "./masaje-nutritivo",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Alisado de Keratina",
+    duration: "90 min",
+    price: "$48.900 (S), $58.900 (M), $78.900 (L), $88.900 (XL)",
+    info: "./alisado-de-keratina",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,133 +92,18 @@ const options = {
       <Header title="Peluquería" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Corte de Cabello Mujer"
-          duration="45 min"
-          price="$18.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Corte de Cabello Hombre"
-          duration="45 min"
-          price="$15.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Brushing"
-          duration="45 min"
-          price="$20.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Balayage"
-          duration="45 min"
-          price="$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Babylights"
-          duration="45 min"
-          price="$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Tintura de Cabello"
-          duration="45 min"
-          price="$38.900 (S), $45.900 (M), $50.900 (L), $60.900 (XL)"
-          info="#"
-          booking="#"
-        /><ServiceCard
-          img="https://placehold.co/600x400"
-          name="Baño de Color"
-          duration="45 min"
-          price="$32.900 (S), $37.900 (M), $47.900 (L), $52.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Matización o Baño de Color"
-          duration="45 min"
-          price="$32.900 (S), $38.900 (M), $48.900 (L), $54.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Visos o mechas con papel"
-          duration="45 min"
-          price="$38.900 (S), $48.900 (M), $58.900 (L), $68.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retoque de Raíz"
-          duration="45 min"
-          price="$28.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje nutritivo"
-          duration="45 min"
-          price="$18.900 (S), $18.900 (M), $24.900 (L), $24.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Alisado de Keratina"
-          duration="45 min"
-          price="$48.900 (S), $58.900 (M), $78.900 (L), $88.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Matización o Baño de Color"
-          duration="45 min"
-          price="$232.900 (S), $38.900 (M), $48.900 (L), $54.900 (XL)"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Corte de Cabello + Brushing"
-          duration="45 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Balayage + Babylights"
-          duration="45 min"
-          price="$62.900 (S), $72.900 (M), $82.9OO (L), 92.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Retoque de Raíz + Brushing"
-          duration="45 min"
-          price="$32.900"
-          info="#"
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
 
       <Booking />

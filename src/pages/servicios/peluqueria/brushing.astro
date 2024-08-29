@@ -1,0 +1,171 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Brushing - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Brushing"
+    duration="40 min"
+    price="$20.900"
+  >
+    <h2>¿Qué es el Brushing?</h2>
+    <p>
+      Es una técnica utilizada en el estilizado del cabello que involucra el uso
+      de un cepillo para dar forma, volumen y suavidad al cabello. Es un método
+      muy versátil y puede ser utilizado tanto en cabello seco como húmedo para
+      lograr diferentes efectos.
+    </p>
+
+    <h2>Tipos de Brushing</h2>
+    <ol>
+      <li class="process-title">
+        Brushing Clásico
+        <ul>
+          <li>
+            <strong>Objetivo:</strong> Crear un estilo liso y suave, eliminando el
+            frizz y añadiendo brillo.
+          </li>
+          <li>
+            <strong>Método:</strong> Se utiliza un cepillo redondo grande para alisar
+            el cabello mientras se seca con un secador. Es ideal para conseguir un
+            acabado profesional y pulido.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Brushing con Volumen
+        <ul>
+          <li>
+            <strong>Objetivo:</strong> Añadir volumen y cuerpo al cabello, creando
+            un estilo más lleno y voluminoso.
+          </li>
+          <li>
+            <strong>Método:</strong> Se usa un cepillo redondo con cerdas más gruesas
+            y se seca el cabello mientras se enrolla alrededor del cepillo, levantando
+            las raíces para dar más cuerpo.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Brushing con Ondas
+        <ul>
+          <li>
+            <strong>Objetivo:</strong> Crear ondas o rizos suaves en el cabello para
+            un estilo más texturizado.
+          </li>
+          <li>
+            <strong>Método:</strong> Se utiliza un cepillo redondo y se enrolla el
+            cabello alrededor del cepillo mientras se seca, creando ondas y movimiento
+            en el cabello.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Aplicación del Brushing</h2>
+    <ol>
+      <li class="process-title">
+        Preparación del Secador y Cepillo
+        <ul>
+          <li>
+            <strong>Secado del Cabello:</strong> Con un secador de cabello con control
+            de temperatura y velocidad.
+          </li>
+          <li>
+            <strong>Cepillo:</strong> Se escoge un cepillo redondo o de cerdas que
+            se adapte a tu estilo deseado (grande para más volumen, más pequeño para
+            rizos más definidos).
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        División del Cabello
+        <ul>
+          <li>
+            <strong>Secciones:</strong> Se divide el cabello en secciones utilizando
+            clips o pinzas para facilitar la aplicación del brushing.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Secado y Estilizado
+        <ul>
+          <li>
+            <strong>Secado:</strong> Se trabaja en cada sección de cabello, utilizando
+            el secador y el cepillo simultáneamente. Colocando el cepillo cerca de
+            la raíz y secando mientras se enrolla hacia las puntas.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Enfriamiento
+        <ul>
+          <li>
+            Una vez seco, se deja que el cabello se enfríe ligeramente para
+            fijar el estilo y reducir el frizz.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación de Productos Finales
+        <ul>
+          <li>
+            <strong>Fijación y Brillo:</strong> Aplicación de un spray de fijación
+            ligera o un aceite para darle brillo y mantener el estilo en su lugar.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Beneficios del Brushing</h2>
+    <ul>
+      <li>
+        <strong>Añade Volumen:</strong> Ideal para cabellos finos o planos, ya que
+        ayuda a dar cuerpo y plenitud al cabello.
+      </li>
+      <li>
+        <strong>Acabado Suave:</strong> Aporta un acabado liso y suave, eliminando
+        el frizz y dando brillo natural al cabello.
+      </li>
+      <li>
+        <strong>Estilos Variados:</strong> Permite crear diferentes estilos, desde
+        un liso pulido hasta ondas y rizos suaves.
+      </li>
+      <li>
+        <strong>Tiempo de Estilizado:</strong> Proporciona un resultado rápido y
+        eficiente, ideal para un look profesional en menos tiempo.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

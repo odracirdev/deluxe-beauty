@@ -1,0 +1,168 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Balayage - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Balayage"
+    duration="120 min"
+    price="$59.900 (S), $69.900 (M), $89.900 (L), $99.900 (XL)"
+  >
+    <h2>¿Qué es el Balayage?</h2>
+    <p>
+      Es una técnica de coloración en la que se aplica el tinte a mano alzada en
+      secciones específicas del cabello. Esto crea un efecto de decoloración
+      gradual y natural, imitando cómo el sol aclara el cabello. La técnica se
+      diferencia de las mechas tradicionales en que no se usa papel de aluminio
+      ni seccionadores de cabello; en cambio, el color se pinta directamente
+      sobre el cabello.
+    </p>
+    <h2>Proceso de Aplicación del Balayage</h2>
+    <ol>
+      <li class="process-title">
+        Consulta y Evaluación
+        <ul>
+          <li>
+            <strong>Consulta:</strong> El estilista evaluará tu cabello, discutirá
+            el tono deseado y determinará el mejor enfoque para lograr el efecto
+            deseado.
+          </li>
+          <li>
+            <strong>Preparación:</strong> Se protege la piel y se prepara el cabello
+            para la aplicación del color.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación del Color
+        <ul>
+          <li>
+            <strong>Preparación del Color:</strong> Se mezcla el tinte o decolorante
+            en el tono deseado. Aplicación Manual: El color se aplica a mano alzada
+            en las secciones del cabello. El estilista utiliza un pincel para aplicar
+            el producto y crear un efecto de barrido.
+          </li>
+          <li>
+            <strong>Difuminado:</strong> Se difumina el color para evitar líneas
+            de demarcación y lograr una transición suave entre las áreas de color
+            y las áreas naturales.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Procesamiento y Enjuague
+        <ul>
+          <li>
+            <strong>Tiempo de Procesamiento:</strong> El producto se deja actuar
+            durante el tiempo recomendado, dependiendo del tono deseado y la textura
+            del cabello.
+          </li>
+          <li>
+            <strong>Enjuague y Tratamiento:</strong> Se enjuaga el producto y se
+            aplican tratamientos adicionales para acondicionar y nutrir el cabello.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Secado y Estilo
+        <ul>
+          <li>
+            <strong>Secado:</strong> El cabello se seca y se estiliza según el gusto
+            del cliente.
+          </li>
+          <li>
+            <strong>Ajustes Finales:</strong> Se realizan ajustes finales para asegurar
+            que el color esté uniforme y el resultado sea el deseado.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Beneficios del Balayage</h2>
+    <ul>
+      <li>
+        <strong>Aspecto Natural:</strong> Proporciona un efecto decolorado que imita
+        el brillo natural del sol.
+      </li>
+      <li>
+        <strong>Menos Mantenimiento:</strong> ELa raíz crece de manera más natural,
+        lo que reduce la necesidad de retoques frecuentes.
+      </li>
+      <li>
+        <strong>Versatilidad:</strong> Funciona bien en una variedad de tonos de
+        cabello y puede adaptarse a diferentes estilos y preferencias.
+      </li>
+    </ul>
+
+    <h2>Cuidados Posteriores al Balayage</h2>
+    <ol>
+      <li class="process-title">
+        Uso de Productos Especiales
+        <ul>
+          <li>
+            <strong>Champús y Acondicionadores para Cabello Colorado:</strong> Utiliza
+            productos diseñados para cabello teñido para mantener el color y la salud
+            del cabello.
+          </li>
+          <li>
+            <strong>Tratamientos Hidratantes:</strong> Aplica tratamientos acondicionadores
+            y mascarillas para mantener el cabello hidratado y suave.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Protección del Color
+        <ul>
+          <li>
+            <strong>Protección Solar:</strong> Protege tu cabello del sol para evitar
+            que el color se desvanezca prematuramente.
+          </li>
+          <li>
+            <strong>Evita el Calor Excesivo:</strong> Usa herramientas de calor con
+            moderación y aplica protectores térmicos para minimizar el daño.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Mantenimiento Regular
+        <ul>
+          <li>
+            <strong>Citas de Retiro:</strong> Programa visitas regulares al estilista
+            para mantener el color y realizar ajustes según sea necesario.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

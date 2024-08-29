@@ -1,0 +1,138 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Visos o Mechas con Papel - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Visos o Mechas con Papel"
+    duration="120 min"
+    price="$38.900 (S), $48.900 (M), $58.900 (L), $68.900 (XL)"
+  >
+    <h2>¿Qué son los Visos o Mechas con Papel?</h2>
+    <p>
+      Es una técnica específica para aplicar mechas en el cabello usando papel
+      de aluminio para envolver las secciones donde se aplicará el color. Este
+      método permite un control más preciso sobre el proceso de decoloración y
+      el color final.
+    </p>
+    <h2>Proceso de Mechas con Papel de Aluminio</h2>
+    <ol>
+      <li class="process-title">
+        Preparación del Cabello
+        <ul>
+          <li>
+            <strong>Limpieza:</strong> Lavado del cabello si es necesario y secado
+            ligeramente.
+          </li>
+          <li>
+            <strong>Protección:</strong> LAplicación de una crema protectora en la
+            línea del cabello.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Preparación del Producto
+        <ul>
+          <li>
+            <strong>Mezcla del Color:</strong> Mezclando el tinte o decolorante con
+            el revelador siguiendo las instrucciones del fabricante.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Selección y Aplicación
+        <ul>
+          <li>
+            <strong>División del Cabello:</strong> Se divide el cabello en secciones
+            usando clips para mantener las secciones separadas.
+          </li>
+          <li>
+            <strong>Selección de Mechones:</strong> Selección de los mechones donde
+            se aplica el tinte. Los mechones suelen ser más finos para un efecto
+            más definido.
+          </li>
+          <li>
+            <strong>Aplicación del Color:</strong> Aplicación del tinte en los mechones
+            seleccionados. Luego, envuelve cada mechón con un trozo de papel de aluminio
+            para mantener el producto en su lugar y concentrar el calor.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Procesamiento y Enjuague
+        <ul>
+          <li>
+            <strong>Tiempo de Procesamiento:</strong> Dejando el tinte en el cabello
+            durante el tiempo recomendado, controlando el proceso para evitar sobreexposición.
+          </li>
+          <li>
+            <strong>Retiro del Papel de Aluminio:</strong> Retirando el papel de
+            aluminio cuidadosamente y se enjuaga el cabello con agua tibia.
+          </li>
+          <li>
+            <strong>Champú y Acondicionador:</strong> Lavado del cabello con un champú
+            suave y aplicacion acondicionador específico para cabello teñido.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Secado y Estilo
+        <ul>
+          <li>
+            <strong>Secado:</strong> Usando una toalla para eliminar el exceso de
+            agua y con un secador si es necesario.
+          </li>
+          <li>
+            <strong>Estilizado:</strong> Se estiliza el cabello según tus preferencias.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Comparación y Elección</h2>
+    <ul>
+      <li>
+        <strong>Visos con Mechas:</strong> Ofrecen un aspecto más natural y gradual.
+        Es ideal para quienes buscan un cambio sutil y luminoso sin contrastes demasiado
+        marcados.
+      </li>
+      <li>
+        <strong>Mechas con Papel de Aluminio:</strong> Proporcionan un contraste
+        más definido y controlado. Es útil para resultados precisos y personalizados,
+        especialmente si buscas mechas más intensas o una cobertura específica de
+        canas.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

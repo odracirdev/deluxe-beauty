@@ -1,0 +1,56 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Maquillaje de Noche"
+    duration="60 min"
+    price="$36.900"
+  >
+    <h2>¿Qué es el Maquillaje de Noche?</h2>
+    <p>
+      Tiende a ser más dramático y sofisticado en comparación con el maquillaje
+      de día. Ideal para eventos especiales, cenas y salidas nocturnas, el
+      maquillaje de noche suele incluir colores más intensos, acabados más
+      luminosos y técnicas que realzan la mirada y los labios para un look más
+      impactante.
+    </p>
+
+    <p>
+      El maquillaje de noche se trata de destacar y realzar tus características
+      para un look impactante y sofisticado.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

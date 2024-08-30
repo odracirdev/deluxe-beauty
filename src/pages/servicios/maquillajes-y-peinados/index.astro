@@ -9,6 +9,33 @@ const options = {
   title: "Maquillaje y Peinados - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Maquillaje de Día",
+    duration: "60 min",
+    price: "$36.900",
+    info: "./maquillaje-de-dia",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Maquillaje de Noche",
+    duration: "80 min",
+    price: "$40.900",
+    info: "./maquillaje-de-noche",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Peinados",
+    duration: "60 min",
+    price: "$30.900",
+    info: "./peinados",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,38 +44,18 @@ const options = {
       <Header title="Maquillaje y Peinados" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Maquillaje de Día"
-          duration="60 min"
-          price="$36.900"
-          info='#"'
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Maquillaje de Noche"
-          duration="60 min"
-          price="$40.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Peinado"
-          duration="9 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Maquillaje + Peinado"
-          duration="90 min"
-          price="$64.900"
-          info='#"'
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 

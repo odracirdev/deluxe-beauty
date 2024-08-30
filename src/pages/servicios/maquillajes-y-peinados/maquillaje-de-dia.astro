@@ -1,0 +1,72 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Maquillaje de Día"
+    duration="60 min"
+    price="$36.900"
+  >
+    <h2>¿Qué es el Maquillaje de Día?</h2>
+    <p>
+      Se caracteriza por su enfoque natural y fresco, ideal para el uso diario
+      en el trabajo, reuniones y actividades diurnas. Su objetivo es realzar la
+      belleza natural sin exagerar, proporcionando un acabado luminoso y
+      saludable.
+    </p>
+
+    <h2>Consejos Adicionales</h2>
+    <ul>
+      <li>
+        <strong>Mantén la Simplicidad:</strong> El maquillaje de día debe ser ligero
+        y natural. Evita los colores demasiado intensos y los acabados brillantes.
+      </li>
+      <li>
+        <strong>Adaptabilidad:</strong> Ajusta los tonos y técnicas según tu tipo
+        de piel y preferencias personales para lograr el look que mejor te favorezca.
+      </li>
+      <li>
+        <strong>Hidratación Continua:</strong> Mantén la piel bien hidratada durante
+        el día para un acabado fresco y saludable.
+      </li>
+    </ul>
+
+    <p>
+      El maquillaje de día se trata de realzar tus rasgos naturales y mantener
+      un aspecto fresco y saludable. Sigue estos pasos para lograr un look que
+      te haga sentir segura y lista para enfrentar el día
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

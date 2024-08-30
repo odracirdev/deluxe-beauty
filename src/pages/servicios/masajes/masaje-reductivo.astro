@@ -1,0 +1,170 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Masaje Reductivo - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Masaje Reductivo"
+    duration="60 min"
+    price="$35.900"
+  >
+    <h2>¿Qué es el Masaje Reductivo?</h2>
+    <p>
+      Es una técnica terapéutica especializada en reducir la grasa localizada,
+      mejorar la apariencia de la piel y esculpir la figura. Este tipo de masaje
+      se enfoca en áreas específicas del cuerpo donde se acumula grasa, como el
+      abdomen, los muslos y los glúteos. A menudo se utiliza como complemento a
+      una dieta equilibrada y un programa de ejercicio regular para ayudar a
+      lograr una figura más tonificada y contorneada.
+    </p>
+
+    <h2>Proceso del Masaje Reductivo</h2>
+    <ol>
+      <li class="process-title">
+        Consulta
+        <ul>
+          <li>
+            <strong>Evaluación Inicial:</strong> El terapeuta realiza una evaluación
+            para entender las áreas de preocupación del cliente, sus objetivos y
+            cualquier problema de salud relevante.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Ambiente
+        <ul>
+          <li>
+            <strong>Entorno Relajante:</strong> Se crea un ambiente cómodo con iluminación
+            suave, música tranquila y una temperatura agradable para facilitar la
+            relajación.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Posición del Cliente
+        <ul>
+          <li>
+            <strong>Comodidad:</strong> El cliente se acomoda en una mesa de masaje
+            en una posición que permita al terapeuta acceder a las áreas que se van
+            a tratar.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Técnicas del Masaje Reductivo</h2>
+    <ol>
+      <li class="process-title">
+        Masaje Manual
+        <ul>
+          <li>
+            <strong>Movimientos Circulatorios:</strong> Se utilizan técnicas de amasamiento,
+            fricción y percusión para estimular la circulación sanguínea y linfática.
+            Estos movimientos ayudan a descomponer las células de grasa y a movilizarlas.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Drenaje Linfático
+        <ul>
+          <li>
+            <strong>Eliminación de Toxinas:</strong> Se aplican técnicas de drenaje
+            linfático para ayudar a eliminar líquidos y toxinas acumuladas en las
+            áreas tratadas.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Técnicas de Amasamiento Profundo
+        <ul>
+          <li>
+            <strong>Liberación de Grasa:</strong> Se realiza un amasamiento profundo
+            para romper y movilizar las células de grasa subcutánea.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Aplicación de Productos
+        <ul>
+          <li>
+            <strong>Crema o Gel:</strong> Se pueden aplicar cremas o geles reductores
+            que contienen ingredientes activos para mejorar la eficacia del masaje.
+            Estos productos suelen tener propiedades que ayudan a la reducción de
+            grasa y la mejora de la textura de la piel.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Uso de Herramientas (opcional)
+        <ul>
+          <li>
+            <strong>Rodillos o Ventosas:</strong> En algunos casos, se utilizan herramientas
+            como rodillos de masaje o ventosas para complementar el masaje manual
+            y aumentar su eficacia.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Beneficios del Masaje Reductivo</h2>
+    <ul>
+      <li>
+        <strong>Reducción de Grasa Localizada:</strong> Ayuda a reducir la grasa
+        en áreas específicas del cuerpo mediante la estimulación del metabolismo
+        local y la movilización de las células de grasa.
+      </li>
+      <li>
+        <strong>Mejora de la Circulación:</strong> Estimula la circulación sanguínea
+        y linfática en las áreas tratadas, lo que ayuda a mejorar el drenaje de líquidos
+        y toxinas.
+      </li>
+      <li>
+        <strong>Reducción de Celulitis:</strong> Ayuda a mejorar la apariencia de
+        la piel al romper los depósitos de grasa y mejorar su textura.
+      </li>
+      <li>
+        <strong>Tonificación Muscular:</strong> Contribuye a tonificar y reafirmar
+        los músculos en las áreas tratadas, mejorando la apariencia general del cuerpo.
+      </li>
+      <li>
+        <strong>Mejora del Metabolismo:</strong> Estimula el metabolismo en el área
+        tratada, lo que puede ayudar en el proceso de quema de grasa.
+      </li>
+      <li>
+        <strong>Relajación y Bienestar:</strong> Ofrece una sensación de relajación
+        y bienestar general, reduciendo el estrés y la tensión muscular.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

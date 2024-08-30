@@ -1,0 +1,124 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Masaje de Relajación con Piedras Calientes - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Masaje de Relajación con Piedras Calientes"
+    duration="60 min"
+    price="$34.900"
+  >
+    <h2>¿Qué son los Masajes de Relajación con Piedras Calientes?</h2>
+    <p>
+      Es una técnica terapéutica que utiliza piedras calentadas para
+      proporcionar una experiencia de masaje profunda y relajante. Este tipo de
+      masaje combina el calor de las piedras con técnicas tradicionales de
+      masaje para aliviar tensiones, mejorar la circulación y promover un
+      bienestar general.
+    </p>
+    <h2>Proceso del Masaje Masaje con Piedras Calientes</h2>
+    <ol>
+      <li class="process-title">
+        Consulta
+        <ul>
+          <li>
+            <strong>Evaluación Inicial:</strong> El terapeuta realiza una consulta
+            para comprender las necesidades y preferencias del cliente, así como
+            cualquier problema de salud relevante.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Preparación de las Piedras
+        <ul>
+          <li>
+            <strong>Calentamiento:</strong> Las piedras de basalto, que son ideales
+            por su capacidad de retener el calor, se calientan en un recipiente con
+            agua a una temperatura controlada (generalmente entre 50-55°C o 120-130°F).
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Ambiente
+        <ul>
+          <li>
+            <strong>Entorno:</strong> Se crea un ambiente relajante con iluminación
+            suave, música tranquila y una temperatura agradable para facilitar la
+            relajación.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Posición del Cliente
+        <ul>
+          <li>
+            <strong>Comodidad:</strong> El cliente se acomoda en una mesa de masaje,
+            en una posición cómoda que permita al terapeuta acceder a las áreas que
+            se van a tratar.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Beneficios del con Piedras Calientes</h2>
+    <ul>
+      <li>
+        <strong>Estrés y Ansiedad:</strong> El calor de las piedras y el masaje inducen
+        una relajación profunda, reduciendo el estrés y la ansiedad.
+      </li>
+      <li>
+        <strong>Tensión Muscular:</strong> El calor ayuda a relajar los músculos
+        tensos, aliviando dolores y rigidez muscular.
+      </li>
+      <li>
+        <strong>Sanguínea y Linfática:</strong> El calor estimula la circulación
+        sanguínea y linfática, lo que puede mejorar la oxigenación y la eliminación
+        de toxinas del cuerpo.
+      </li>
+      <li>
+        <strong>Movilidad:</strong> El masaje con piedras calientes puede aliviar
+        la rigidez en las articulaciones, mejorando la flexibilidad y el rango de
+        movimiento.
+      </li>
+      <li>
+        <strong>Bienestar General:</strong> Promueve una sensación de bienestar y
+        calma al activar el sistema nervioso parasimpático.
+      </li>
+      <li>
+        <strong>Sueño Reparador:</strong> La relajación profunda inducida por el
+        masaje puede mejorar la calidad del sueño.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

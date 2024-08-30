@@ -1,0 +1,80 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Masaje Mixto - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Masaje Mixto"
+    duration="90 min"
+    price="$42.900"
+  >
+    <h2>¿Qué son los Masajes Mixto?</h2>
+    <p>
+      Combina diversas técnicas de masaje para abordar múltiples necesidades y
+      preferencias en una sola sesión. Este enfoque integral permite al
+      terapeuta adaptar el tratamiento a las necesidades específicas del
+      cliente, combinando técnicas para lograr un equilibrio entre relajación,
+      alivio del dolor, y mejora de la circulación.
+    </p>
+
+    <h2>Beneficios del Masaje Mixto</h2>
+    <ul>
+      <li>
+        <strong>Tratamiento Personalizado:</strong> Permite ajustar las técnicas
+        según las necesidades individuales del cliente, combinando aspectos de diferentes
+        métodos para obtener resultados óptimos.
+      </li>
+      <li>
+        <strong>Relajación y Descontracturación:</strong> Combina técnicas de relajación
+        profunda con métodos para aliviar tensiones y contracturas.
+      </li>
+      <li>
+        <strong>Estimulación:</strong> Favorece la circulación sanguínea y linfática
+        a través de una combinación de movimientos suaves y más profundos.
+      </li>
+      <li>
+        <strong>Alivio del Dolor:</strong> Integra técnicas para aliviar dolores
+        musculares y rigidez, proporcionando un alivio efectivo.
+      </li>
+      <li>
+        <strong>Movilidad Mejorada:</strong> Combina estiramientos y técnicas de
+        presión para mejorar el rango de movimiento y la flexibilidad.
+      </li>
+      <li>
+        <strong>Efecto Integral:</strong> Promueve una sensación general de bienestar
+        al abordar tanto la tensión física como el estrés mental.
+      </li>
+    </ul>
+  </Service>
+
+  <style>
+    h2 {
+      margin: 1rem 0;
+    }
+
+    ol,
+    ul {
+      padding-left: 1rem;
+    }
+
+    li:is(.process-title) {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    li:not(.process-title) {
+      color: var(--black);
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  </style>
+</Layout>

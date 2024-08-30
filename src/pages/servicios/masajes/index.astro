@@ -9,6 +9,81 @@ const options = {
   title: "Masajes - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
+
+const services = [
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje de Relajación",
+    duration: "60 min",
+    price: "$26.900",
+    info: "./masaje-de-relajacion",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Descontracturante",
+    duration: "60 min",
+    price: "$30.900",
+    info: "./masaje-descontracturante",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Mixto",
+    duration: "90 min",
+    price: "$42.900",
+    info: "./masaje-mixto",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Prenatal",
+    duration: "60 min",
+    price: "$36.900",
+    info: "./masaje-prenatal",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Craneal",
+    duration: "60 min",
+    price: "$34.900",
+    info: "./masaje-craneal",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje con Piedras Calientes",
+    duration: "60 min",
+    price: "$40.900",
+    info: "./masaje-de-relajacion-con-piedras-calientes",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje para Bruxismo",
+    duration: "50 min",
+    price: "$35.900",
+    info: "./masaje-para-bruxismo",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Reductivo",
+    duration: "60 min",
+    price: "$35.900",
+    info: "./masaje-reductivo",
+    booking: "#",
+  },
+  {
+    img: "https://placehold.co/600x400",
+    name: "Masaje Reafirmante",
+    duration: "60 min",
+    price: "$35.900",
+    info: "./masaje-reafirmante",
+    booking: "#",
+  },
+];
 ---
 
 <Layout options={options}>
@@ -17,70 +92,18 @@ const options = {
       <Header title="Masajes" />
 
       <ServiceCategories column>
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje de Relajación"
-          duration="60 min"
-          price="$26.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje de Relajación"
-          duration="90 min"
-          price="$32.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje Descontracturante"
-          duration="60 min"
-          price="$30.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje Mixto"
-          duration="90 min"
-          price="$42.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje Prenatal"
-          duration="45 min"
-          price="$36.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje Craneal"
-          duration="45 min"
-          price="$34.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje de Relajación con Piedras Calientes"
-          duration="45 min"
-          price="$40.900"
-          info="#"
-          booking="#"
-        />
-        <ServiceCard
-          img="https://placehold.co/600x400"
-          name="Masaje para Bruxismo"
-          duration="45 min"
-          price="$35.900"
-          info="#"
-          booking="#"
-        />
+        {
+          services.map(({ img, name, duration, price, info, booking }) => (
+            <ServiceCard
+              img={img}
+              name={name}
+              duration={duration}
+              price={price}
+              info={info}
+              booking={booking}
+            />
+          ))
+        }
       </ServiceCategories>
     </section>
 

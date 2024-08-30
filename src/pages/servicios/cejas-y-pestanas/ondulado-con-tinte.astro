@@ -1,0 +1,96 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Ondulado de Pestañas con Tinte - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Ondulado de Pestañas con Tinte"
+    duration="80 min"
+    price="$26.900"
+  >
+    <h2>¿Qué es el Ondulado de Pestañas con Tinte?</h2>
+    <p>
+      Es un tratamiento estético que riza las pestañas y les aplica color para
+      proporcionar un efecto de mayor definición y duración. Este procedimiento
+      combina dos técnicas: el ondulado de pestañas para lograr un rizado
+      duradero y el tinte para oscurecer y definir el color de las pestañas.
+    </p>
+
+    <h2>Beneficios del Ondulado de Pestañas con Tinte</h2>
+    <ul>
+      <li>
+        <strong>Efecto Prolongado:</strong> El rizado puede durar entre 6 y 8 semanas,
+        dependiendo del ciclo de crecimiento de las pestañas.
+      </li>
+      <li>
+        <strong>Definición Adicional:</strong> El tinte oscurece las pestañas y realza
+        su color, haciendo que sean más notables sin necesidad de rímel.
+      </li>
+      <li>
+        <strong>Ojos Más Amplios:</strong> Las pestañas rizadas y teñidas hacen que
+        los ojos parezcan más grandes y despiertos.
+      </li>
+      <li>
+        <strong>Reducción de Productos:</strong> Reduce la necesidad de usar un rizador
+        de pestañas y de aplicar rímel, simplificando la rutina diaria.
+      </li>
+      <li>
+        <strong>Efecto de Mayor Longitud:</strong> Las pestañas rizadas y teñidas
+        parecen más largas y voluminosas.
+      </li>
+    </ul>
+
+    <h2>Cuidados Posteriores al Ondulado de Pestañas con Tinte</h2>
+    <ul>
+      <li>
+        <strong>Primera Hora:</strong> Evita mojar las pestañas durante al menos
+        24 horas después del tratamiento para permitir que el rizado y el tinte se
+        fijen completamente.
+      </li>
+      <li>
+        <strong>Cuidado de las Pestañas:</strong> Usa limpiadores suaves y evita
+        productos a base de aceite en las pestañas para prolongar la duración del
+        tratamiento.
+      </li>
+      <li>
+        <strong>Protección:</strong> Protege las pestañas de la exposición directa
+        al sol y fuentes de calor intensas.
+      </li>
+      <li>
+        <strong>Retoques:</strong> Realiza retoques cada 6-8 semanas para mantener
+        el rizado y el color deseado.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

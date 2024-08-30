@@ -1,0 +1,130 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Planchado de Cejas - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Planchado de Cejas"
+    duration="60 min"
+    price="$18.900"
+  >
+    <h2>¿Qué es el Planchado de Cejas?</h2>
+    <p>
+      Es un tratamiento estético que alisa y fija los vellos de las cejas
+      respetando su posición natural. Esta técnica da como resultado cejas bien
+      definidas, con un aspecto ordenado y peinado. Es ideal para quienes desean
+      un acabado más pulido y natural sin tener que aplicar productos a diario.
+    </p>
+    <h2>Proceso de Aplicación del Producto</h2>
+    <ol>
+      <li class="process-title">
+        Aplicación del Gel de Alisado
+        <ul>
+          <li>
+            <strong>Aplicación:</strong> Se aplica un gel alisador en los vellos
+            de las cejas para suavizarlos y permitir que se moldeen en la dirección
+            deseada.
+          </li>
+          <li>
+            <strong>Tiempo de Espera:</strong>
+            Dejando actuar el gel durante el tiempo recomendado, que suele ser de
+            10 a 15 minutos, dependiendo del producto y del tipo de vello.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Peinado
+        <ul>
+          <li>
+            <strong>Forma Deseada:</strong>
+            Usando un cepillo para cejas para peinar los vellos en la dirección deseada
+            y darles la forma final.
+          </li>
+          <li>
+            <strong>Fijación:</strong> Aplicando un fijador para mantener los vellos
+            en su lugar durante el tiempo de procesamiento.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Proceso de Aplicación del Neutralizante</h2>
+    <ol>
+      <li class="process-title">
+        Neutralización
+        <ul>
+          <li>
+            <strong>Aplicación:</strong> Aplicando un neutralizante para detener
+            el proceso químico y fijar los vellos en la nueva posición.
+          </li>
+          <li>
+            <strong>Tiempo de Espera:</strong>
+            Se deja actuar el neutralizante durante el tiempo recomendado, generalmente
+            de 5 a 10 minutos.
+          </li>
+        </ul>
+      </li>
+      <li class="process-title">
+        Enjuague
+        <ul>
+          <li>
+            <strong>Enjuaga:</strong>
+            Enjuagando el neutralizante con agua tibia, asegurándonos de eliminar
+            todo el producto.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Cuidados Posteriores del Planchado de Cejas</h2>
+    <ul>
+      <li>
+        <strong>Primera Hora:</strong> Evita mojar las cejas durante al menos 24
+        horas después del tratamiento para permitir que los resultados se fijen completamente.
+      </li>
+      <li>
+        <strong>Cuidado de la Piel:</strong> Usa productos suaves y evita productos
+        a base de aceite en las cejas para prolongar la duración del tratamiento.
+      </li>
+      <li>
+        <strong>Protección:</strong> Protege las cejas de la exposición directa al
+        sol y fuentes de calor intensas para mantener el tratamiento en buen estado.
+      </li>
+      <li>
+        <strong>Retoques:</strong> Realiza retoques cada 6-8 semanas para mantener
+        la forma y el aspecto deseado.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

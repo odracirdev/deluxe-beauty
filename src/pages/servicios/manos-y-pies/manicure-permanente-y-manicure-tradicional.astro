@@ -1,0 +1,142 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente + Manicure Tradicional - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Manicure Permanente + Manicure Tradicional"
+    duration="90 min"
+    price="$32.900"
+  >
+    <h2>Manicure entre amigas</h2>
+    <p>
+      Disfruta de una experiencia relajante y divertida con tu mejor amiga.
+      Nuestro servicio de manicure para dos incluye tanto el <strong
+        >manicure tradicional</strong
+      >
+      como el <strong>manicure permanente</strong>, para que elijan la opción
+      que mejor se adapte a su estilo. ¡Perfecto para una tarde de chicas!
+    </p>
+
+    <h2>Proceso de Aplicación del Manicure</h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas
+        <ul>
+          <li>
+            <strong>Desmaquillado:</strong> Eliminamos cualquier esmalte anterior
+            para dejar las uñas listas.
+          </li>
+          <li>
+            <strong>Baño de Manos:</strong> Un relajante baño tibio suaviza las cutículas
+            y prepara la piel para el tratamiento.
+          </li>
+          <li>
+            <strong>Corte y Forma:</strong> Damos forma a las uñas según su preferencia,
+            seguido del cuidado de cutículas.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Aplicación de Esmalte
+        <ul>
+          <li>
+            <strong>Manicure Tradicional:</strong> Aplicamos una capa base, el esmalte
+            de color de su elección y una capa superior para un acabado brillante
+            y duradero.
+          </li>
+          <li>
+            <strong>Manicure Permanente:</strong> Capas finas de esmalte de gel que
+            se curan bajo una lámpara UV o LED para un resultado impecable y duradero.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Capa Superior y Secado
+        <ul>
+          <li>
+            <strong>Manicure Tradicional:</strong> El esmalte se seca al aire, brindando
+            un acabado natural y hermoso.
+          </li>
+          <li>
+            <strong>Manicure Permanente:</strong> Se aplica una capa superior de
+            gel, seguida de curado bajo la lámpara para un brillo excepcional.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            Se limpia cualquier residuo y se aplican aceites hidratantes para
+            mantener las uñas y la piel suaves y saludables.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Ventajas del Manicure</h2>
+    <ul>
+      <li>
+        <strong>Variedad:</strong> Elige entre el acabado clásico del manicure tradicional
+        o la durabilidad del manicure permanente.
+      </li>
+      <li>
+        <strong>Experiencia Compartida:</strong> Disfruta de un momento especial
+        con tu amiga mientras ambas se relajan y se miman.
+      </li>
+    </ul>
+
+    <h2>Cuidados Posteriores del Manicure para Dos Amigas</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Aplica crema para manos y aceites para cutículas
+        regularmente para mantener las uñas y la piel hidratadas.
+      </li>
+      <li>
+        <strong>Protección:</strong> Usa guantes al realizar tareas que puedan dañar
+        el esmalte, como lavar platos o usar productos químicos.
+      </li>
+    </ul>
+    <p>
+      <em
+        >Comparte este momento especial con tu mejor amiga y salgan con uñas
+        impecables que reflejen su estilo.</em
+      >
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

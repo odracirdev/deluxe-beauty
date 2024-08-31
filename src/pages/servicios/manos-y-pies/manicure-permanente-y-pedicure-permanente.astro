@@ -1,0 +1,146 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente + Pedicure Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Manicure Permanente + Pedicure Permanente"
+    duration="120 min"
+    price="$36.900"
+  >
+    <h2>¿Qué es el Manicure y Pedicure Permanente?</h2>
+    <p>
+      El manicure y pedicure permanente son técnicas populares que utilizan
+      esmalte de gel para mantener tus uñas de manos y pies impecables durante
+      semanas sin necesidad de retoques frecuentes. Estos tratamientos ofrecen
+      un acabado duradero y brillante, ideal para quienes buscan una apariencia
+      perfecta durante más tiempo.
+    </p>
+
+    <h2>Proceso de Aplicación del Manicure y Pedicure Permanente</h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas y Pies
+        <ul>
+          <li>
+            <strong>Limpieza y Exfoliación:</strong> Se realiza una limpieza de manos
+            y pies, eliminando cualquier esmalte anterior, seguida de una exfoliación
+            que retira la piel muerta y suaviza la piel.
+          </li>
+          <li>
+            <strong>Corte y Forma:</strong> Las uñas se cortan y se les da forma.
+            Se empujan las cutículas y se retira el exceso de piel para preparar
+            las uñas.
+          </li>
+          <li>
+            <strong>Capa Base:</strong> Se aplica una capa base tanto en las uñas
+            de manos como en las de los pies, lo que ayuda a que el esmalte se adhiera
+            mejor.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Aplicación de Esmalte
+        <ul>
+          <li>
+            <strong>Esmalte de Gel:</strong> Se aplica el esmalte de gel en capas
+            finas, curando cada capa bajo una lámpara UV o LED. Esto asegura que
+            el esmalte se seque completamente y se adhiera de manera duradera.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Capa Superior
+        <ul>
+          <li>
+            <strong>Sellado:</strong> Se aplica una capa superior de gel en manos
+            y pies, que se cura bajo la lámpara. Esta capa da un acabado brillante
+            y protege el color para una mayor durabilidad.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            <strong>Limpieza:</strong> Se limpia cualquier residuo pegajoso con un
+            limpiador especial para dejar las uñas y la piel alrededor en perfecto
+            estado.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Ventajas del Manicure y Pedicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> Tanto el manicure como el pedicure permanente
+        pueden durar de 2 a 4 semanas sin desconchamientos, ideal para quienes buscan
+        un acabado duradero.
+      </li>
+      <li>
+        <strong>Brillo:</strong> Mantiene un acabado brillante durante todo el tiempo
+        que dura el esmalte, tanto en manos como en pies.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El esmalte se seca rápidamente bajo la lámpara,
+        evitando el riesgo de que se estropee mientras está seco.
+      </li>
+    </ul>
+
+    <h2>Cuidados Posteriores del Manicure y Pedicure Permanente</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Es importante mantener la piel de manos y pies
+        hidratada. Aplica crema para manos y pies, así como aceites para cutículas
+        regularmente para mantener las uñas y la piel en buen estado.
+      </li>
+      <li>
+        <strong>Quitar el esmalte correctamente:</strong> No intentes quitar el esmalte
+        de gel con fuerza. Utiliza un removedor especializado y sigue las instrucciones
+        para evitar dañar tus uñas o piel.
+      </li>
+    </ul>
+    <p>
+      <em
+        >Recuerda que es importante cuidar tanto tus manos como tus pies después
+        del tratamiento para mantener los resultados y disfrutar de unas uñas
+        impecables.</em
+      >
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

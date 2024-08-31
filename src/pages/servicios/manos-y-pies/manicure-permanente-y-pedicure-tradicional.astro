@@ -1,0 +1,176 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Manicure Permanente + Pedicure Tradicional - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Manicure Permanente + Pedicure Tradicional"
+    duration="90 min"
+    price="$32.900"
+  >
+    <h2>¿Qué es el Manicure Permanente y el Pedicure Tradicional?</h2>
+    <p>
+      El manicure permanente, también conocido como esmalte de gel o gel polish,
+      es una técnica popular para mantener unas uñas impecables durante semanas
+      sin necesidad de retoques frecuentes. Por otro lado, el pedicure
+      tradicional se enfoca en la limpieza y el embellecimiento de los pies y
+      las uñas de los pies utilizando técnicas que no requieren curado con luz
+      UV o LED, mejorando tanto la apariencia como la salud general de los pies.
+    </p>
+
+    <h2>
+      Proceso de Aplicación del Manicure Permanente y el Pedicure Tradicional
+    </h2>
+    <ol>
+      <li class="process-title">
+        Preparación de las Uñas y Pies
+        <ul>
+          <li>
+            <strong>Limpieza y Exfoliación:</strong> Se realiza una limpieza de manos
+            y pies, eliminando cualquier esmalte anterior y exfoliando la piel muerta
+            para suavizar y relajar.
+          </li>
+          <li>
+            <strong>Corte y Forma:</strong> Las uñas de manos y pies se cortan y
+            se les da forma. Se empujan las cutículas y se retira el exceso de piel.
+          </li>
+          <li>
+            <strong>Cuidado de Cutículas:</strong> Las cutículas se empujan suavemente
+            y se tratan con productos específicos si es necesario.
+          </li>
+          <li>
+            <strong>Eliminación de Callosidades:</strong> Si hay callosidades en
+            los pies, se usan piedras pómez o raspadores para eliminarlas suavemente.
+          </li>
+          <li>
+            <strong>Capa Base:</strong> Se aplica una capa base en manos y pies para
+            mejorar la adhesión del esmalte y proteger las uñas.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Aplicación de Esmalte
+        <ul>
+          <li>
+            <strong>Esmalte de Gel (Manicure):</strong> Se aplica el esmalte en capas
+            finas, curando cada capa bajo una lámpara UV o LED. Esto asegura que
+            el esmalte se seque completamente y se adhiera de manera duradera.
+          </li>
+          <li>
+            <strong>Esmalte Tradicional (Pedicure):</strong> Se aplican una o dos
+            capas de esmalte de color en las uñas de los pies, dejando secar entre
+            capa y capa.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Capa Superior
+        <ul>
+          <li>
+            <strong>Sellado:</strong> En el manicure se aplica una capa superior
+            de gel que se cura bajo la lámpara para un acabado brillante y duradero.
+            En el pedicure, se aplica una capa superior (top coat) para sellar el
+            color y proporcionar un acabado brillante.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Finalización
+        <ul>
+          <li>
+            <strong>Limpieza:</strong> Se limpia cualquier residuo pegajoso con un
+            limpiador especial para dejar las uñas y la piel alrededor en perfecto
+            estado.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Ventajas del Manicure Permanente y el Pedicure Tradicional</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> El manicure permanente puede durar de 2 a 4
+        semanas sin desconchamientos, mientras que el pedicure tradicional proporciona
+        un acabado pulido y profesional que puede durar hasta que se decida realizar
+        un nuevo pedicure.
+      </li>
+      <li>
+        <strong>Brillo:</strong> Ambos tratamientos ofrecen un acabado brillante
+        y atractivo durante el tiempo que duran.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El esmalte de gel se seca rápidamente bajo
+        la lámpara en el manicure, mientras que el esmalte tradicional del pedicure
+        se seca al aire, con el riesgo de posibles marcas si no se tiene cuidado.
+      </li>
+    </ul>
+
+    <h2>
+      Cuidados Posteriores del Manicure Permanente y el Pedicure Tradicional
+    </h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Es fundamental mantener la piel de manos y
+        pies hidratada. Aplica crema para manos y pies, así como aceites para cutículas
+        regularmente para mantener las uñas y la piel en buen estado.
+      </li>
+      <li>
+        <strong>Quitar el esmalte correctamente:</strong> Para el esmalte de gel,
+        utiliza un removedor especializado y sigue las instrucciones para evitar
+        dañar las uñas. En el caso del esmalte tradicional, asegúrate de usar quitaesmalte
+        adecuado y sin componentes agresivos.
+      </li>
+      <li>
+        <strong>Uso de Calzado Adecuado:</strong> Después del pedicure tradicional,
+        usa calzado que se ajuste bien para evitar problemas en las uñas y los pies,
+        y que permita a tus pies respirar.
+      </li>
+      <li>
+        <strong>Evita el Agua Excesiva:</strong> Para el pedicure tradicional, evita
+        mojar los pies durante períodos prolongados inmediatamente después del pedicure
+        para asegurar que el esmalte se adhiera bien.
+      </li>
+    </ul>
+    <p>
+      <em
+        >Recuerda que es importante cuidar tanto tus manos como tus pies después
+        del tratamiento para mantener los resultados y disfrutar de unas uñas
+        impecables.</em
+      >
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

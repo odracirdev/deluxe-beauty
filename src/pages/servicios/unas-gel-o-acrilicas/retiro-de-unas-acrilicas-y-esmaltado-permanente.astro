@@ -1,0 +1,179 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Retiro de Uñas Acrílicas + Esmaltado Permanente - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Retiro de Uñas Acrílicas + Esmaltado Permanente"
+    duration="90 min"
+    price="$28.900"
+  >
+    <h2>¿Qué es el Retiro de Uñas Acrílicas y Esmaltado Permanente?</h2>
+    <p>
+      El retiro de uñas acrílicas y esmaltado permanente es un proceso
+      meticuloso que asegura que tus uñas naturales permanezcan saludables
+      mientras se eliminan los productos de manera eficaz. Este servicio también
+      incluye el esmaltado permanente para mantener tus uñas en perfecto estado
+      durante varias semanas.
+    </p>
+
+    <h2>Proceso del Retiro de Uñas Acrílicas y Esmaltado Permanente</h2>
+    <ol>
+      <li class="process-title">
+        Preparación
+        <ul>
+          <li>
+            <strong>Lijado Suave:</strong> Se utiliza una lima de grano fino para
+            frotar suavemente la superficie del esmalte acrílico o permanente, rompiendo
+            la capa superior y permitiendo que el removedor penetre de manera más
+            efectiva.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Aplicación del Removedor
+        <ul>
+          <li>
+            <strong>Empapar Algodón:</strong> Un algodón se empapa con removedor
+            de esmalte que contenga acetona, preparándolo para aplicar sobre las
+            uñas.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Cubrir con Papel Aluminio
+        <ul>
+          <li>
+            <strong>Enrollar con Papel Aluminio:</strong> Cada dedo se envuelve con
+            papel aluminio para mantener el algodón en su lugar y evitar que el removedor
+            se evapore, asegurando una mejor disolución del esmalte.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Tiempo de Espera
+        <ul>
+          <li>
+            <strong>Dejar Actuar:</strong> El removedor debe actuar durante 10-15
+            minutos. El tiempo puede variar dependiendo de la marca del esmalte y
+            del removedor utilizado. Es importante seguir el tiempo recomendado para
+            asegurar la eliminación completa.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Retiro del Esmalte
+        <ul>
+          <li>
+            <strong>Retiro del Algodón y Acrílico:</strong> Se retira el papel aluminio
+            y el algodón. Se utiliza un palito de naranjo para retirar suavemente
+            el esmalte acrílico o permanente, asegurándose de no dañar la uña natural.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Limpieza y Cuidado
+        <ul>
+          <li>
+            <strong>Limpiar Restos:</strong> Cualquier residuo de esmalte se limpia
+            con un limpiador de gel si es necesario, asegurando que no queden restos.
+          </li>
+          <li>
+            <strong>Hidratar:</strong> Se aplica aceite para cutículas y una crema
+            hidratante para nutrir las uñas y la piel circundante, ayudando a restaurar
+            la hidratación y mantener la salud de las uñas.
+          </li>
+        </ul>
+      </li>
+
+      <li class="process-title">
+        Aplicación de Esmaltado Permanente
+        <ul>
+          <li>
+            <strong>Preparación de las Uñas:</strong> Se liman y se dan forma a las
+            uñas, se empujan las cutículas y se aplica una capa base para asegurar
+            una buena adherencia del esmalte.
+          </li>
+          <li>
+            <strong>Aplicación del Esmalte:</strong> Se aplican capas finas de esmalte
+            de gel, curando cada capa bajo una lámpara UV o LED. Esto asegura que
+            el esmalte se seque completamente y se adhiera de manera duradera.
+          </li>
+          <li>
+            <strong>Capa Superior:</strong> Se aplica una capa superior de gel que
+            también se cura bajo la lámpara, proporcionando un acabado brillante
+            y protegiendo el color.
+          </li>
+          <li>
+            <strong>Finalización:</strong> Se limpia cualquier residuo pegajoso con
+            un limpiador especial y se asegura que las uñas queden en perfecto estado.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>Ventajas del Esmaltado Permanente</h2>
+    <ul>
+      <li>
+        <strong>Durabilidad:</strong> Puede durar de 2 a 4 semanas sin desconchamientos,
+        ideal para quienes buscan un acabado duradero.
+      </li>
+      <li>
+        <strong>Brillo:</strong> El esmalte mantiene un acabado brillante y atractivo
+        durante el tiempo que lleva puesto.
+      </li>
+      <li>
+        <strong>Secado Rápido:</strong> El esmalte se seca instantáneamente bajo
+        la lámpara, evitando el riesgo de que se estropee.
+      </li>
+    </ul>
+
+    <h2>Cuidados Posteriores del Esmaltado Permanente</h2>
+    <ul>
+      <li>
+        <strong>Hidratación:</strong> Mantén las uñas y la piel circundante hidratadas
+        con cremas y aceites para cutículas.
+      </li>
+      <li>
+        <strong>Evitar el Agua Prolongada:</strong> Evita mojar las manos durante
+        períodos prolongados para asegurar la durabilidad del esmalte.
+      </li>
+    </ul>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

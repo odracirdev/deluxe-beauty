@@ -1,9 +1,9 @@
 ---
-const { image, title, description } = Astro.props;
+const { image, title, description, alt } = Astro.props;
 ---
 
 <article class="reasons__wrap">
-  <img src=`${image}` alt="" />
+  <img src=`${image}` alt=`${alt}` />
   <h3>{title}</h3>
   <p>{description}</p>
 </article>

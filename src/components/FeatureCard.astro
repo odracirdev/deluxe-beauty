@@ -1,10 +1,15 @@
 ---
-const { image, alt } = Astro.props;
+const { image, alt, slug, pos, name } = Astro.props;
 ---
 
 <div class="featured__card">
   <img src=`${image}` alt=`${alt}` />
-  <slot />
+  <div class:list={["button-service", pos ? "Top" : "Mid"]}>
+    <h3>{name}</h3>
+    <a href={slug} target="_self" rel="noopener noreferrer">
+      <slot />
+    </a>
+  </div>
 </div>
 
 <style>
@@ -13,5 +18,68 @@ const { image, alt } = Astro.props;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 16rem;
+    position: relative;
+
+    & img {
+      border-radius: 0.7rem;
+      border: 0.4rem solid var(--white);
+      box-shadow: var(--shadow-large);
+    }
+
+    & .button-service {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+    }
+
+    & h3 {
+      background-color: var(--white);
+      padding: 0.2rem 1rem;
+      border-radius: 0.7rem 0.7rem 0 0;
+    }
+
+    & a {
+      width: 100%;
+      padding: 0.2rem 0;
+      background-color: var(--primary-color);
+      border-radius: 0 0 0.7rem 0.7rem;
+      text-decoration: none;
+    }
+
+    & .Top {
+      margin-top: -4rem;
+
+      & h3 {
+        font-size: 1.25rem;
+      }
+
+      & a {
+        font-size: 0.9rem;
+      }
+    }
+
+    & .Mid {
+      --width: 124px;
+      position: absolute;
+      bottom: -48px;
+
+      & h3 {
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        width: var(--width);
+        padding: 0.2rem 0.9rem;
+        line-height: 1;
+      }
+
+      & a {
+        width: var(--width);
+      }
+    }
   }
 </style>

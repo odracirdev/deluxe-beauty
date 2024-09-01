@@ -2,8 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
-import ServiceCategories from "@components/ServiceCategories.astro";
 import Header from "@components/Header.astro";
+import Services from "@components/Services.astro";
 
 const options = {
   title: "Novias - Deluxe Beauty",
@@ -16,7 +16,7 @@ const options = {
     <section class="service__list">
       <Header title="Novias" />
 
-      <ServiceCategories column>
+      <Services>
         <ServiceCard
           img="https://placehold.co/600x400"
           name="Maquillaje Novia (Prueba)"
@@ -57,13 +57,13 @@ const options = {
           info="#"
           booking="#"
         />
-      </ServiceCategories>
+      </Services>
     </section>
 
     <section class="service__list">
       <Header title="Packs para novias" />
 
-      <ServiceCategories column>
+      <Services>
         <ServiceCard
           img="https://placehold.co/600x400"
           name="Maquillaje Novia (Prueba + Día del Matrimonio)"
@@ -96,7 +96,7 @@ const options = {
           info="#"
           booking="#"
         />
-      </ServiceCategories>
+      </Services>
     </section>
 
     <Booking />
@@ -107,5 +107,9 @@ const options = {
   .service__list {
     display: flex;
     flex-direction: column;
+  }
+
+  .service__list:nth-child(1) {
+    margin-top: 4.5rem;
   }
 </style>

@@ -2,8 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
-import ServiceCategories from "@components/ServiceCategories.astro";
 import Header from "@components/Header.astro";
+import Services from "@components/Services.astro";
 
 const options = {
   title: "Cejas y Pestañas - Deluxe Beauty",
@@ -29,7 +29,7 @@ const services = [
   },
   {
     img: "https://placehold.co/600x400",
-    name: "Lamino de Cejas",
+    name: "Laminado de Cejas",
     duration: "60 min",
     price: "$18.900",
     info: "./laminado-de-cejas",
@@ -102,7 +102,7 @@ const servicesPack = [
     <section class="service__list">
       <Header title="Cejas y Pestañas" />
 
-      <ServiceCategories column>
+      <Services>
         {
           services.map(({ img, name, duration, price, info, booking }) => (
             <ServiceCard
@@ -115,13 +115,13 @@ const servicesPack = [
             />
           ))
         }
-      </ServiceCategories>
+      </Services>
     </section>
 
     <section class="service__list">
       <Header title="Packs para cejas y pestañas" />
 
-      <ServiceCategories column>
+      <Services>
         {
           servicesPack.map(({ img, name, duration, price, info, booking }) => (
             <ServiceCard
@@ -134,7 +134,7 @@ const servicesPack = [
             />
           ))
         }
-      </ServiceCategories>
+      </Services>
     </section>
 
     <Booking />
@@ -145,5 +145,9 @@ const servicesPack = [
   .service__list {
     display: flex;
     flex-direction: column;
+  }
+
+  .service__list:nth-child(1) {
+    margin-top: 4.5rem;
   }
 </style>

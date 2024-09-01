@@ -2,8 +2,8 @@
 import Layout from "@layouts/Layout.astro";
 import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
-import ServiceCategories from "@components/ServiceCategories.astro";
 import Header from "@components/Header.astro";
+import Services from "@components/Services.astro";
 
 const options = {
   title: "Maquillaje y Peinados - Deluxe Beauty",
@@ -43,7 +43,7 @@ const services = [
     <section class="service__list">
       <Header title="Maquillaje y Peinados" />
 
-      <ServiceCategories column>
+      <Services>
         {
           services.map(({ img, name, duration, price, info, booking }) => (
             <ServiceCard
@@ -56,7 +56,7 @@ const services = [
             />
           ))
         }
-      </ServiceCategories>
+      </Services>
     </section>
 
     <Booking />
@@ -67,5 +67,9 @@ const services = [
   .service__list {
     display: flex;
     flex-direction: column;
+  }
+
+  .service__list:nth-child(1) {
+    margin-top: 4.5rem;
   }
 </style>

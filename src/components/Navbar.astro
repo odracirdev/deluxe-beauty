@@ -6,7 +6,7 @@ const siteURL = import.meta.env.DEV ? '' : import.meta.env.SITE
 const slugs = [
   { text: 'Inicio', slug: `${siteURL}/`, icon: 'home' },
   { text: 'Servicios', slug: `${siteURL}/servicios`, icon: 'services' },
-  { text: 'Contacto', slug: `${siteURL}#`, icon: 'whatsapp' }
+  { text: 'Contacto', slug: "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%C2%A1Hola!%20Necesito%20informaci%C3%B3n%20sobre%20sus%20servicios.", icon: 'whatsapp' }
 ]
 
 function isActiveSlug(slug: string) {

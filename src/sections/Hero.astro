@@ -4,9 +4,6 @@ import Button from "@components/Button.astro";
 ---
 
 <section class="hero">
-  <nav>
-    <img src="/images/logo-black.webp" alt="Deluxe Beauty" />
-  </nav>
   <div class="embla">
     <div class="embla__container">
       <div class="embla__slide slide-1">
@@ -26,34 +23,34 @@ import Button from "@components/Button.astro";
 </section>
 
 <style>
-  nav {
-    padding: 16px;
-  }
+  .hero {
+    margin-top: 4.5rem;
 
-  .embla {
-    overflow: hidden;
-    height: 400px;
+    & .embla {
+      overflow: hidden;
+      height: 400px;
 
-    & .embla__container {
-      display: flex;
-      height: 100%;
+      & .embla__container {
+        display: flex;
+        height: 100%;
 
-      & .embla__slide {
-        flex: 0 0 100%;
-        min-width: 0;
-        padding: 1.5rem 2rem;
-      }
+        & .embla__slide {
+          flex: 0 0 100%;
+          min-width: 0;
+          padding: 1.5rem 2rem;
+        }
 
-      & .slide-1 {
-        background-image: url(https://placehold.co/430x400/000000/FFFFFF/png);
-      }
+        & .slide-1 {
+          background-image: url(https://placehold.co/430x400/000000/FFFFFF/png);
+        }
 
-      & .slide-2 {
-        background-image: url(https://placehold.co/430x400/f9408e/000000/png);
-      }
+        & .slide-2 {
+          background-image: url(https://placehold.co/430x400/f9408e/000000/png);
+        }
 
-      & .slide-3 {
-        background-image: url(https://placehold.co/430x400/000000/f9408e/png);
+        & .slide-3 {
+          background-image: url(https://placehold.co/430x400/000000/f9408e/png);
+        }
       }
     }
   }

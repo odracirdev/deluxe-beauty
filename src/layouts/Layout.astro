@@ -2,6 +2,7 @@
 // import { Schema } from 'astro-seo-schema'
 
 import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
 
 const { options } = Astro.props;
 const { title, description, metaRobots } = options;
@@ -39,6 +40,13 @@ const { title, description, metaRobots } = options;
         --scrollbar-dark: #898989;
         --scrollbar-thumb-dark: #5d5d5d;
         --scrollbar-thumb-hover-dark: #3f3f3f;
+
+        --shadow-small: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        --shadow-medium: 0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
       }
 
       @font-face {
@@ -46,13 +54,6 @@ const { title, description, metaRobots } = options;
         font-style: normal;
         font-weight: bold;
         src: url("/fonts/CabinetGrotesk-Bold.woff2");
-      }
-
-      @font-face {
-        font-family: "Colus";
-        font-style: normal;
-        font-weight: 400;
-        src: url("/fonts/ColusRegular.woff2");
       }
 
       @font-face {
@@ -65,16 +66,26 @@ const { title, description, metaRobots } = options;
       *,
       *::before,
       *::after {
+        padding: 0;
+        margin: 0;
         box-sizing: border-box;
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
       }
 
-      * {
-        margin: 0;
+      html {
+        font-size: 100%;
+        box-sizing: inherit;
+        scroll-behavior: smooth;
       }
 
       body {
+        font-size: 1rem;
+        font-weight: 400;
         line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
+        color: var(--color-black);
       }
 
       img,
@@ -84,13 +95,8 @@ const { title, description, metaRobots } = options;
       svg {
         display: block;
         max-width: 100%;
-      }
-
-      input,
-      button,
-      textarea,
-      select {
-        font: inherit;
+        height: auto;
+        object-fit: cover;
       }
 
       h1,
@@ -109,13 +115,18 @@ const { title, description, metaRobots } = options;
         overflow-wrap: break-word;
         color: var(--black);
         font-family: "Satoshi";
-        font-size: 1rem;
         line-height: 1.25;
       }
 
-      a {
+      a,
+      button {
         color: var(--white);
-        font-family: "Colus";
+        font-family: "Satoshi";
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        text-decoration: none;
       }
 
       html {
@@ -183,12 +194,13 @@ const { title, description, metaRobots } = options;
 
     <slot name="schema" />
 
-    <link rel="icon" type="image" href="/favicon.webp" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <meta name="color-scheme" content="light" />
     <slot name="social-media" />
   </head>
   <body>
+    <Navbar />
     <slot />
 
     <slot name="dynamic-components" />

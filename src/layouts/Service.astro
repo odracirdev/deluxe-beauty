@@ -1,7 +1,7 @@
 ---
 import Button from "@components/Button.astro";
 
-const { img, title, duration, price } = Astro.props;
+const { img, title, duration, price, booking } = Astro.props;
 ---
 
 <main>
@@ -15,11 +15,11 @@ const { img, title, duration, price } = Astro.props;
         <p><strong>Duración:</strong> {duration}</p>
         <p><strong>Valor:</strong> {price}</p>
       </div>
-      <Button href="#" variant="pink">Agendar</Button>
+      <Button href={booking} variant="pink">Agendar</Button>
     </article>
     <article class="description">
       <slot />
-      <Button href="#" variant="pinklarge">Agendar</Button>
+      <Button href={booking} variant="pinklarge">Agendar</Button>
     </article>
   </section>
 </main>

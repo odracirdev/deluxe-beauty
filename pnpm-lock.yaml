@@ -14,6 +14,9 @@ importers:
       astro-icon:
         specifier: ^1.1.1
         version: 1.1.1
+      astro-seo-schema:
+        specifier: ^4.0.2
+        version: 4.0.2(astro@4.14.2(@types/node@22.5.1)(rollup@4.20.0)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4))
       embla-carousel:
         specifier: ^8.1.8
         version: 8.1.8
@@ -23,6 +26,9 @@ importers:
       eslint-plugin-astro:
         specifier: ^1.2.3
         version: 1.2.3(eslint@9.9.1)(typescript@5.5.4)
+      schema-dts:
+        specifier: ^1.1.2
+        version: 1.1.2(typescript@5.5.4)
     devDependencies:
       '@eslint/js':
         specifier: ^9.9.1
@@ -766,6 +772,12 @@ packages:
 
   astro-icon@1.1.1:
     resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
+
+  astro-seo-schema@4.0.2:
+    resolution: {integrity: sha512-OI9DWasORMpIzKsAmF4s6ghVX8F1INROla4JKBT8WDm/du25jxQsoQcJx99NY3gOQJ7Rv9a+cFPAfr17LsYXEg==}
+    peerDependencies:
+      astro: ^4.0.0
+      schema-dts: ^1.1.0
 
   astro@4.14.2:
     resolution: {integrity: sha512-x9VeYx8Ih6kYKBMVwwsfRzsZVq30+SUhiawnYQ6+46qQnEx3zH05KcH24HsJMe6dVpHD8HdH7CWR5C4o7Q/jeg==}
@@ -1956,6 +1968,11 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
+  schema-dts@1.1.2:
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
@@ -3060,6 +3077,11 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
+
+  astro-seo-schema@4.0.2(astro@4.14.2(@types/node@22.5.1)(rollup@4.20.0)(typescript@5.5.4))(schema-dts@1.1.2(typescript@5.5.4)):
+    dependencies:
+      astro: 4.14.2(@types/node@22.5.1)(rollup@4.20.0)(typescript@5.5.4)
+      schema-dts: 1.1.2(typescript@5.5.4)
 
   astro@4.14.2(@types/node@22.5.1)(rollup@4.20.0)(typescript@5.5.4):
     dependencies:
@@ -4611,6 +4633,10 @@ snapshots:
       queue-microtask: 1.2.3
 
   safer-buffer@2.1.2: {}
+
+  schema-dts@1.1.2(typescript@5.5.4):
+    dependencies:
+      typescript: 5.5.4
 
   section-matter@1.0.0:
     dependencies:

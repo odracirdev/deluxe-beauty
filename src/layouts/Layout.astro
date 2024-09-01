@@ -1,5 +1,5 @@
 ---
-// import { Schema } from 'astro-seo-schema'
+import { Schema } from "astro-seo-schema";
 
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
@@ -192,23 +192,26 @@ const { title, description, metaRobots } = options;
       content="Ricardo Cuauro - https://github.com/odracirdev"
     />
 
-    <!-- {
+    {
       description && (
         <Schema
           item={{
-	        "@context": "http://schema.org",
-	        "@type": "Organization",
-	        "name": "Deluxe Beauty",
-	        "address": {
-		        "@type": "PostalAddress",
-		        "addressLocality": "Santiago"
-	          }
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Deluxe Beauty",
+            description: "Una descripción que debo cambiar",
+            image: "",
+            logo: "",
+            url: "https://deluxebeauty.cl",
+            telephone: "+56931268104",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Santiago",
+            },
           }}
         />
       )
-
-
-    } -->
+    }
 
     <slot name="schema" />
 

@@ -26,6 +26,22 @@ const { title, description, metaRobots } = options;
 
     <slot name="preload" />
 
+    <link
+      rel="preload"
+      href="/fonts/CabinetGrotesk-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/Satoshi-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
     <slot name="defer-script" />
 
     <style is:global>

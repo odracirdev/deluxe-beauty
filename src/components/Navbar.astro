@@ -23,7 +23,7 @@ function isActiveSlug(slug: string) {
 <header class="header">
   <nav class="navbar container">
     <a href="/" class="logo"
-      ><img src="/images/logo-black.webp" alt="Deluxe Beauty" /></a
+      ><img src="/images/logo-black.avif" alt="Deluxe Beauty" /></a
     >
     <div class="menu">
       <ul class="menu-list">
@@ -59,6 +59,10 @@ function isActiveSlug(slug: string) {
       align-items: center;
       height: 100%;
       margin: 0 auto;
+
+      & img {
+        max-width: 10rem;
+      }
     }
 
     & .menu {

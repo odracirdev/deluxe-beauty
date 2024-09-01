@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "astro": "^4.14.2",
+    "astro-icon": "^1.1.1",
     "embla-carousel": "^8.1.8",
     "embla-carousel-autoplay": "^8.1.8",
     "eslint-plugin-astro": "^1.2.3"

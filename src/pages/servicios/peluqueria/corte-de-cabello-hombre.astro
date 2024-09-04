@@ -1,0 +1,68 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Corte de Cabello Hombre - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Corte de Cabello Hombre"
+    duration="60 min"
+    price="$15.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20corte%20de%20cabello%20para%hombres."
+  >
+    <h2>¿Qué es el Corte de Cabello Hombre?</h2>
+    <p>
+      Los cortes de cabello para hombres pueden variar en longitud, desde muy
+      cortos hasta medianos o largos, y en estilo, desde clásicos hasta modernos
+      y vanguardistas. Algunos ejemplos de cortes de cabello para hombres son:
+    </p>
+    <ul>
+      <li>Corte militar: Un corte muy corto y uniforme.</li>
+      <li>
+        Corte fade: Un corte que se va desvaneciendo hacia la nuca y las sienes.
+      </li>
+      <li>
+        Undercut: Un corte que combina una parte superior larga con una parte
+        inferior corta y rasurada.
+      </li>
+      <li>Pompadour: Un corte que se peina hacia arriba y hacia atrás.</li>
+      <li>Side part: Un corte clásico con una raya lateral.</li>
+    </ul>
+    <p>
+      Los cortes de cabello para hombres pueden ser personalizados para
+      adaptarse a las necesidades y preferencias individuales de cada hombre, y
+      pueden ser acompañados de técnicas de afeitado, peinado y estilismo para
+      completar el look deseado.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

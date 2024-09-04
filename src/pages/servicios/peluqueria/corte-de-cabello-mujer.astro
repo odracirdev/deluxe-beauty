@@ -1,0 +1,71 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Corte de Cabello Mujer - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Corte de Cabello Mujer"
+    duration="60 min"
+    price="$18.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20corte%20de%20cabello%20de%20mujer."
+  >
+    <h2>¿Qué es el Corte de Cabello Mujer?</h2>
+    <p>
+      Los cortes de cabello para mujeres pueden variar en longitud, desde cortos
+      hasta largos, y en estilo, desde clásicos hasta modernos y vanguardistas.
+      Algunos ejemplos de cortes de cabello para mujeres son:
+    </p>
+    <ul>
+      <li>Bob: Un corte clásico que llega a la barbilla o los hombros.</li>
+      <li>
+        Pixie: Un corte corto y moderno que se ajusta al contorno de la cabeza.
+      </li>
+      <li>Melenas: Un corte largo que llega a la espalda o más abajo.</li>
+      <li>
+        Shag: Un corte capa que se ajusta al contorno de la cabeza y llega a los
+        hombros.
+      </li>
+      <li>
+        Undercut: Un corte que combina una parte superior larga con una parte
+        inferior corta y rasurada.
+      </li>
+    </ul>
+    <p>
+      Los cortes de cabello pueden ser personalizados para adaptarse a las
+      necesidades y preferencias individuales de cada mujer, y pueden ser
+      acompañados de técnicas de coloración, peinado y estilismo para completar
+      el look deseado.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

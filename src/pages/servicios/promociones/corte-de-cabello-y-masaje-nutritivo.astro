@@ -1,0 +1,116 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Corte de Cabello + Masaje Nutritivo - Deluxe Beauty",
+  description: "Una descripción que tengo que editar",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="https://placehold.co/390x340"
+    title="Corte de Cabello + Masaje Nutritivo"
+    duration="120 min"
+    price="$32.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20corte%20de%20cabello%20%2B%20masaje%20nutritivo."
+  >
+    <h2>¿Qué es el Corte de Cabello Mujer y Masaje Nutritivo?</h2>
+    <p>
+      Este tratamiento combina un corte de cabello personalizado para mujeres
+      con un masaje nutritivo que mejora la salud del cuero cabelludo y del
+      cabello. Es ideal para quienes buscan renovar su estilo mientras
+      fortalecen y revitalizan su cabello, disfrutando de una experiencia
+      relajante y completa.
+    </p>
+
+    <h2>Opciones de Corte de Cabello para Mujer</h2>
+    <ul>
+      <li>
+        <strong>Bob:</strong> Un corte clásico que llega a la barbilla o los hombros.
+      </li>
+      <li>
+        <strong>Pixie:</strong> Un corte corto y moderno que se ajusta al contorno
+        de la cabeza.
+      </li>
+      <li>
+        <strong>Melenas:</strong> Un corte largo que llega a la espalda o más abajo.
+      </li>
+      <li>
+        <strong>Shag:</strong> Un corte en capas que se ajusta al contorno de la
+        cabeza y llega a los hombros.
+      </li>
+      <li>
+        <strong>Undercut:</strong> Un corte que combina una parte superior larga
+        con una parte inferior corta y rasurada.
+      </li>
+    </ul>
+
+    <p>
+      Los cortes de cabello pueden ser personalizados para adaptarse a las
+      necesidades y preferencias individuales de cada mujer, y pueden ser
+      complementados con técnicas de coloración y estilismo para completar el
+      look deseado.
+    </p>
+
+    <h2>Beneficios del Masaje Nutritivo para el Cabello</h2>
+    <ul>
+      <li>
+        <strong>Mejora la Nutrición del Folículo:</strong> Aumenta el flujo sanguíneo
+        al cuero cabelludo, lo que ayuda a transportar más nutrientes a los folículos
+        pilosos y fomenta un crecimiento saludable del cabello.
+      </li>
+      <li>
+        <strong>Cabello Más Saludable:</strong> Los productos nutritivos aplicados
+        durante el masaje proporcionan hidratación y nutrientes esenciales, mejorando
+        la textura y la apariencia del cabello.
+      </li>
+      <li>
+        <strong>Suaviza el Cabello:</strong> Los aceites y mascarillas nutritivas
+        ayudan a controlar el frizz y a suavizar el cabello, dejándolo más manejable
+        y brillante.
+      </li>
+      <li>
+        <strong>Experiencia Relajante:</strong> El masaje en el cuero cabelludo proporciona
+        una experiencia relajante que ayuda a reducir el estrés y la tensión.
+      </li>
+      <li>
+        <strong>Fortalece los Folículos:</strong> Al mejorar la salud del cuero cabelludo
+        y fortalecer los folículos pilosos, el masaje nutritivo puede ayudar a reducir
+        la caída del cabello.
+      </li>
+    </ul>
+
+    <p>
+      <em
+        >Este servicio combinado es ideal para renovar tu estilo y cuidar tu
+        cabello, dejándolo más saludable, fuerte y con un aspecto espectacular.</em
+      >
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

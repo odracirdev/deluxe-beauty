@@ -18,7 +18,7 @@ const { image, alt, slug, pos, name } = Astro.props;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 16rem;
+    max-width: 18rem;
     position: relative;
 
     & img {
@@ -37,7 +37,7 @@ const { image, alt, slug, pos, name } = Astro.props;
 
     & h3 {
       background-color: var(--white);
-      padding: 0.2rem 1rem;
+      padding: 0.25rem 1rem;
       border-radius: 0.7rem 0.7rem 0 0;
     }
 
@@ -52,18 +52,10 @@ const { image, alt, slug, pos, name } = Astro.props;
     & .Top {
       position: absolute;
       bottom: -28px;
-
-      & h3 {
-        font-size: 1.25rem;
-      }
-
-      & a {
-        font-size: 0.9rem;
-      }
     }
 
     & .Mid {
-      --width: 124px;
+      --width: 12.5rem;
       position: absolute;
       bottom: -48px;
 
@@ -72,7 +64,6 @@ const { image, alt, slug, pos, name } = Astro.props;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1rem;
         width: var(--width);
         padding: 0.2rem 0.9rem;
         line-height: 1;

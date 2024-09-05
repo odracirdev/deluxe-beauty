@@ -1,8 +1,8 @@
 ---
-const { column } = Astro.props;
+const { type } = Astro.props;
 ---
 
-<article class:list={["cols", column ? "col-2" : "col-1"]}>
+<article class:list={["cols", type ? "services" : " "]}>
   <slot />
 </article>
 
@@ -11,18 +11,15 @@ const { column } = Astro.props;
     padding: 2rem 1rem;
   }
 
-  .col-1 {
+  .cols {
     display: grid;
     place-items: center;
-    gap: 3rem;
+    gap: 4rem;
     margin-bottom: 3rem;
   }
 
-  .col-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: stretch;
-    gap: 3.25rem 0.5rem;
+  .services {
+    width: 100%;
     background-color: var(--white);
     border-radius: 2rem;
     margin-top: -3rem;

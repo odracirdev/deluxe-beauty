@@ -1,26 +1,36 @@
 ---
+import { Icon } from "astro-icon/components";
+
 const { img, name, duration, price, info, booking } = Astro.props;
 ---
 
 <div class="services__wrapper">
   <img src={img} alt="" />
-  <article>
-    <h3>{name}</h3>
-    <p><strong>Duración:</strong> {duration}</p>
-    <p><strong>Valor:</strong> {price}</p>
-  </article>
-  <div class="buttons">
-    <a href={info} target="_self" rel="noopener noreferrer">Info</a>
-    <a href={booking} target="_self" rel="noopener noreferrer">Agendar</a>
+  <h3>{name}</h3>
+  <div class="info">
+    <article>
+      <p><Icon name="clock" size="28" /> {duration}</p>
+      <p><Icon name="money" size="28" /> {price}</p>
+    </article>
+    <div class="buttons">
+      <a href={info} target="_self" rel="noopener noreferrer"
+        ><Icon name="information" size="28" /> Ver</a
+      >
+      <a href={booking} target="_self" rel="noopener noreferrer"
+        ><Icon name="calendar" size="28" /> Agendar</a
+      >
+    </div>
   </div>
 </div>
 
 <style>
   .services__wrapper {
-    padding: 0.5rem;
+    max-width: 20rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 0.5rem;
     background-color: var(--white);
     border-radius: 1rem;
@@ -30,38 +40,46 @@ const { img, name, duration, price, info, booking } = Astro.props;
 
     & img {
       border-radius: 1rem;
+      aspect-ratio: 16 / 9;
     }
 
-    & article {
+    & h3 {
+      text-align: center;
+      text-wrap: balance;
+    }
+
+    & .info {
       display: flex;
       flex-direction: column;
-      gap: 0.25rem;
+      gap: 1rem;
 
-      & h3 {
-        text-wrap: balance;
-        font-size: 1.25rem;
+      & article {
+        display: flex;
+        gap: 0.5rem;
+
+        & p {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
       }
 
-      & p {
-        font-size: 1rem;
-      }
-    }
+      .buttons {
+        display: flex;
+        gap: 0.5rem;
 
-    .buttons {
-      display: flex;
-      flex: 1;
-      align-items: end;
-      justify-content: space-between;
-      padding: 0.5rem 0;
-
-      & a {
-        background-color: var(--primary-color);
-        color: var(--white);
-        font-size: 1rem;
-        text-decoration: none;
-        padding: 0.25rem 0.5rem;
-        border-radius: 0.5rem;
-        cursor: pointer;
+        & a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: var(--primary-color);
+          color: var(--white);
+          text-decoration: none;
+          padding: 0.35rem 1rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          width: fit-content;
+        }
       }
     }
   }

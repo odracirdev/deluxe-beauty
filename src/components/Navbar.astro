@@ -1,21 +1,25 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 
-const siteURL = import.meta.env.DEV ? '' : import.meta.env.SITE
+const siteURL = import.meta.env.DEV ? "" : import.meta.env.SITE;
 
 const slugs = [
-  { text: 'Inicio', slug: `${siteURL}/`, icon: 'home' },
-  { text: 'Servicios', slug: `${siteURL}/servicios`, icon: 'services' },
-  { text: 'Contacto', slug: "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%C2%A1Hola!%20Necesito%20informaci%C3%B3n%20sobre%20sus%20servicios.", icon: 'whatsapp' }
-]
+  { text: "Inicio", slug: `${siteURL}/`, icon: "home" },
+  { text: "Servicios", slug: `${siteURL}/servicios`, icon: "services" },
+  {
+    text: "Contacto",
+    slug: "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%C2%A1Hola!%20Necesito%20informaci%C3%B3n%20sobre%20sus%20servicios.",
+    icon: "whatsapp",
+  },
+];
 
 function isActiveSlug(slug: string) {
-  const normalizedPath = Astro.url.pathname.replace(`${siteURL}/`, '/');
-  const normalizedSlug = slug.replace(`${siteURL}/`, '/');
+  const normalizedPath = Astro.url.pathname.replace(`${siteURL}/`, "/");
+  const normalizedSlug = slug.replace(`${siteURL}/`, "/");
 
   return (
     normalizedPath === normalizedSlug ||
-    (normalizedSlug !== '/' && normalizedPath.startsWith(normalizedSlug))
+    (normalizedSlug !== "/" && normalizedPath.startsWith(normalizedSlug))
   );
 }
 ---
@@ -27,12 +31,19 @@ function isActiveSlug(slug: string) {
     >
     <div class="menu">
       <ul class="menu-list">
-        {slugs.map(({text, slug, icon})=>(<li class="menu-item">
-          <a href={slug} class:list={["menu-link", {"is-active":isActiveSlug(slug)}]}>
-            <Icon name={icon} size={32} />
-            <span class="menu-name">{text}</span>
-          </a>
-        </li>))}
+        {
+          slugs.map(({ text, slug, icon }) => (
+            <li class="menu-item">
+              <a
+                href={slug}
+                class:list={["menu-link", { "is-active": isActiveSlug(slug) }]}
+              >
+                <Icon name={icon} size={32} />
+                <span class="menu-name">{text}</span>
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </nav>
@@ -52,7 +63,7 @@ function isActiveSlug(slug: string) {
     height: 4.5rem;
     z-index: 100;
 
-    &:before{
+    &:before {
       content: "";
       position: absolute;
       background: rgb(255 255 255 / 0.5);
@@ -86,8 +97,8 @@ function isActiveSlug(slug: string) {
       border-top-left-radius: 1.5rem;
       border-top-right-radius: 1.5rem;
       box-shadow: var(--shadow-medium);
-       background: rgb(255 255 255 / 0.5);
-       backdrop-filter: blur(24px);
+      background: rgb(255 255 255 / 0.5);
+      backdrop-filter: blur(24px);
 
       & .menu-list {
         display: flex;
@@ -95,8 +106,8 @@ function isActiveSlug(slug: string) {
         justify-content: space-around;
 
         & .menu-link {
-		      display: flex;
-		      flex-direction: column;
+          display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
           border: none;
@@ -104,18 +115,43 @@ function isActiveSlug(slug: string) {
           color: var(--color-black);
 
           &.is-active {
-			      color: var(--primary-color);
-			      transition: all 0.35s ease-in-out;
-		      }
+            color: var(--primary-color);
+            transition: all 0.35s ease-in-out;
+          }
 
-        & .menu-name {
-          font-weight: 700;
+          & .menu-name {
+            font-weight: 700;
+          }
+
+          &:hover {
+            color: var(--primary-color);
+            transition: color 0.35s ease-in-out;
+          }
         }
+      }
+    }
+  }
 
-         &:hover {
-				  color: var(--primary-color);
-				  transition: color 0.35s ease-in-out;
-			  } 
+  @media (width >= 768px) {
+    .navbar {
+      width: 60rem;
+
+      & .menu {
+        position: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        box-shadow: none;
+        background: none;
+
+        & .menu-list {
+          justify-content: flex-end;
+          gap: 3rem;
+
+          & .menu-link {
+            flex-direction: row;
+            gap: 0.5rem;
+          }
+        }
       }
     }
   }

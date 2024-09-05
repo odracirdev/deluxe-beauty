@@ -25,4 +25,10 @@ const { type } = Astro.props;
     margin-top: -3rem;
     padding-bottom: 5rem;
   }
+
+  @media (width >= 768px) {
+    .cols {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 </style>

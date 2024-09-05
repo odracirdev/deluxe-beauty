@@ -24,4 +24,13 @@ const { image, title, description, alt } = Astro.props;
       text-align: center;
     }
   }
+
+  @media (width >= 768px) {
+    .reasons__wrap {
+      & p {
+        text-align: left;
+        text-wrap: balance;
+      }
+    }
+  }
 </style>

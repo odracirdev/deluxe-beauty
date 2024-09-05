@@ -50,4 +50,15 @@ import ServiceCategories from "@components/ServiceCategories.astro";
       margin-bottom: 1rem;
     }
   }
+
+  @media (width >= 768px) {
+    .categories {
+      max-width: 60rem;
+      margin: 0 auto;
+
+      & p {
+        text-wrap: balance;
+      }
+    }
+  }
 </style>

@@ -19,7 +19,7 @@ import Button from "@components/Button.astro";
 <style>
   .booking {
     background-image: url(/images/pattern-1.avif);
-    background-size: cover;
+    background-size: contain;
     padding: 2rem 1rem;
     text-align: center;
 
@@ -40,5 +40,8 @@ import Button from "@components/Button.astro";
   }
 
   @media (width >= 768px) {
+    .booking {
+      width: 100dvw;
+    }
   }
 </style>

@@ -54,18 +54,20 @@ const { img, name, duration, price, info, booking } = Astro.props;
       gap: 1rem;
 
       & article {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 0.5rem;
 
         & p {
           display: flex;
-          gap: 1rem;
+          gap: 0.5rem;
           align-items: center;
         }
       }
 
       .buttons {
         display: flex;
+        justify-content: center;
         gap: 0.5rem;
 
         & a {

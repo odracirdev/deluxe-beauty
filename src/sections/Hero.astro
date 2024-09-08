@@ -7,12 +7,16 @@ import Button from "@components/Button.astro";
   <div class="embla">
     <div class="embla__container">
       <div class="embla__slide slide-1">
-        <h2>Título del servicio 1</h2>
-        <Button href="#" variant="pink">Botón 1</Button>
+        <div class="slide__container">
+          <h2>Título del servicio 1</h2>
+          <Button href="#" color="white-pink">Botón 1</Button>
+        </div>
       </div>
       <div class="embla__slide slide-2">
-        <h2>Título del servicio 2</h2>
-        <Button href="#" variant="white">Botón 2</Button>
+        <div class="slide__container">
+          <h2>Título del servicio 2</h2>
+          <Button href="#" color="pink-black">Botón 2</Button>
+        </div>
       </div>
     </div>
   </div>
@@ -31,7 +35,15 @@ import Button from "@components/Button.astro";
         & .embla__slide {
           flex: 0 0 100%;
           min-width: 0;
-          padding: 1.5rem 2rem;
+
+          & .slide__container {
+            max-width: 60rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 0;
+            margin: 0 auto;
+          }
         }
 
         & .slide-1 {

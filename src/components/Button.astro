@@ -1,5 +1,5 @@
 ---
-const { href, variant } = Astro.props;
+const { href, color } = Astro.props;
 ---
 
 <a
@@ -9,9 +9,9 @@ const { href, variant } = Astro.props;
   class:list={[
     "button",
     {
-      pink: variant === "pink",
-      pinklarge: variant === "pinklarge",
-      white: variant === "white",
+      "white-pink": color === "white-pink",
+      "white-black": color === "white-black",
+      "pink-black": color === "pink-black",
     },
   ]}
 >
@@ -20,33 +20,61 @@ const { href, variant } = Astro.props;
 
 <style>
   .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border: none;
-    border-radius: 999999px;
-    box-shadow:
-      0px 4px 20px #ccc4,
-      0px 2px 6px #ccc4;
+    max-width: fit-content;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }
 
-  .pink {
-    background-color: var(--primary-color);
+  .white-pink {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 0 0 var(--primary-color);
+
+    &:hover {
+      transform: translateY(-4px) translateX(-2px);
+      box-shadow: 2px 5px 0 0 var(--primary-color);
+    }
+
+    &:active {
+      transform: translateY(2px) translateX(1px);
+      box-shadow: 0 0 0 0 var(--primary-color);
+    }
+  }
+
+  .white-black {
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+    box-shadow: 0 0 0 0 var(--black);
+
+    &:hover {
+      transform: translateY(-4px) translateX(-2px);
+      box-shadow: 2px 5px 0 0 var(--black);
+    }
+
+    &:active {
+      transform: translateY(2px) translateX(1px);
+      box-shadow: 0 0 0 0 var(--black);
+    }
+  }
+
+  .pink-black {
+    background: var(--primary-color);
     color: var(--white);
-    padding: 0.25rem 1.5rem;
-  }
+    border: 2px solid var(--black);
+    box-shadow: 0 0 0 0 var(--black);
 
-  .pinklarge {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 0.25rem 1.5rem;
-    margin-top: 1rem;
-  }
+    &:hover {
+      transform: translateY(-4px) translateX(-2px);
+      box-shadow: 2px 5px 0 0 var(--black);
+    }
 
-  .white {
-    background-color: var(--white);
-    color: var(--primary-color);
-    padding: 0.25rem 1.5rem;
+    &:active {
+      transform: translateY(2px) translateX(1px);
+      box-shadow: 0 0 0 0 var(--black);
+    }
   }
 </style>

@@ -15,11 +15,11 @@ const { img, title, duration, price, booking } = Astro.props;
         <p><strong>Duración:</strong> {duration}</p>
         <p><strong>Valor:</strong> {price}</p>
       </div>
-      <Button href={booking} variant="pink">Agendar</Button>
+      <Button href={booking} color="pink-black">Agendar</Button>
     </article>
     <article class="description">
       <slot />
-      <Button href={booking} variant="pinklarge">Agendar</Button>
+      <Button href={booking} color="pink-black">Agendar</Button>
     </article>
   </section>
 </main>

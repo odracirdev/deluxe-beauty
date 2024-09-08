@@ -74,13 +74,25 @@ const { img, name, duration, price, info, booking } = Astro.props;
           display: flex;
           align-items: center;
           gap: 0.5rem;
-          background-color: var(--primary-color);
-          color: var(--white);
-          text-decoration: none;
-          padding: 0.35rem 1rem;
-          border-radius: 0.5rem;
+          max-width: fit-content;
+          border-radius: 0.75rem;
+          padding: 0.5rem 1.25rem;
           cursor: pointer;
-          width: fit-content;
+          transition: all 0.3s ease-in-out;
+          background: var(--primary-color);
+          color: var(--white);
+          border: 2px solid var(--black);
+          box-shadow: 0 0 0 0 var(--black);
+
+          &:hover {
+            transform: translateY(-4px) translateX(-2px);
+            box-shadow: 2px 5px 0 0 var(--black);
+          }
+
+          &:active {
+            transform: translateY(2px) translateX(1px);
+            box-shadow: 0 0 0 0 var(--black);
+          }
         }
       }
     }

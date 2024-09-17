@@ -3,7 +3,6 @@ import Layout from "@layouts/Layout.astro";
 import FeatureCard from "@components/FeatureCard.astro";
 import Booking from "@sections/Booking.astro";
 import ServiceCategories from "@components/ServiceCategories.astro";
-import Header from "@components/Header.astro";
 
 const options = {
   title: "Servicios - Deluxe Beauty",
@@ -15,11 +14,13 @@ const options = {
 <Layout options={options}>
   <main>
     <section class="categories">
-      <Header
-        title="Tus servicios favoritos"
-        desc="Descubre una experiencia de belleza personalizada con nuestros servicios. ¡Dedícate un momento para sentirte y verte increíble!"
-      />
-
+      <header>
+        <h2>Tus servicios favoritos</h2>
+        <p>
+          Descubre una experiencia de belleza personalizada con nuestros
+          servicios. ¡Dedícate un momento para sentirte y verte increíble!
+        </p>
+      </header>
       <ServiceCategories type>
         <FeatureCard
           image="/images/manos-y-pies/portada-manos-y-pies.avif"
@@ -28,49 +29,49 @@ const options = {
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/manos-y-pies/unas-gel-o-acrilico.avif"
           name="Uñas Gel o Acrilicas"
           slug="/servicios/unas-gel-o-acrilicas/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/peluqueria/brushing.avif"
           name="Peluquería"
           slug="/servicios/peluqueria/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/cejas-y-pestanas/laminado-de-cejas.avif"
           name="Cejas y Pestañas"
           slug="/servicios/cejas-y-pestanas/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/masajes/masaje-de-relajacion.avif"
           name="Masajes"
           slug="/servicios/masajes/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/tratamientos-corporales/pack-masajes-reafirmantes.avif"
           name="Tratamientos Corpolares"
           slug="/servicios/tratamientos-corporales/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/maquillajes-y-peinados/maquillaje-ondas.avif"
           name="Maquillaje y Peinados"
           slug="/servicios/maquillajes-y-peinados/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/novias/peinado-prueba.avif"
           name="Novias"
           slug="/servicios/novias/"
           >Ver Servicios
         </FeatureCard>
         <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
+          image="/images/promociones/manicure-lifting.avif"
           name="Promociones"
           slug="/servicios/promociones/"
           >Ver Servicios
@@ -88,5 +89,33 @@ const options = {
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    & header {
+      width: 100dvw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: url(/images/pattern-4.avif);
+      background-size: contain;
+      padding: 3rem 1rem 6.25rem;
+
+      & h2 {
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+      }
+
+      & p {
+        color: var(--white);
+      }
+    }
+
+    @media (width >= 768px) {
+      header {
+        & p {
+          max-width: 60rem;
+          text-wrap: balance;
+        }
+      }
+    }
   }
 </style>

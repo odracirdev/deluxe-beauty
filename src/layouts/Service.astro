@@ -1,15 +1,14 @@
 ---
 import Button from "@components/Button.astro";
+import Header from "@components/Header.astro";
 
 const { img, title, duration, price, booking } = Astro.props;
 ---
 
 <main>
-  <header>
-    <img src={img} alt={title} />
-  </header>
+  <Header title={title} />
   <section class="service">
-    <h1>{title}</h1>
+    <img src={img} alt={title} />
     <article class="details">
       <div class="time-price">
         <p><strong>Duración:</strong> {duration}</p>
@@ -25,18 +24,20 @@ const { img, title, duration, price, booking } = Astro.props;
 </main>
 
 <style>
-  header {
-    width: 100dvw;
-    height: 21.188rem;
-    position: relative;
-    z-index: -1;
-  }
-
   .service {
-    background-color: var(--white);
+    max-width: 60rem;
     padding: 1.5rem 1rem;
-    border-radius: 2rem;
-    margin-top: -3rem;
+    margin: 0 auto;
+
+    & img {
+      aspect-ratio: 4 / 3;
+      border-radius: 1rem;
+      border: 2px solid var(--black);
+
+      @media (width >= 768px) {
+        aspect-ratio: 16 / 9;
+      }
+    }
 
     & h1 {
       font-size: 2.25rem;

@@ -26,10 +26,11 @@ const { img, name, duration, price, info, booking } = Astro.props;
 <style>
   .services__wrapper {
     max-width: 20rem;
+    min-height: 30rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 0.5rem;
     background-color: var(--white);
@@ -58,7 +59,6 @@ const { img, name, duration, price, info, booking } = Astro.props;
       & article {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
 
         & p {
           display: flex;

@@ -1,0 +1,81 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Maquillaje + Peinado (Día del Matrimonio) - Deluxe Beauty",
+  description:
+    "Maquillaje y peinado para tu boda: look radiante y duradero con productos de alta calidad, adaptado a tu estilo y tema del evento.",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="/images/novias/peinado-prueba.avif"
+    title="Maquillaje + Peinado (Día del Matrimonio)"
+    duration="120 min"
+    price="$124.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20el%20pack%20para%20el%20maquillaje%20y%20peinado%20de%20en%20el%20día%20del%20matrimonio."
+  >
+    <h2>¿Qué es el Maquillaje + Peinado (Día del Matrimonio)?</h2>
+    <p>
+      El servicio de maquillaje y peinado para el día del matrimonio es una
+      experiencia completa diseñada para que luzcas perfecta y radiante en tu
+      boda. Este servicio garantiza que tanto tu maquillaje como tu peinado se
+      mantendrán impecables durante toda la celebración, utilizando productos de
+      alta calidad y técnicas profesionales que realzan tu belleza natural,
+      adaptándose a tu estilo y a la temática de tu boda.
+    </p>
+
+    <h2>Consejos Adicionales</h2>
+    <ul>
+      <li>
+        <strong>Preparación Integral:</strong> El día de la boda, se dedica especial
+        atención a la preparación de la piel y el cabello, asegurando que ambos estén
+        en perfectas condiciones para lograr un resultado duradero y sin fallas.
+      </li>
+      <li>
+        <strong>Productos de Alta Durabilidad:</strong> Se utilizan productos resistentes
+        al agua y de larga duración para garantizar que tanto el maquillaje como
+        el peinado se mantengan intactos desde la ceremonia hasta la recepción.
+      </li>
+      <li>
+        <strong>Estilo Personalizado:</strong> El maquillaje y peinado se ajustan
+        a tus preferencias personales, combinando a la perfección con tu vestido,
+        accesorios y el ambiente del evento, para que te sientas segura y hermosa
+        en tu gran día.
+      </li>
+    </ul>
+
+    <p>
+      El servicio de maquillaje y peinado para el día del matrimonio te asegura
+      un look impecable, pensado para que resaltes en cada momento del evento y
+      puedas disfrutar de tu boda con la confianza de que estarás perfecta de
+      principio a fin.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Maquillaje Novia  (Dia del Matrimonio) - Deluxe Beauty",
+  description:
+    "Maquillaje de novia personalizado para tu boda: duradero, elegante y adaptado a tu estilo. Luzca radiante desde la ceremonia hasta la recepción.",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="/images/novias/maquillaje-novia-dia-del-matrimonio.avif"
+    title="Maquillaje Novia (Dia del Matrimonio)"
+    duration="80 min"
+    price="$76.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20maquillaje%20de%20novia%20en%20el%20día%20del%20matrimonio."
+  >
+    <h2>¿Qué es el Maquillaje de Novia (Día del Matrimonio)?</h2>
+    <p>
+      El maquillaje de novia para el día del matrimonio es un servicio
+      especializado que asegura que luzcas impecable y radiante durante toda la
+      celebración. Está diseñado para resaltar tu belleza natural, adaptándose
+      al estilo de tu boda y a las condiciones del evento, con productos de alta
+      duración para que permanezcas fresca y elegante hasta el final del día.
+    </p>
+
+    <h2>Consejos Adicionales</h2>
+    <ul>
+      <li>
+        <strong>Preparación de la Piel:</strong> Antes de aplicar el maquillaje,
+        se realiza una preparación cuidadosa de la piel para que luzca hidratada
+        y suave, garantizando un acabado perfecto.
+      </li>
+      <li>
+        <strong>Productos de Alta Duración:</strong> Se utilizan productos resistentes
+        al agua y de larga duración, pensados para soportar el calor, las emociones
+        y las fotos a lo largo de la boda.
+      </li>
+      <li>
+        <strong>Armonía con el Estilo:</strong> El maquillaje se adapta a tu estilo
+        personal, al vestido, y a la temática de la boda, logrando una apariencia
+        que refleje tu esencia en este día tan especial.
+      </li>
+    </ul>
+
+    <p>
+      El maquillaje de novia para el día del matrimonio te garantiza un look
+      perfecto desde la ceremonia hasta la recepción. Con un enfoque en la
+      durabilidad, la elegancia y la personalización, estarás lista para brillar
+      en cada momento de este día inolvidable.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

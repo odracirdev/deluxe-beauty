@@ -1,0 +1,79 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Service from "@layouts/Service.astro";
+
+const options = {
+  title: "Peinado Novia (Prueba) - Deluxe Beauty",
+  description:
+    "Prueba de peinado de novia: ensayo previo para encontrar el estilo perfecto que complemente tu vestido y maquillaje, garantizando durabilidad y confort.",
+};
+---
+
+<Layout options={options}>
+  <Service
+    img="/images/novias/peinado-prueba.avif"
+    title="Peinado Novia (Prueba)"
+    duration="60 min"
+    price="$42.900"
+    booking="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20prueba%20de%20peinado%20de%20novia."
+  >
+    <h2>¿Qué es el Peinado de Novia (Prueba)?</h2>
+    <p>
+      El peinado de novia (prueba) es una sesión preliminar donde se ensaya el
+      peinado que lucirás el día de tu boda. Su propósito es encontrar el estilo
+      perfecto que complemente tu vestido y maquillaje, garantizando que te
+      sientas cómoda y hermosa. Este ensayo permite hacer ajustes y asegurar que
+      el peinado se mantenga impecable durante toda la celebración.
+    </p>
+
+    <h2>Consejos Adicionales</h2>
+    <ul>
+      <li>
+        <strong>Explora Opciones:</strong> Trae ideas y referencias para probar diferentes
+        estilos y descubrir cuál te favorece más y se adapta a la temática de tu
+        boda.
+      </li>
+      <li>
+        <strong>Durabilidad y Comodidad:</strong> Asegúrate de que el peinado no
+        solo luzca bien, sino que también sea cómodo y duradero, resistiendo el movimiento
+        y las actividades del día.
+      </li>
+      <li>
+        <strong>Accesorios:</strong> Si planeas usar velo, tiara u otros accesorios,
+        llévalos a la prueba para integrarlos y verificar que se complementen perfectamente
+        con tu peinado.
+      </li>
+    </ul>
+
+    <p>
+      La prueba de peinado de novia es esencial para garantizar que el día de tu
+      boda luzcas y te sientas espectacular. Este ensayo te permite encontrar el
+      estilo ideal y asegurarte de que todo esté en su lugar para que puedas
+      disfrutar de tu día sin preocupaciones.
+    </p>
+  </Service>
+</Layout>
+
+<style>
+  h2 {
+    margin: 1rem 0;
+  }
+
+  ol,
+  ul {
+    padding-left: 1rem;
+  }
+
+  li:is(.process-title) {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  li:not(.process-title) {
+    color: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+</style>

@@ -8,14 +8,29 @@ import Button from "@components/Button.astro";
     <div class="embla__container">
       <div class="embla__slide slide-1">
         <div class="slide__container">
-          <h2>Título del servicio 1</h2>
-          <Button href="#" color="white-pink">Botón 1</Button>
+          <h2>Manicure Permanente 2 Amigas</h2>
+          <Button
+            href="/servicios/promociones/manicure-permanente-amigas"
+            color="pink-black">Ver Promoción</Button
+          >
         </div>
       </div>
       <div class="embla__slide slide-2">
         <div class="slide__container">
-          <h2>Título del servicio 2</h2>
-          <Button href="#" color="pink-black">Botón 2</Button>
+          <h2>Perfilado de Cejas + Lifting de Pestañas</h2>
+          <Button
+            href="/servicios/promociones/perfilado-de-cejas-y-lifting-de-pestanas"
+            color="pink-black">Ver Promoción</Button
+          >
+        </div>
+      </div>
+      <div class="embla__slide slide-3">
+        <div class="slide__container">
+          <h2>Lifting de Pestañas + Manicure Permanente</h2>
+          <Button
+            href="/servicios/promociones/lifting-de-pestanas-y-manicure-permanente"
+            color="pink-black">Ver Promoción</Button
+          >
         </div>
       </div>
     </div>
@@ -37,23 +52,36 @@ import Button from "@components/Button.astro";
           min-width: 0;
 
           & .slide__container {
+            height: 100%;
             max-width: 60rem;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            padding: 1.5rem;
             gap: 1rem;
-            padding: 2rem 0;
             margin: 0 auto;
+          }
+
+          & h2 {
+            color: var(--white);
+            text-shadow: #000000 1px 0 10px;
           }
         }
 
         & .slide-1 {
-          background-image: url("/images/manos-y-pies/portada-manos-y-pies.avif");
+          background-image: url("/images/promo-manicure-2-amigas.avif");
           background-size: cover;
           background-position: center center;
         }
 
         & .slide-2 {
-          background-image: url("/images/cejas-y-pestanas/laminado-de-cejas.avif");
+          background-image: url("/images/promo-perfilado-de-cejas-lifting-de-de-pestanas.avif");
+          background-size: cover;
+          background-position: center center;
+        }
+
+        & .slide-3 {
+          background-image: url("/images/promo-lifting-de-pestanas-y-manicure-permanente.avif");
           background-size: cover;
           background-position: center center;
         }

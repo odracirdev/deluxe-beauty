@@ -4,6 +4,7 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Tratamientos corporales - Deluxe Beauty",
@@ -11,44 +12,7 @@ const options = {
     "Ofrecemos servicios profesionales que ayudan a esculpir tu figura, reafirmar la piel y mejorar la circulación, promoviendo una sensación de renovación y vitalidad.",
 };
 
-const services = [
-  {
-    img: "/images/tratamientos-corporales/masaje-reductivo.avif",
-    name: "Masaje Reductivo",
-    duration: "60 min",
-    price: "$34.900",
-    info: "./masaje-reductivo",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20reductivo.",
-  },
-  {
-    img: "/images/tratamientos-corporales/masaje-reafirmante.avif",
-    name: "Masaje Reafirmante",
-    duration: "60 min",
-    price: "$38.900",
-    info: "./masaje-reafirmante",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20reafirmante.",
-  },
-  {
-    img: "/images/tratamientos-corporales/pack-masajes-reafirmantes.avif",
-    name: "Pack de 8 Masajes Reafirmantes",
-    duration: "60 min / Sesión",
-    price: "$240.000",
-    info: "./pack-8-masajes-reafirmantes",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20pack%20de%208%20masajes%20reafirmantes.",
-  },
-  {
-    img: "/images/tratamientos-corporales/drenaje-linfatico.avif",
-    name: "Drenaje Linfático",
-    duration: "60 min",
-    price: "$36.900",
-    info: "./drenaje-linfatico",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20drenaje%20linf%C3%A1tico.",
-  },
-];
+const services = await getCollection("tratamientos-corporales");
 ---
 
 <Layout options={options}>
@@ -58,16 +22,21 @@ const services = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services.map((service) => {
+            const { slug, data } = service;
+            const { name, img, duration, price, booking } = data;
+
+            return (
+              <ServiceCard
+                img={img}
+                name={name}
+                duration={duration}
+                price={price}
+                info={slug}
+                booking={booking}
+              />
+            );
+          })
         }
       </Services>
     </section>

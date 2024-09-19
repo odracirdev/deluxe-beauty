@@ -4,77 +4,14 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Promociones - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
 
-const services = [
-  {
-    img: "/images/promociones/2-manicure-amigas.avif",
-    name: "Manicure Permanente 2 Amigas",
-    duration: "120 min",
-    price: "$35.900",
-    info: "./manicure-permanente-amigas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20manicure%20permanente%20para%202%20amigas.",
-  },
-  {
-    img: "/images/promociones/2-pedicure-amigas.avif",
-    name: "Pedicure Permanente 2 Amigas",
-    duration: "120 min",
-    price: "$38.900",
-    info: "./preidicure-permanente-amigas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%pedicure%20permanente%20para%202%20amigas.",
-  },
-  {
-    img: "/images/promociones/perfilado-de-cejas-lifting.avif",
-    name: "Perfilado de Cejas + Lifting de Pestañas",
-    duration: "90 min",
-    price: "$34.900",
-    info: "./perfilado-de-cejas-y-lifting-de-pestanas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20perfilado%20de%20cejas%20%2B%20lifting%20de%20pesta%C3%B1as.",
-  },
-  {
-    img: "/images/promociones/planchado-de-cejas-perfilado.avif",
-    name: "Planchado de Cejas + Perfilado de Cejas",
-    duration: "90 min",
-    price: "$28.900",
-    info: "./planchado-de-cejas-con-perfilado",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20planchado%20de%20cejas%20%2B%20perfilado%20de%20cejas.",
-  },
-  {
-    img: "/images/promociones/manicure-lifting.avif",
-    name: "Lifting de Pestañas + Manicure Permanente",
-    duration: "120 min",
-    price: "$40.900",
-    info: "./lifting-de-pestanas-y-manicure-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20lifting%20de%20pesta%C3%B1as%20%2B%20manicure%20permanente.",
-  },
-  {
-    img: "/images/promociones/corte-brushing.avif",
-    name: "Corte de Cabello + Brushing",
-    duration: "90 min",
-    price: "$26.900",
-    info: "./corte-de-cabello-y-brushing",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20corte%20de%20cabello%20%2B%20brushing.",
-  },
-  {
-    img: "/images/promociones/corte-de-cabello-masaje-nutritivo.avif",
-    name: "Corte de Cabello + Masaje Nutritivo",
-    duration: "120 min",
-    price: "$32.900",
-    info: "./corte-de-cabello-y-masaje-nutritivo",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20promoci%C3%B3n%20de%20corte%20de%20cabello%20%2B%20masaje%20nutritivo.",
-  },
-];
+const services = await getCollection("promociones");
 ---
 
 <Layout options={options}>
@@ -84,16 +21,21 @@ const services = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services.map((service) => {
+            const { slug, data } = service;
+            const { name, img, duration, price, booking } = data;
+
+            return (
+              <ServiceCard
+                img={img}
+                name={name}
+                duration={duration}
+                price={price}
+                info={slug}
+                booking={booking}
+              />
+            );
+          })
         }
       </Services>
     </section>

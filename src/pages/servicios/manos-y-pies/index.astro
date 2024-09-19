@@ -4,6 +4,7 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Manos y Pies - Deluxe Beauty",
@@ -11,200 +12,7 @@ const options = {
     "Descubre nuestros servicios de manicure y pedicure. Ofrecemos diseños exclusivos, retiro de esmalte permanente, y opciones de kapping con baño de gel o acrílico. Perfecto para cada estilo y necesidad.",
 };
 
-const services = [
-  {
-    img: "/images/manos-y-pies/manicure-tradicional.avif",
-    name: "Manicure Tradicional",
-    duration: "30 min",
-    price: "$14.900",
-    info: "./manicure-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-permanente.avif",
-    name: "Manicure Permanente",
-    duration: "60 min",
-    price: "$20.900",
-    info: "./manicure-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-permanente-pro.avif",
-    name: "Manicure Permanente Pro (con diseños)",
-    duration: "90 min",
-    price: "$26.900",
-    info: "./manicure-permanente-pro-con-disenos",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente%20con%20dise%C3%B1os.",
-  },
-  {
-    img: "/images/manos-y-pies/pedicure-tradicional.avif",
-    name: "Pedicure Tradicional",
-    duration: "30 min",
-    price: "$16.900",
-    info: "./pedicure-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20pedicure%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/pedicure-permanente.avif",
-    name: "Pedicure Permanente",
-    duration: "60 min",
-    price: "$22.900",
-    info: "./pedicure-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20pedicure%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/pedicure-masculina.avif",
-    name: "Pedicure Hombre",
-    duration: "30 min",
-    price: "$15.900",
-    info: "./pedicure-hombre",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20pedicure%20de%20hombres.",
-  },
-  {
-    img: "/images/manos-y-pies/retiro-de-esmalte-permanente.avif",
-    name: "Retiro de Esmalte Permanente",
-    duration: "20 min",
-    price: "$3.000",
-    info: "./retiro-de-esmalte-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20retiro%20de%20esmalte%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/kapping-permanente.avif",
-    name: "Kapping Baño de Gel o Acrílico Permanente",
-    duration: "90 min",
-    price: "$30.900",
-    info: "./kapping-bano-de-gel-o-acrilico-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20kapping%20ba%C3%B1o%20de%20gel%20o%20acr%C3%ADlico%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/kapping-tradicional.avif",
-    name: "Kapping Baño de Gel o Acrílico Tradicional",
-    duration: "60 min",
-    price: "$24.900",
-    info: "./kapping-bano-de-gel-o-acrilico-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20kapping%20ba%C3%B1o%20de%20gel%20o%20acr%C3%ADlico%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-masculina.avif",
-    name: "Manicure Masculina",
-    duration: "30 min",
-    price: "$12.900",
-    info: "./manicure-masculina",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20masculino.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-nina.avif",
-    name: "Manicure Tradicional para Niñas",
-    duration: "20 min",
-    price: "$10.900",
-    info: "./manicure-tradicional-para-ninas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20tradicionla%20para%20ni%C3%B1as.",
-  },
-];
-
-const servicesPack = [
-  {
-    img: "/images/manos-y-pies/manicure-rusa-esmaltado-permanente.avif",
-    name: "Manicure Rusa + Esmaltado Permanente",
-    duration: "90 min",
-    price: "$32.900",
-    info: "./manicure-rusa-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20ruso%20%2B%20esmaltado%20permanente.#",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-rusa-esmalte-tradicional.avif",
-    name: "Manicure Rusa + Esmaltado Tradicional",
-    duration: "60 min",
-    price: "$28.900",
-    info: "./manicure-rusa-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20ruso%20%2B%20esmaltado%20tradicional.#",
-  },
-  {
-    img: "/images/manos-y-pies/tratamiento-ibx-esmalte-tradicional.avif",
-    name: "Tratamiento IBX + Manicure Tradicional",
-    duration: "50 min",
-    price: "$20.900",
-    info: "./tratamiento-ibx-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20tratamiento%20IBX%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/tratamiento-IBX-esmalte-permanente.avif",
-    name: "Tratamiento IBX + Manicure Permanente",
-    duration: "80 min",
-    price: "$25.900",
-    info: "./tratamiento-ibx-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20tratamiento%20IBX%20%2B%20manicure%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-nina.avif",
-    name: "Manicure Permanente + Manicure Tradicional Niña",
-    duration: "80 min",
-    price: "$28.900",
-    info: "./manicure-permanente-para-mama-y-manicure-tradicional-para-ninas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente%20%2B%20manicure%20tradicional%20para%20ni%C3%B1as.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-tradicional-pedicure-tradicional.avif",
-    name: "Manicure Tradicional + Pedicure Tradicional",
-    duration: "60 min",
-    price: "$26.900",
-    info: "./manicure-tradicional-y-pedicure-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20tradicional%20%2B%20pedicure%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-permanente-promo.avif",
-    name: "Manicure Permanente + Manicure Tradicional",
-    duration: "90 min",
-    price: "$32.900",
-    info: "./manicure-permanente-y-manicure-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente%20%2B%20manicure%20tradicional.#",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-y-pedicure-permanente.avif",
-    name: "Manicure Permanente + Pedicure Permanente",
-    duration: "120 min",
-    price: "$36.900",
-    info: "./manicure-permanente-y-pedicure-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente%20%2B%20pedicure%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-permanente-pedicure-tradicional.avif",
-    name: "Manicure Permanente + Pedicure Tradicional",
-    duration: "90 min",
-    price: "$32.900",
-    info: "./manicure-permanente-y-pedicure-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20permanente%20%2B%20pedicure%20tradicional.",
-  },
-  {
-    img: "/images/manos-y-pies/manicure-tradicional-y-pedicure-permanente.avif",
-    name: "Manicure Tradicional + Pedicure Permanente",
-    duration: "90 min",
-    price: "$32.900",
-    info: "./manicure-tradicional-y-pedicure-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20manicure%20tradicional%20%2B%20pedicure%20tradicional.",
-  },
-];
+const services = await getCollection("manos-y-pies");
 ---
 
 <Layout options={options}>
@@ -213,16 +21,23 @@ const servicesPack = [
       <Header title="Manos y pies" />
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => !service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>
@@ -232,16 +47,23 @@ const servicesPack = [
 
       <Services>
         {
-          servicesPack.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>

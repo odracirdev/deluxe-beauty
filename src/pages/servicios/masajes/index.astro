@@ -4,6 +4,7 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Masajes - Deluxe Beauty",
@@ -11,80 +12,7 @@ const options = {
     "Descubre nuestra gama de masajes diseñados para tu bienestar: desde Masaje de Relajación y Descontracturante, hasta Masaje Prenatal y con Piedras Calientes. Ofrecemos tratamientos especializados como Masaje para Bruxismo y Masaje Craneal para aliviar tensiones y mejorar tu salud general.",
 };
 
-const services = [
-  {
-    img: "/images/masajes/masaje-de-relajacion.avif",
-    name: "Masaje de Relajación",
-    duration: "60 min",
-    price: "$26.900",
-    info: "./masaje-de-relajacion-60-min",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20de%20relajaci%C3%B3n%20de%2060%20min.",
-  },
-  {
-    img: "/images/masajes/masaje-relajacion-90min.avif",
-    name: "Masaje de Relajación",
-    duration: "90 min",
-    price: "$32.900",
-    info: "./masaje-de-relajacion-90-min",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20de%20relajaci%C3%B3n%20de%2090%20min.",
-  },
-  {
-    img: "/images/masajes/masaje-descontracturante.avif",
-    name: "Masaje Descontracturante",
-    duration: "60 min",
-    price: "$30.900",
-    info: "./masaje-descontracturante",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20descontracturante.",
-  },
-  {
-    img: "/images/masajes/masaje-mixto.avif",
-    name: "Masaje Mixto",
-    duration: "90 min",
-    price: "$42.900",
-    info: "./masaje-mixto",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20mixto.",
-  },
-  {
-    img: "/images/masajes/masaje-prenatal.avif",
-    name: "Masaje Prenatal",
-    duration: "60 min",
-    price: "$36.900",
-    info: "./masaje-prenatal",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20prenatal.",
-  },
-  {
-    img: "/images/masajes/masaje-craneal.avif",
-    name: "Masaje Craneal",
-    duration: "60 min",
-    price: "$34.900",
-    info: "./masaje-craneal",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20craneal.",
-  },
-  {
-    img: "/images/masajes/masaje-con-piedras-calientes.avif",
-    name: "Masaje con Piedras Calientes",
-    duration: "60 min",
-    price: "$40.900",
-    info: "./masaje-de-relajacion-con-piedras-calientes",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20de%20relajaci%C3%B3n%20con%20piedras%20calientes.",
-  },
-  {
-    img: "/images/masajes/masaje-bruxismo.avif",
-    name: "Masaje para Bruxismo",
-    duration: "50 min",
-    price: "$35.900",
-    info: "./masaje-para-bruxismo",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20masaje%20para%20bruxismo.",
-  },
-];
+const services = await getCollection("masajes");
 ---
 
 <Layout options={options}>
@@ -94,16 +22,21 @@ const services = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services.map((service) => {
+            const { slug, data } = service;
+            const { name, img, duration, price, booking } = data;
+
+            return (
+              <ServiceCard
+                img={img}
+                name={name}
+                duration={duration}
+                price={price}
+                info={slug}
+                booking={booking}
+              />
+            );
+          })
         }
       </Services>
     </section>

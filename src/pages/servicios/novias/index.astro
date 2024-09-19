@@ -4,98 +4,14 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Novias - Deluxe Beauty",
   description: "Una descripción que tengo que editar",
 };
 
-const services = [
-  {
-    img: "/images/novias/maquillaje-prueba-novia.avif",
-    name: "Maquillaje Novia (Prueba)",
-    duration: "60 min",
-    price: "$54.900",
-    info: "./maquillaje-novia-prueba",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20prueba%20de%20maquillaje%20de%20novia.",
-  },
-  {
-    img: "/images/novias/maquillaje-novia-dia-del-matrimonio.avif",
-    name: "Maquillaje Novia (Dia del Matrimonio)",
-    duration: "80 min",
-    price: "$76.900",
-    info: "./maquillaje-novia-dia-del-matrimonio",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20maquillaje%20de%20novia%20en%20el%20día%20del%20matrimonio.",
-  },
-  {
-    img: "/images/novias/peinado-prueba.avif",
-    name: "Peinado Novia (Prueba)",
-    duration: "60 min",
-    price: "$42.900",
-    info: "./peinado-novia-prueba",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20prueba%20de%20peinado%20de%20novia.",
-  },
-  {
-    img: "/images/novias/peinado-dia-del-matrimonio.avif",
-    name: "Peinado Novia (Dia del Matrimonio)",
-    duration: "80 min",
-    price: "$58.900",
-    info: "./peinado-novia-dia-del-matrimonio",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20peinado%20de%20novia%20en%20el%20día%20del%20matrimonio.",
-  },
-  {
-    img: "/images/novias/peinado-nina.avif",
-    name: "Peinado Niña",
-    duration: "50 min",
-    price: "$22.900",
-    info: "./peinado-nina",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20peinado%20de%20niña.",
-  },
-];
-
-const servicesPack = [
-  {
-    img: "/images/novias/maquillaje-prueba-novia.avif",
-    name: "Maquillaje Novia (Prueba + Día del Matrimonio)",
-    duration: "120 min",
-    price: "$90.900",
-    info: "./maquillaje-novia-prueba-dia-del-matrimonio",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20el%20pack%20para%20el%20maquillaje%20de%20novia%20que%20incluye%20la%20prueba%20y%20el%20día%20del%20matrimonio.",
-  },
-  {
-    img: "/images/novias/peinado-dia-del-matrimonio.avif",
-    name: "Peinado Novia (Prueba + Día del Matrimonio)",
-    duration: "120 min",
-    price: "$102.900",
-    info: "./peinado-novia-prueba-dia-del-matrimonio",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20el%20pack%20para%20el%20peinado%20de%20novia%20que%20incluye%20la%20prueba%20y%20el%20día%20del%20matrimonio.",
-  },
-  {
-    img: "/images/novias/maquillaje-novia-dia-del-matrimonio.avif",
-    name: "Maquillaje + Peinado (Prueba)",
-    duration: "120 min",
-    price: "$72.900",
-    info: "./maquillaje-peinado-prueba",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20el%20pack%20para%20el%20maquillaje%20y%20peinado%20de%20prueba%20para%20matrimonios.",
-  },
-  {
-    img: "/images/novias/peinado-prueba.avif",
-    name: "Maquillaje + Peinado (Día del Matrimonio)",
-    duration: "120 min",
-    price: "$124.900",
-    info: "./maquillaje-peinado-dia-del-matrimonio",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20el%20pack%20para%20el%20maquillaje%20y%20peinado%20de%20en%20el%20día%20del%20matrimonio.",
-  },
-];
+const services = await getCollection("novias");
 ---
 
 <Layout options={options}>
@@ -105,16 +21,23 @@ const servicesPack = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => !service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>
@@ -124,16 +47,23 @@ const servicesPack = [
 
       <Services>
         {
-          servicesPack.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>

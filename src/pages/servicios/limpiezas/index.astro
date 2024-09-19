@@ -1,0 +1,61 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Booking from "@sections/Booking.astro";
+import ServiceCard from "@components/ServiceCard.astro";
+import Header from "@components/Header.astro";
+import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
+
+const options = {
+  title: "Limpiezas - Deluxe Beauty",
+  description:
+    "Descubre nuestros servicios de limpiezas faciales, diseñados para rejuvenecer tu piel y mejorar su salud. Disfruta de tratamientos personalizados que eliminan impurezas, hidratan y revitalizan tu rostro. ¡Reserva tu cita y luce una piel radiante!",
+};
+
+const services = await getCollection("limpiezas");
+---
+
+<Layout options={options}>
+  <main>
+    <section class="service__list">
+      <Header title="Limpiezas" />
+
+      <Services>
+        {
+          services.map((service) => {
+            const { slug, data } = service;
+            const { name, img, duration, price, booking } = data;
+
+            return (
+              <ServiceCard
+                img={img}
+                name={name}
+                duration={duration}
+                price={price}
+                info={slug}
+                booking={booking}
+              />
+            );
+          })
+        }
+      </Services>
+
+      <Booking />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .service__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (width >= 768px) {
+    .service__list {
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+  }
+</style>

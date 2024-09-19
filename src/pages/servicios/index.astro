@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import FeatureCard from "@components/FeatureCard.astro";
 import Booking from "@sections/Booking.astro";
 import ServiceCategories from "@components/ServiceCategories.astro";
+import categories from "./categories.json";
 
 const options = {
   title: "Servicios - Deluxe Beauty",
@@ -22,60 +23,13 @@ const options = {
         </p>
       </header>
       <ServiceCategories type>
-        <FeatureCard
-          image="/images/manos-y-pies/portada-manos-y-pies.avif"
-          name="Manos y Pies"
-          slug="/servicios/manos-y-pies/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/manos-y-pies/unas-gel-o-acrilico.avif"
-          name="Uñas Gel o Acrilicas"
-          slug="/servicios/unas-gel-o-acrilicas/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/peluqueria/brushing.avif"
-          name="Peluquería"
-          slug="/servicios/peluqueria/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/cejas-y-pestanas/laminado-de-cejas.avif"
-          name="Cejas y Pestañas"
-          slug="/servicios/cejas-y-pestanas/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/masajes/masaje-de-relajacion.avif"
-          name="Masajes"
-          slug="/servicios/masajes/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/tratamientos-corporales/pack-masajes-reafirmantes.avif"
-          name="Tratamientos Corpolares"
-          slug="/servicios/tratamientos-corporales/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/maquillajes-y-peinados/maquillaje-ondas.avif"
-          name="Maquillaje y Peinados"
-          slug="/servicios/maquillajes-y-peinados/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/novias/peinado-prueba.avif"
-          name="Novias"
-          slug="/servicios/novias/"
-          >Ver Servicios
-        </FeatureCard>
-        <FeatureCard
-          image="/images/promociones/manicure-lifting.avif"
-          name="Promociones"
-          slug="/servicios/promociones/"
-          >Ver Servicios
-        </FeatureCard>
+        {
+          categories.map(({ img, name, slug }) => (
+            <FeatureCard image={img} name={name} slug={slug}>
+              Ver Servicios
+            </FeatureCard>
+          ))
+        }
       </ServiceCategories>
 
       <Booking />

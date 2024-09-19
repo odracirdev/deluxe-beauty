@@ -4,6 +4,7 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Cejas y Pestañas - Deluxe Beauty",
@@ -11,92 +12,7 @@ const options = {
     "Descubre nuestros servicios de cejas y pestañas: perfilado, planchado, laminado de cejas, lifting y ondulado de pestañas. Realza tu mirada con tratamientos profesionales y personalizados.",
 };
 
-const services = [
-  {
-    img: "/images/cejas-y-pestanas/perfilado-de-cejas.avif",
-    name: "Perfilado de Cejas",
-    duration: "30 min",
-    price: "$14.900",
-    info: "./perfilado-de-cejas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20perfilado%20de%20cejas.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/planchado-de-cejas.avif",
-    name: "Planchado de Cejas",
-    duration: "60 min",
-    price: "$18.900",
-    info: "./planchado-de-cejas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20planchado%20de%20cejas.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/laminado-de-cejas.avif",
-    name: "Laminado de Cejas",
-    duration: "60 min",
-    price: "$18.900",
-    info: "./laminado-de-cejas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20laminado%20de%20cejas.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/lifting-de-pestanas.avif",
-    name: "Lifting de Pestañas",
-    duration: "60 min",
-    price: "$20.900",
-    info: "./lifting-de-pestanas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20lifting%20de%20pesta%C3%B1as.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/ondulado-de-pestanas.avif",
-    name: "Ondulado de Pestañas",
-    duration: "60 min",
-    price: "$20.900",
-    info: "./ondulado-de-pestanas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20ondulado%20de%20pesta%C3%B1as.",
-  },
-];
-
-const servicesPack = [
-  {
-    img: "/images/cejas-y-pestanas/perfilado-de-cejas-tinte.avif",
-    name: "Perfilado de Cejas + Tinte",
-    duration: "45 min",
-    price: "$22.900",
-    info: "./perfilado-de-cejas-con-tinte",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20perfilado%20de%20cejas%20%2B%20tinte.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/laminado-de-cejas-perfilado.avif",
-    name: "Laminado de Cejas + Perfilado",
-    duration: "90 min",
-    price: "$28.900",
-    info: "./laminado-de-cejas-con-perfilado",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20laminado%20de%20cejas%20%2B%20perfilado.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/lifting-de-pestanas-tinte.avif",
-    name: "Lifting de Pestañas + Tinte",
-    duration: "80 min",
-    price: "$26.900",
-    info: "./lifting-de-pestanas-con-tinte",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20lifting%20de%20pesta%C3%B1as%20%2B%20tinte.",
-  },
-  {
-    img: "/images/cejas-y-pestanas/ondulado-tinte.avif",
-    name: "Ondulado + Tinte",
-    duration: "80 min",
-    price: "$26.900",
-    info: "./ondulado-con-tinte",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20ondulado%20de%20pesta%C3%B1as%20%2B%20tinte.",
-  },
-];
+const services = await getCollection("cejas-y-pestanas");
 ---
 
 <Layout options={options}>
@@ -106,16 +22,23 @@ const servicesPack = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => !service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>
@@ -125,16 +48,23 @@ const servicesPack = [
 
       <Services>
         {
-          servicesPack.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services
+            .filter((service) => service.data.name.includes("+"))
+            .map((service) => {
+              const { slug, data } = service;
+              const { name, img, duration, price, booking } = data;
+
+              return (
+                <ServiceCard
+                  img={img}
+                  name={name}
+                  duration={duration}
+                  price={price}
+                  info={slug}
+                  booking={booking}
+                />
+              );
+            })
         }
       </Services>
     </section>

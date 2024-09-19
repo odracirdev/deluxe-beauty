@@ -4,6 +4,7 @@ import Booking from "@sections/Booking.astro";
 import ServiceCard from "@components/ServiceCard.astro";
 import Header from "@components/Header.astro";
 import Services from "@components/Services.astro";
+import { getCollection } from "astro:content";
 
 const options = {
   title: "Uñas Gel o Acrílicas - Deluxe Beauty",
@@ -11,89 +12,7 @@ const options = {
     "Descubre nuestra gama de servicios para uñas de gel y acrílicas: desde Uñas Gel Permanente y Tradicional hasta Uñas Acrílicas Permanentes y con Diseños. Ofrecemos también mantención y retiro de uñas acrílicas para mantener tu estilo siempre impecable.",
 };
 
-const services = [
-  {
-    img: "/images/manos-y-pies/unas-gel-permanente.avif",
-    name: "Uñas Gel Permanente",
-    duration: "150 min",
-    price: "$36.900",
-    info: "./unas-gel-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20las%20u%C3%B1as%20de%20gel%20permanentes.",
-  },
-  {
-    img: "/images/manos-y-pies/unas-gel-tradicional.avif",
-    name: "Uñas Gel Tradicional",
-    duration: "120 min",
-    price: "$30.900",
-    info: "./unas-gel-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20las%20u%C3%B1as%20de%20gel%20tradicionales.",
-  },
-  {
-    img: "/images/manos-y-pies/unas-acrilicas-permanente.avif",
-    name: "Uñas Acrílicas Permanentes",
-    duration: "150 min",
-    price: "$36.900",
-    info: "./unas-acrilicas-permanentes",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20las%20u%C3%B1as%20acr%C3%ADlicas%20permanentes.#",
-  },
-  {
-    img: "/images/manos-y-pies/unas-acrilicas-con-disenos.avif",
-    name: "Uñas Acrílicas Permanentes con Diseños",
-    duration: "180 min",
-    price: "$42.900",
-    info: "./unas-acrilicas-permanentes-con-disenos",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20las%20u%C3%B1as%20acr%C3%ADlicas%20permanentes%20con%20dise%C3%B1os.",
-  },
-  {
-    img: "/images/manos-y-pies/unas-acrilicas-tradicional.avif",
-    name: "Uñas Acrílicas Tradicional",
-    duration: "120 min",
-    price: "$30.900",
-    info: "./unas-acrilicas-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20las%20u%C3%B1as%20acr%C3%ADlicas%20tradicionales.",
-  },
-  {
-    img: "/images/manos-y-pies/mantencion-de-unas-acrilicas.avif",
-    name: "Mantención de Uñas Acrílicas",
-    duration: "90 min",
-    price: "$28.900",
-    info: "./mantencion-de-unas-acrilicas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20la%20mantenci%C3%B3n%20de%20u%C3%B1as%20acr%C3%ADlicas.",
-  },
-  {
-    img: "/images/manos-y-pies/retiro-de-unas-acrilicas.avif",
-    name: "Retiro de Uñas Acrílicas",
-    duration: "30 min",
-    price: "$10.900",
-    info: "./retiro-de-unas-acrilicas",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20retiro%20de%20u%C3%B1as%20acr%C3%ADlicas.",
-  },
-  {
-    img: "/images/manos-y-pies/retiro-esmalte-permanente.avif",
-    name: "Retiro de Uñas Acrílicas + Esmaltado Permanente",
-    duration: "90 min",
-    price: "$28.900",
-    info: "./retiro-de-unas-acrilicas-y-esmaltado-permanente",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20retiro%20de%20u%C3%B1as%20acr%C3%ADlicas%20%2B%20esmaltado%20permanente.",
-  },
-  {
-    img: "/images/manos-y-pies/retiro-esmalte-tradicional.avif",
-    name: "Retiro de Uñas Acrílicas + Esmaltado Tradicional",
-    duration: "60 min",
-    price: "$22.900",
-    info: "./retiro-de-unas-acrilicas-y-esmaltado-tradicional",
-    booking:
-      "https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20retiro%20de%20u%C3%B1as%20acr%C3%ADlicas%20%2B%20esmaltado%20tradicional.",
-  },
-];
+const services = await getCollection("unas-gel-o-acrilicas");
 ---
 
 <Layout options={options}>
@@ -103,16 +22,21 @@ const services = [
 
       <Services>
         {
-          services.map(({ img, name, duration, price, info, booking }) => (
-            <ServiceCard
-              img={img}
-              name={name}
-              duration={duration}
-              price={price}
-              info={info}
-              booking={booking}
-            />
-          ))
+          services.map((service) => {
+            const { slug, data } = service;
+            const { name, img, duration, price, booking } = data;
+
+            return (
+              <ServiceCard
+                img={img}
+                name={name}
+                duration={duration}
+                price={price}
+                info={slug}
+                booking={booking}
+              />
+            );
+          })
         }
       </Services>
 

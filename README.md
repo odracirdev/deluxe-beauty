@@ -20,19 +20,6 @@
 </p>
 <hr>
 
-## 🔗 Enlaces rápidos
-
-> - [📍 Visión general](#-vision-general)
-> - [📦 Características](#-caracteristicas)
-> - [📂 Estructura del repositorio](#-estructura-del-repositorio)
-> - [🚀 Primeros pasos](#-primeros-pasos)
->   - [⚙️ Instalación](#️-instalacion)
->   - [🤖 Ejecutar deluxe-beauty](#-ejecutar-deluxe-beauty)
-> - [🛠 Roadmap](#-roadmap)
-> - [👏 Agradecimientos](#-agradecimientos)
-
----
-
 ## 📍 Visión general
 
 Este proyecto es un trabajo freelance que realicé para un cliente. Este necesitaba dar a conocer sus servicios de belleza en general para su nueva empresa por lo que cree un sitio web pensado en sus usuarios objetivos (mayormente mujeres con poco tiempo que prefieren utilizar dispositivos móviles para contratar estos servicios).
@@ -41,35 +28,9 @@ Este proyecto es un trabajo freelance que realicé para un cliente. Este necesit
 
 ## 📦 Características
 
-- 100% Código abierto.
-- Optimizado para dispositivos móviles.
-- Interfaz sencilla e intuitiva.
-
----
-
-## 📂 Estructura del repositorio
-
-```sh
-└── deluxe-beauty/
-    ├── .github
-    │   └── workflows
-    │       └── deploy.yml
-    ├── README.md
-    ├── astro.config.mjs
-    ├── package.json
-    ├── pnpm-lock.yaml
-    ├── public
-    │   ├── fonts
-    │   └── images
-    └── src
-        ├── components
-        ├── layouts
-        ├── pages
-        │   └── servicios
-        │       └── ...
-        └── sections
-            └── ...
-```
+- 🍻 100% Código abierto.
+- 📱 Optimizado para dispositivos móviles.
+- 👌🏻 Interfaz sencilla e intuitiva.
 
 ---
 
@@ -114,10 +75,10 @@ pnpm dev
 
 ## 🛠 Roadmap
 
-- [ ] `► Maquetación para dispositivos móviles`
-- [ ] `► Maquetación para dispositivos de es critorio`
-- [ ] `► Optimización de archivos multimedia`
-- [ ] `► Optimización del SEO`
+- [x] `► Maquetación para dispositivos móviles`
+- [x] `► Maquetación para dispositivos de es critorio`
+- [x] `► Optimización de archivos multimedia`
+- [x] `► Optimización del SEO`
 
 ---
 

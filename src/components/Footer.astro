@@ -1,16 +1,67 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
 <footer>
-  <p>Deluxe Beauty © Todos los derechos reservados.</p>
+  <h3>¿Quieres trabajar con nosotros?</h3>
+  <p>
+    Ponte en contacto al correo <a href="mailto:info@deluxebeauty.cl"
+      >info@deluxebeauty.cl</a
+    >
+  </p>
+  <div class="social">
+    <a href="https://instagram.com/deluxebeauty_cl" target="_blank">
+      <Icon name="instagram" size="32" />
+    </a>
+    <!-- <a href="https://instagram.com/deluxebeauty_cl" target="_blank">
+      <Icon name="facebook" size="32" />
+    </a> -->
+    <a
+      href="https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%C2%A1Hola!%20Necesito%20informaci%C3%B3n%20sobre%20sus%20servicios."
+      target="_blank"
+    >
+      <Icon name="whatsapp" size="32" />
+    </a>
+  </div>
+  <small>Deluxe Beauty © Todos los derechos reservados.</small>
 </footer>
 
 <style>
   footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
     margin-bottom: 4.5rem;
+    background: var(--black);
+    background-size: contain;
     text-align: center;
+    color: var(--white);
+
+    & .social {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+
+      & a {
+        &:hover {
+          color: var(--primary-color);
+          transition: color 0.35s ease-in-out;
+        }
+      }
+    }
+
+    & a {
+      &:hover {
+        color: var(--primary-color);
+        transition: color 0.35s ease-in-out;
+      }
+    }
+
+    & small {
+      margin-top: 2rem;
+    }
   }
 
   @media (width >= 768px) {

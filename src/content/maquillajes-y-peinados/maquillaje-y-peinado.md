@@ -3,7 +3,7 @@ name: Maquillaje + Peinado
 description: Prepárate para brillar con nuestro servicio combinado de Maquillaje + Peinado. Disfruta de un look completo y profesional que resalta tu belleza con un acabado perfecto para cualquier ocasión especial.
 img: /images/maquillajes-y-peinados/maquillaje-ondas.avif
 duration: 120 min
-price: $64.900
+price: $85.900
 booking: https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20maquillaje%20%2B%20peinado.
 ---
 

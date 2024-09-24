@@ -3,7 +3,7 @@ name: Maquillaje de Día
 description: Luce radiante con nuestro Maquillaje de Día, ideal para un acabado fresco y natural. Perfecto para resaltar tu belleza con un toque profesional que dura todo el día, ideal para cualquier ocasión.
 img: /images/maquillajes-y-peinados/maquillaje-dia-natural.avif
 duration: 60 min
-price: $36.900
+price: $59.900
 booking: https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20maquillaje%20de%20d%C3%ADa.
 ---
 

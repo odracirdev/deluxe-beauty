@@ -3,7 +3,7 @@ name: Maquillaje de Noche
 description: Transforma tu look con nuestro Maquillaje de Noche. Diseñado para ofrecer un acabado sofisticado y duradero, resalta tu belleza con un toque profesional que te hará destacar en cualquier evento nocturno.
 img: /images/maquillajes-y-peinados/maquillaje-de-noche.avif
 duration: 60 min
-price: $36.900
+price: $59.900
 booking: https://api.whatsapp.com/send?phone=56931268104&text=%F0%9F%91%8B%F0%9F%8F%BB%20%C2%A1Hola!%20Quisiera%20agendar%20una%20hora%20para%20el%20maquillaje%20de%20noche.
 ---
 

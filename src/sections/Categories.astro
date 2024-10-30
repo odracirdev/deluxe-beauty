@@ -2,6 +2,7 @@
 import Button from "@components/Button.astro";
 import FeatureCard from "@components/FeatureCard.astro";
 import ServiceCategories from "@components/ServiceCategories.astro";
+import { featuredServices } from "@data/feature-services.data";
 ---
 
 <section class="categories">
@@ -13,27 +14,13 @@ import ServiceCategories from "@components/ServiceCategories.astro";
   </p>
 
   <ServiceCategories>
-    <FeatureCard
-      image="/images/manos-y-pies/portada-manos-y-pies.avif"
-      name="Manos y Pies"
-      slug="/servicios/manos-y-pies/"
-      pos
-      >Ver Servicios
-    </FeatureCard>
-    <FeatureCard
-      image="/images/cejas-y-pestanas/laminado-de-cejas.avif"
-      name="Cejas y Pestañas"
-      slug="/servicios/cejas-y-pestanas/"
-      pos
-      >Ver Servicios
-    </FeatureCard>
-    <FeatureCard
-      image="/images/peluqueria/brushing.avif"
-      name="Peluquería"
-      slug="/servicios/peluqueria/"
-      pos
-      >Ver Servicios
-    </FeatureCard>
+    {
+      featuredServices.map(({ image, name, slug }) => (
+        <FeatureCard image={image} name={name} slug={slug} pos>
+          Ver Servicios
+        </FeatureCard>
+      ))
+    }
   </ServiceCategories>
   <Button href="/servicios" color="white-pink">Ver todos los servicios</Button>
 </section>

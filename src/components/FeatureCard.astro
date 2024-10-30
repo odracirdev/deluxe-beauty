@@ -23,9 +23,15 @@ const { image, alt, slug, pos, name } = Astro.props;
 
     & img {
       border-radius: 0.7rem;
-      border: 0.4rem solid var(--white);
-      box-shadow: var(--shadow-large);
+      outline: 0.2rem solid var(--black);
+      box-shadow: 0 0 0 0 var(--black);
       aspect-ratio: 1 / 1;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-4px) translateX(-2px);
+        box-shadow: 6px 6px 0 0 var(--black);
+      }
     }
 
     & .button-service {

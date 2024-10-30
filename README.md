@@ -76,7 +76,7 @@ pnpm dev
 ## 🛠 Roadmap
 
 - [x] `► Maquetación para dispositivos móviles`
-- [x] `► Maquetación para dispositivos de es critorio`
+- [x] `► Maquetación para dispositivos de escritorio`
 - [x] `► Optimización de archivos multimedia`
 - [x] `► Optimización del SEO`
 
